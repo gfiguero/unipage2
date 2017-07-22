@@ -1,0 +1,26 @@
+{% extends 'UniPageBundle:Base:base.html.twig' %}
+{% use 'UniPageBundle:Base:navbar.html.twig' %}
+{% use 'UniPageBundle:Base:footer.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    {% block navbar %}{{ parent() }}{% endblock %}
+    <section class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <h2>Registro</h2>
+                {% block security %}{% endblock %}
+            </div>
+        </div>
+    </section>
+    {% block footer %}{{ parent() }}{% endblock %}
+{% endblock %}
+
+{% block stylesheet %}
+    <style type="text/css">
+        section {
+            padding: 100px 0px;
+        }
+    </style>
+{% endblock %}

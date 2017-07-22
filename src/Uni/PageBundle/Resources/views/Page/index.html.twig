@@ -1,0 +1,28 @@
+{% extends 'UniPageBundle:Page:base.html.twig' %}
+{% use 'UniPageBundle:Page:navbar.html.twig' %}
+{% use 'UniPageBundle:Page:header.html.twig' %}
+{% use 'UniPageBundle:Page:about.html.twig' %}
+{% use 'UniPageBundle:Page:feature.html.twig' %}
+{% use 'UniPageBundle:Page:contact.html.twig' %}
+{% use 'UniPageBundle:Page:footer.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    {% block navbar %}{{ parent() }}{% endblock %}
+    {% block header %}{{ parent() }}{% endblock %}
+    {% block about %}{{ parent() }}{% endblock %}
+    {% block feature %}{{ parent() }}{% endblock %}
+    {% block contact %}{{ parent() }}{% endblock %}
+    {% block footer %}{{ parent() }}{% endblock %}
+{% endblock %}
+
+{% block stylesheet %}
+<style type="text/css">
+header, section, footer { padding: 80px 0px; }
+#about { background-color: #fff; }
+#feature { background-color: #eee; }
+#contact { background-color: #fff; }
+#footer { background-color: #eee; }
+</style>
+{% endblock %}

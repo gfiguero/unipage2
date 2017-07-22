@@ -1,0 +1,23 @@
+{% block feature %}
+    {% trans_default_domain 'UniPageBundle' %}
+     <section id="feature">
+         <div class="container">
+            <div class="row">
+                <h1 class="page-header text-center">{{ 'feature.title'|trans }}</h1>
+                <h4 class="text-center">{{ 'feature.subtitle'|trans }}</h4>
+                {% for item in [1,2,3,4,5,6] %}
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <img src="http://via.placeholder.com/800x600" alt="800x600">
+                            <div class="caption text-center">
+                                <h3>{{ 'feature.item.title'|trans }}</h3>
+                                <p>{{ 'feature.item.content'|trans }}</p>
+                                <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

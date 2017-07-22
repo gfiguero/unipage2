@@ -1,0 +1,22 @@
+#kore_user:
+#    resource: "@UniUserBundle/Resources/config/routing.yml"
+#    prefix:   /
+#
+#kore_agent:
+#    resource: "@UniAgentBundle/Resources/config/routing.yml"
+#    prefix:   /agent
+#
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+uni_admin:
+    resource: "@UniAdminBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
+uni_page:
+    resource: "@UniPageBundle/Resources/config/routing.yml"
+    prefix:   /
+
+_liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.xml"

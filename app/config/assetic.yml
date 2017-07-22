@@ -1,0 +1,27 @@
+# Assetic Configuration
+assetic:
+    debug:          "%kernel.debug%"
+    use_controller: false
+    bundles:        [ ]
+    filters:
+        cssrewrite: ~
+        less:
+            node: %node_bin_path%
+            node_paths: [%node_lib_path%]
+    read_from: %kernel.root_dir%/..
+    write_to: %kernel.root_dir%/..
+    assets:
+        uni_page_css:
+            inputs:
+                - src/Uni/PageBundle/Resources/less/build.less
+            filters:
+                - less
+                - cssrewrite
+            output: src/Uni/PageBundle/Resources/public/css/unipage.css
+        uni_admin_css:
+            inputs:
+                - src/Uni/PageBundle/Resources/less/build.less
+            filters:
+                - less
+                - cssrewrite
+            output: src/Uni/AdminBundle/Resources/public/css/uniadmin.css

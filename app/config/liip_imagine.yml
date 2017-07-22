@@ -1,0 +1,12 @@
+liip_imagine:
+    resolvers:
+        default:
+            web_path: ~
+    filter_sets:
+        cache: ~
+        product_export_small:
+            quality: 75
+            default_image: default.png
+            filters:
+                upscale: { min: [120, 120] }
+                thumbnail: { size: [120, 120], mode: outbound }

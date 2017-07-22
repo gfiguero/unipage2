@@ -1,0 +1,8 @@
+uni_admin_user:
+    resource: "@UniAdminBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+
+uni_admin_feature:
+    resource: "@UniAdminBundle/Resources/config/routing/feature.yml"
+    prefix:   /feature
+

@@ -1,0 +1,26 @@
+topmenu:
+    home: Inicio
+    register: Registro
+    login: Ingreso
+    logout: Salir
+
+header:
+    title: uniPage
+    subtitle: un producto de uniSign
+
+about:
+    title: Sobre Nosotros
+    item: 
+        title: Título de contenido
+        content: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+feature:
+    title: Servicios
+    subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    item:
+        title: Título de Servicio
+        content: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+contact:
+    title: Contacto
+    subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

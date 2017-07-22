@@ -1,0 +1,50 @@
+{% block contact %}
+    {% trans_default_domain 'UniPageBundle' %}
+    <section id="contact">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="page-header">{{ 'contact.title'|trans }}</h1>
+                    <p>{{ 'contact.subtitle'|trans }}</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-4 text-center">
+                                    {{ icon('phone fa-fw fa-5x') }}
+                                </div>
+                                <div class="col-md-8"><h2>+56 9 82785909</h2></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-4 text-center">
+                                    {{ icon('envelope fa-fw fa-5x') }}
+                                </div>
+                                <div class="col-md-8"><h2>contacto@unisign.cl</h2></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-4 text-center">
+                                    {{ icon('map-marker fa-fw fa-5x') }}
+                                </div>
+                                <div class="col-md-8"><h2>Carmen 446 Depto 2608</h2></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+{% endblock %}

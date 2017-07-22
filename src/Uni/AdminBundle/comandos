@@ -1,0 +1,16 @@
+php app/console doctrine:generate:entities UniAdminBundle:User --path=src
+php app/console doctrine:generate:entities UniAdminBundle:Feature --path=src
+
+php app/console uni:admingenerate:crud --overwrite --format=yml --with-write --no-interaction --entity=UniAdminBundle:User --route-prefix=admin_user
+php app/console uni:admingenerate:crud --overwrite --format=yml --with-write --no-interaction --entity=UniAdminBundle:Feature --route-prefix=admin_feature
+
+php app/console uni:admingenerate:crud --format=yml --with-write --no-interaction --entity=UniAdminBundle:User --route-prefix=admin_user
+php app/console uni:admingenerate:crud --format=yml --with-write --no-interaction --entity=UniAdminBundle:Feature --route-prefix=admin_feature
+
+find src/Uni/AdminBundle/* -type f -print0 | xargs -0 sed -i 's/rutum/ruta/g'
+find src/Uni/AdminBundle/Resources/config/doctrine/* -type f -print0 | xargs -0 sed -i 's/createdAt/created_at/g'
+
+find src/Uni/AdminBundle/Entity/* -type f -print0 | xargs -0 sed -i 's/createdAt/created_at/g'
+find src/Uni/AdminBundle/Entity/* -type f -print0 | xargs -0 sed -i 's/updatedAt/updated_at/g'
+find src/Uni/AdminBundle/Entity/* -type f -print0 | xargs -0 sed -i 's/deletedAt/deleted_at/g'
+

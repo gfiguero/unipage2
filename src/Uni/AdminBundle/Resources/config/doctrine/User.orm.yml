@@ -1,0 +1,95 @@
+Uni\AdminBundle\Entity\User:
+    type: entity
+    table: User
+    repositoryClass: Uni\AdminBundle\Entity\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    oneToMany:
+        features:
+            targetEntity: Uni\AdminBundle\Entity\Feature
+            mappedBy: user
+    fields:
+        brand:
+            type: string
+            length: 100
+            nullable: true
+        contactname:
+            type: string
+            length: 200
+            nullable: true
+        contactemail:
+            type: string
+            length: 100
+            nullable: true
+        contactphone:
+            type: string
+            length: 20
+            nullable: true
+        contactaddress:
+            type: string
+            length: 100
+            nullable: true
+        absoluteurl:
+            type: string
+            length: 100
+            nullable: true
+
+        pagetitle:
+            type: string
+            length: 20
+            nullable: true
+        pagesubtitle:
+            type: string
+            length: 100
+            nullable: true
+        pagecalltoaction:
+            type: string
+            length: 20
+            nullable: true
+
+        abouttitle:
+            type: string
+            length: 20
+            nullable: true
+        aboutcontent:
+            type: text
+            nullable: true
+
+        featuretitle:
+            type: string
+            length: 20
+            nullable: true
+        featurecontent:
+            type: text
+            nullable: true
+
+        contacttitle:
+            type: string
+            length: 20
+            nullable: true
+        contactcontent:
+            type: text
+            nullable: true
+
+        created_at:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+        updated_at:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: update
+        deleted_at:
+            type: datetime
+            nullable: true
+    gedmo:
+        soft_deleteable:
+            field_name: deleted_at
+            time_aware: false
+    lifecycleCallbacks: {  }

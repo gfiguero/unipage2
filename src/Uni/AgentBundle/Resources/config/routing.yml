@@ -1,0 +1,28 @@
+kore_agent_budget:
+    resource: "@UniAgentBundle/Resources/config/routing/budget.yml"
+    prefix:   /budget
+
+kore_agent_client:
+    resource: "@UniAgentBundle/Resources/config/routing/client.yml"
+    prefix:   /client
+
+kore_agent_item:
+    resource: "@UniAgentBundle/Resources/config/routing/item.yml"
+    prefix:   /item
+
+kore_agent_product:
+    resource: "@UniAgentBundle/Resources/config/routing/product.yml"
+    prefix:   /product
+
+kore_agent_provider:
+    resource: "@UniAgentBundle/Resources/config/routing/provider.yml"
+    prefix:   /provider
+
+kore_agent_seller:
+    resource: "@UniAgentBundle/Resources/config/routing/seller.yml"
+    prefix:   /seller
+
+kore_agent_search:
+    resource: "@UniAgentBundle/Resources/config/routing/search.yml"
+    prefix:   /search
+
