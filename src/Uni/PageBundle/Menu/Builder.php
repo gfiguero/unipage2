@@ -14,7 +14,7 @@ class Builder implements ContainerAwareInterface
     public function topMenu(FactoryInterface $factory, array $options)
     {
         $topmenu = $factory->createItem('root');
-        $topmenu->setChildrenAttribute('class', 'nav navbar-nav navbar-right');
+        $topmenu->setChildrenAttribute('class', 'nav navbar-nav navbar-nav-custom navbar-right');
         $topmenu->setChildrenAttribute('id', 'topmenu');
         $checker = $this->container->get('security.authorization_checker');
 

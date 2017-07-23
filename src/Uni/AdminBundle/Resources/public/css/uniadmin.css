@@ -3,6 +3,7 @@
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900');
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -1071,7 +1072,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
@@ -1173,7 +1174,7 @@ h6,
 .h5,
 .h6 {
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.1;
   color: inherit;
 }
@@ -4698,6 +4699,87 @@ fieldset[disabled] .navbar-inverse .btn-link:hover,
 fieldset[disabled] .navbar-inverse .btn-link:focus {
   color: #444;
 }
+.navbar-custom {
+  background: #333;
+  border-color: transparent;
+}
+@media (min-width: 768px) {
+  .navbar-custom {
+    background: transparent;
+    border-color: transparent;
+    padding: 25px 0;
+    transition: padding .3s;
+  }
+}
+.navbar-custom .navbar-collapse-custom {
+  border-color: rgba(255, 255, 255, 0.02);
+}
+.navbar-custom .navbar-nav-custom > .active > a {
+  color: white;
+  background-color: slategray;
+  border-radius: 3px;
+}
+.navbar-custom .navbar-nav-custom > .active > a:focus,
+.navbar-custom .navbar-nav-custom > .active > a:active,
+.navbar-custom .navbar-nav-custom > .active > a:hover {
+  color: white;
+  background-color: #b23068;
+  border-radius: 3px;
+}
+.navbar-custom .navbar-nav-custom > li > a {
+  font-size: 18px;
+  font-weight: bolder;
+  color: white;
+}
+.navbar-custom .navbar-nav-custom > li > a:hover,
+.navbar-custom .navbar-nav-custom > li > a:focus,
+.navbar-custom .navbar-nav-custom > li > a:active {
+  color: slategray;
+  background-color: transparent;
+}
+.navbar-custom .navbar-brand-custom {
+  color: white;
+}
+.navbar-custom .navbar-brand-custom:hover,
+.navbar-custom .navbar-brand-custom:focus,
+.navbar-custom .navbar-brand-custom:active {
+  color: white;
+}
+@media (min-width: 768px) {
+  .navbar-custom .navbar-brand-custom {
+    font-size: 2em;
+    color: white;
+    transition: all .3s;
+  }
+}
+.navbar-custom .navbar-toggle-custom {
+  background-color: slategray;
+  border-color: slategray;
+}
+.navbar-custom .navbar-toggle-custom:hover,
+.navbar-custom .navbar-toggle-custom:focus,
+.navbar-custom .navbar-toggle-custom:active {
+  background-color: slategray;
+}
+.navbar-custom .navbar-toggle-custom .icon-bar {
+  background-color: white;
+}
+.affix {
+  background: #333;
+  border-color: transparent;
+  transition: .3s;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .affix {
+    padding: 10px 0;
+  }
+}
+@media (min-width: 768px) {
+  .affix .navbar-brand-custom {
+    font-size: 1.5em;
+  }
+}
 .sidebar-nav {
   background: #fff;
 }
@@ -6056,7 +6138,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6174,7 +6256,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6819,4 +6901,90 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+header#header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  min-height: 100vh;
+  font-weight: bolder;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://static.pexels.com/photos/483773/pexels-photo-483773.jpeg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+}
+header#header .jumbotron.jumbotron-custom {
+  background-color: transparent;
+  border-radius: 0px;
+}
+header#header .jumbotron.jumbotron-custom h1 {
+  text-shadow: 0 2px 4px #000;
+  font-weight: 700;
+}
+header#header .jumbotron.jumbotron-custom h2 {
+  text-shadow: 0 2px 4px #000;
+}
+header#header .jumbotron.jumbotron-custom p a.header-btn {
+  border-radius: 0px;
+  background: slategray;
+  border: none;
+  color: white;
+  font-size: 21px;
+  padding: 15px 30px;
+}
+section#about {
+  background: slategrey ;
+  padding: 80px 0;
+  color: white;
+}
+section#feature {
+  padding: 4em 0;
+}
+section#feature p {
+  margin-bottom: 40px;
+}
+section#feature .thumbnail-custom {
+  padding: 0;
+  border: none;
+  background-color: #333;
+  transition: all 0.25s ease-in-out;
+  border-radius: 0px;
+}
+section#feature .thumbnail-custom:hover {
+  background-color: slategray;
+}
+section#feature .thumbnail-custom:hover .caption-custom p a.feature-btn {
+  background-color: #333;
+}
+section#feature .thumbnail-custom .caption-custom {
+  color: white;
+}
+section#feature .thumbnail-custom .caption-custom p:hover a {
+  background-color: #333;
+}
+section#feature .thumbnail-custom .caption-custom p a.feature-btn {
+  border-radius: 0px;
+  background-color: slategray;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+}
+section#contact {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://static.pexels.com/photos/487247/pexels-photo-487247.jpeg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 80px 0;
+}
+footer#footer {
+  background: #333;
+  color: white;
+  padding: 80px 0;
+}
+footer#footer p {
+  margin: 0 0 0;
 }

@@ -1,0 +1,38 @@
+section#feature {
+    padding: 4em 0;
+    p {
+        margin-bottom: 40px;
+    }
+    .thumbnail-custom {
+        padding: 0;
+        border: none;
+        background-color: #333;
+        transition: all .25s ease-in-out;
+        border-radius: 0px;
+        &:hover {
+            background-color: slategray;
+            .caption-custom {
+                p {
+                    a.feature-btn {
+                        background-color: #333;
+                    }
+                }
+            }
+        } 
+        .caption-custom {
+            color: white;
+            p {
+                &:hover a {
+                    background-color: #333;
+                }
+                a.feature-btn {
+                    border-radius: 0px;
+                    background-color: slategray;
+                    border: none;
+                    color: white;
+                    padding: 15px 30px;
+                }
+            }
+        }
+    }
+}
