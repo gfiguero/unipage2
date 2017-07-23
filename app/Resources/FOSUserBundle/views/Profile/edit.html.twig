@@ -1,5 +1,33 @@
-{% extends "@FOSUser/layout.html.twig" %}
+{% extends 'UniPageBundle:Page:base.html.twig' %}
+{% use 'UniPageBundle:Page:navbar.html.twig' %}
+{% use 'UniPageBundle:Page:footer.html.twig' %}
 
-{% block fos_user_content %}
-{% include "@FOSUser/Profile/edit_content.html.twig" %}
-{% endblock fos_user_content %}
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block title %}Registro{% endblock %}
+
+{% block body %}
+    {% block navbar %}{{ parent() }}{% endblock %}
+    <section class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h1 class="page-header">Ingreso de Usuarios</h1>
+                {{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
+                    {{ form_widget(form) }}
+                    <div>
+                        <input type="submit" value="{{ 'profile.edit.submit'|trans }}" class="btn btn-default" />
+                    </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </section>
+    {% block footer %}{{ parent() }}{% endblock %}
+{% endblock %}
+
+{% block stylesheet %}
+    <style type="text/css">
+        section {
+            padding: 80px 0px;
+        }
+    </style>
+{% endblock %}
