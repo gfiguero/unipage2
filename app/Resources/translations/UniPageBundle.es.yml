@@ -3,6 +3,8 @@ topmenu:
     register: Registro
     login: Ingreso
     logout: Salir
+    change_password: Cambiar contraseña
+    profile: Mi perfil
 
 header:
     title: uniPage
