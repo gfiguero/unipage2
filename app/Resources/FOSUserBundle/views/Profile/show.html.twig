@@ -1,5 +1,27 @@
 {% extends "@FOSUser/layout.html.twig" %}
 
-{% block fos_user_content %}
-{% include "@FOSUser/Profile/show_content.html.twig" %}
-{% endblock fos_user_content %}
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block title %}Perfil de Usuario{% endblock %}
+
+{% block user %}
+    <section class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h1 class="page-header">Perfil de Usuario</h1>
+                <div class="row">
+                    <div class="col-md-4"><strong>{{ 'profile.show.username'|trans }}</strong></div><div class="col-md-8">{{ user.username }}</div>
+                    <div class="col-md-4"><strong>{{ 'profile.show.email'|trans }}</strong></div><div class="col-md-8">{{ user.email }}</div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block stylesheet %}
+    <style type="text/css">
+        section {
+            padding: 80px 0px;
+        }
+    </style>
+{% endblock %}
