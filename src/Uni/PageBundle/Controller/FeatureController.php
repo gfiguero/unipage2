@@ -3,6 +3,7 @@
 namespace Uni\PageBundle\Controller;
 
 use Uni\AdminBundle\Entity\Feature;
+use Uni\PageBundle\Form\FeatureType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -88,8 +89,7 @@ class FeatureController extends Controller
      */
     public function editAction(Request $request, Feature $feature)
     {
-        $editForm = $this->createEditForm($feature);
-        $deleteForm = $this->createDeleteForm($feature);
+        $editForm = $this->createForm(new FeatureType(), $feature);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted()) {
@@ -98,28 +98,13 @@ class FeatureController extends Controller
                 $em->persist($feature);
                 $em->flush();
                 $request->getSession()->getFlashBag()->add( 'success', 'feature.edit.flash' );
-                return $this->redirect($this->generateUrl('admin_feature_index'));
+                return $this->redirect($this->generateUrl('page_feature_index'));
             }
         }
 
-        return $this->render('UniAdminBundle:Feature:edit.html.twig', array(
+        return $this->render('UniPageBundle:Feature:edit.html.twig', array(
             'feature' => $feature,
             'editForm' => $editForm->createView(),
-            'deleteForm' => $deleteForm->createView(),
-        ));
-    }
-
-    /**
-     * Creates a form to edit a Feature entity.
-     *
-     * @param Feature $feature The Feature entity
-     *
-     * @return \Symfony\Component\Form\Form The form
-     */
-    private function createEditForm(Feature $feature)
-    {
-        return $this->createForm(new FeatureType(), $feature, array(
-            'action' => $this->generateUrl('admin_feature_edit', array('id' => $feature->getId())),
         ));
     }
 
