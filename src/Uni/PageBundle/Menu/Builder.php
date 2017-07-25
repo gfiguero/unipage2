@@ -20,7 +20,7 @@ class Builder implements ContainerAwareInterface
         $topmenu->setChildrenAttribute('class', 'nav navbar-nav navbar-nav-custom navbar-right');
         $topmenu->setChildrenAttribute('id', 'topmenu');
 
-        $topmenu->addChild('topmenu.home', array('route' => 'page_index'))->setExtras(array('translation_domain' => 'UniPageBundle'))->setLinkAttribute('class', 'page-scroll');
+        $topmenu->addChild('topmenu.home', array('route' => 'uni_page_index'))->setExtras(array('translation_domain' => 'UniPageBundle'))->setLinkAttribute('class', 'page-scroll');
 //        $topmenu->addChild('topmenu.about', array('uri' => '#'))->setExtras(array('translation_domain' => 'UniPageBundle'))->setLinkAttribute('class', 'page-scroll');
 //        $topmenu->addChild('topmenu.feature', array('uri' => '#'))->setExtras(array('translation_domain' => 'UniPageBundle'))->setLinkAttribute('class', 'page-scroll');
 //        $topmenu->addChild('topmenu.contact', array('uri' => '#'))->setExtras(array('translation_domain' => 'UniPageBundle'))->setLinkAttribute('class', 'page-scroll');

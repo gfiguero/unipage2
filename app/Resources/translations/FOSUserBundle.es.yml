@@ -15,6 +15,8 @@ security:
         password: Contraseña
         remember_me: Recordar
         submit: Entrar
+    register: Registrar
+    resetting: Recuperar contraseña
 profile:
     show:
         username: 'Nombre de usuario'
@@ -37,7 +39,7 @@ registration:
     email:
         subject: 'Bienvenido a uniPage !'
         message: |
-            Hola!
+            Hola %username%!
 
             Para completar la validación de tu cuenta - por favor visita %confirmationUrl%
             
@@ -68,7 +70,7 @@ resetting:
             Para restablecer tu contraseña - por favor visita %confirmationUrl%
 
             Atentamente,
-            el Equipo.
+            el Equipo de uniPage.
 
 layout:
     logout: Salir

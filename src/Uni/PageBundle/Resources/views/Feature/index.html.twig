@@ -1,0 +1,14 @@
+{% extends 'UniPageBundle:Page:base.html.twig' %}
+{% use 'UniPageBundle:Page:navbar.html.twig' %}
+{% use 'UniPageBundle:Page:footer.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    {% block navbar %}{{ parent() }}{% endblock %}
+        {% dump(features) %}
+        {% for feature in features %}
+            {% dump(feature.user.username) %}
+        {% endfor %}
+    {% block footer %}{{ parent() }}{% endblock %}
+{% endblock %}
