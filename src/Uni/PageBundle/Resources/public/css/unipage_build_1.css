@@ -1531,7 +1531,7 @@ address {
   margin-right: auto;
   margin-left: auto;
   display: block;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   border-bottom: 3px solid;
 }
 code,
@@ -4716,7 +4716,13 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
     background: transparent;
     border-color: transparent;
     padding: 25px 0;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
+}
+.navbar-scroll .navbar-brand {
+  padding: 10px 15px;
 }
 .navbar-scroll .navbar-brand:hover,
 .navbar-scroll .navbar-brand:focus {
@@ -5793,22 +5799,22 @@ button.list-group-item-danger.active:focus {
   border-bottom: 1px solid #ddd;
 }
 .panel-default {
-  border-color: #337ab7;
+  border-color: transparent;
 }
 .panel-default > .panel-heading {
   color: #333333;
   background-color: #f5f5f5;
-  border-color: #337ab7;
+  border-color: transparent;
 }
 .panel-default > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #337ab7;
+  border-top-color: transparent;
 }
 .panel-default > .panel-heading .badge {
   color: #f5f5f5;
   background-color: #333333;
 }
 .panel-default > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #337ab7;
+  border-bottom-color: transparent;
 }
 .panel-primary {
   border-color: #337ab7;
@@ -6910,13 +6916,17 @@ section#feature .container .feature-col {
 }
 section#contact {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://static.pexels.com/photos/196656/pexels-photo-196656.jpeg');
+  background-attachment: fixed;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 60px 0;
 }
-section#contact .contact-panel {
-  background-color: rgba(51, 122, 183, 0.8);
+section#contact .row.contact-info {
+  margin-top: 25px;
+}
+section#contact .row.contact-info .contact-panel {
+  background-color: rgba(51, 122, 183, 0.5);
 }
 footer#footer {
   background: #333333;
