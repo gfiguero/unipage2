@@ -1517,12 +1517,11 @@ address {
   font-style: normal;
   line-height: 1.42857143;
 }
-.page-header {
+.section-header {
   padding-bottom: 0;
-  margin: 0;
   border-bottom: none;
 }
-.page-header:after {
+.section-header:after {
   content: '';
   position: relative;
   top: 10px;
@@ -5560,7 +5559,7 @@ button.list-group-item-danger.active:focus {
 }
 .panel {
   margin-bottom: 25px;
-  background-color: #337ab7;
+  background-color: #fff;
   border: 1px solid transparent;
   border-radius: 0;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -6890,10 +6889,10 @@ main#main p a.header-btn {
 }
 section#about {
   background: #337ab7;
-  padding: 60px 0;
+  padding: 120px 0;
 }
 section#feature {
-  padding: 60px 0;
+  padding: 120px 0;
 }
 section#feature .container .row .col-sm-12 h1 {
   color: #333333;
@@ -6915,7 +6914,7 @@ section#contact {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 60px 0;
+  padding: 120px 0;
 }
 section#contact .row.contact-info {
   margin-top: 25px;
@@ -6925,5 +6924,5 @@ section#contact .row.contact-info .contact-panel {
 }
 footer#footer {
   background: #333333;
-  padding: 60px 0;
+  padding: 120px 0;
 }
