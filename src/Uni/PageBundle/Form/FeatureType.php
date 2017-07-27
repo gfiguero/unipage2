@@ -29,6 +29,11 @@ class FeatureType extends AbstractType
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
             )) 
+            ->add('user', null, array(
+                'label' => 'feature.form.user',
+                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
+                'translation_domain' => 'UniAdminBundle',
+            ))
         ;
     }
     

@@ -1,15 +1,20 @@
 {% block header %}
     <header id="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="jumbotron jumbotron-custom">
-                        <h1>uniPage es un sistema flexible y rápido para crear visibilidad y presencia para empresas en internet</h1>
-                        <h2>Nuestros recursos están optimizados para un despliegue de información eficiente, ideal para conexiones móbiles</h2>
-                        <p><a type="button" href="#about" class="btn btn-default header-btn page-scroll">header.calltoaction</a></p>
-                    </div>
+        <nav id="navbar" class="navbar navbar-default navbar-scroll navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{{ path('uni_page_index') }}">uniPage</a>
                 </div>
-            </div>
-        </div>
+                <div class="collapse navbar-collapse" id="topbar">
+                    {{ knp_menu_render('UniPageBundle:Builder:topMenu') }}
+                </div>
+            </div>   
+        </nav>
     </header>
 {% endblock %}

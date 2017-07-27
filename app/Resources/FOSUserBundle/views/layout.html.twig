@@ -1,9 +1,9 @@
 {% extends 'UniPageBundle:Page:base.html.twig' %}
-{% use 'UniPageBundle:Page:navbar.html.twig' %}
+{% use 'UniPageBundle:Page:header.html.twig' %}
 {% use 'UniPageBundle:Page:footer.html.twig' %}
 
 {% block body %}
-    {% block navbar %}{{ parent() }}{% endblock %}
+    {% block header %}{{ parent() }}{% endblock %}
     {% block user %}{% endblock %}
     {% block footer %}{{ parent() }}{% endblock %}
 {% endblock %}

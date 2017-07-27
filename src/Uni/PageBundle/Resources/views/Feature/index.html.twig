@@ -1,6 +1,7 @@
 {% extends 'UniPageBundle:Page:base.html.twig' %}
 {% use 'UniPageBundle:Page:navbar.html.twig' %}
 {% use 'UniPageBundle:Page:footer.html.twig' %}
+{% use 'UniAdminBundle:Base:flashbag.html.twig' %}
 
 {% trans_default_domain 'UniPageBundle' %}
 
@@ -13,10 +14,8 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div id="page-header">
-                            <div class="col-lg-12">
-                                <h1 class="page-header">{% block icons %}{{ parent() }}{% endblock %}{{ 'feature.index.title'|trans }}</h1>
-                                {% block flashbag %}{{ parent() }}{% endblock %}
-                            </div>
+                            <h1 class="page-header">{% block icons %}{{ parent() }}{% endblock %}{{ 'feature.index.title'|trans }}</h1>
+                            {% block flashbag %}{{ parent() }}{% endblock %}
                         </div>
                         <!-- /#page-header -->
 
@@ -36,7 +35,7 @@
                                         <h2 class="panel-title">{{ 'feature.index.list'|trans }}</h2>
                                     </div>
                                     <div class="table-responsive">
-                                        <table class="records_list table table-striped table-hover table-middle">
+                                        <table class="records_list table table-striped table-hover table-middle table-inverse">
                                             <thead>
                                                 <tr>
                                                     <th>

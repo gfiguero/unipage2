@@ -1,6 +1,7 @@
 {% extends 'UniPageBundle:Page:base.html.twig' %}
 {% use 'UniPageBundle:Page:navbar.html.twig' %}
 {% use 'UniPageBundle:Page:footer.html.twig' %}
+{% use 'UniAdminBundle:Base:flashbag.html.twig' %}
 
 {% trans_default_domain 'UniPageBundle' %}
 
@@ -14,10 +15,8 @@
                     <div class="col-md-12">
                         <div id="page-wrapper">
                             <div class="row" id="page-header">
-                                <div class="col-lg-12">
-                                    <h1 class="page-header">{% block icons %}{{ parent() }}{% endblock %}{{ 'feature.new.title'|trans }}</h1>
-                                    {% block flashbag %}{{ parent() }}{% endblock %}
-                                </div>
+                                <h1 class="page-header">{% block icons %}{{ parent() }}{% endblock %}{{ 'feature.new.title'|trans }}</h1>
+                                {% block flashbag %}{{ parent() }}{% endblock %}  
                             </div>
                             <!-- /#page-header -->
 

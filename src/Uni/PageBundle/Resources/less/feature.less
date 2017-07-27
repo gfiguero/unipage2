@@ -1,10 +1,24 @@
 section#feature {
-    padding: 100px 0;
-    .feature-row{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .feature-col{
-        display: flex;
+    padding: 60px 0;
+    .container {
+        .row {
+            .col-sm-12 {
+                h1 {
+                    color: @gray-dark;
+                }
+                p {
+                    color: @gray-dark;
+                }
+            }
+        }
+    
+        .feature-row {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .feature-col{
+            display: flex;
+        }
     }
 }

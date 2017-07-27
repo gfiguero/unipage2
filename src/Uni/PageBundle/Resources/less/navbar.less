@@ -1,69 +1,19 @@
 @import "../../../../../vendor/bower_components/bootstrap/less/navbar.less";
-.navbar-custom { 
-    background: #333;
+.navbar-scroll { 
+    background: @gray-darker;
     border-color: transparent;
+    a {
+        .transition(all .3s ease);
+    }
     @media (min-width: 768px) {
         background: transparent;
         border-color: transparent;
         padding: 25px 0;
-        transition: padding .3s;
     }
-    .navbar-collapse-custom {
-        border-color: rgba(255,255,255,.02);
-    }
-    .navbar-nav-custom {
-        >.active {
-            > a {
-                color: white;
-                background-color: slategray;
-                border-radius: 3px;
-                &:focus,
-                &:active,
-                &:hover {
-                    color: white;
-                    background-color: #b23068;
-                    border-radius: 3px;
-                }
-            }
-           
-        }
-        > li {
-            > a {
-                font-size: 18px;
-                font-weight: bolder;
-                color: white;  
-                &:hover,
-                &:focus,
-                &:active {
-                    color: slategray;
-                    background-color: transparent;
-                } 
-            }
-        } 
-    }
-    .navbar-brand-custom {
-        color: white; 
+    .navbar-brand {
         &:hover,
-        &:focus,
-        &:active {
-            color: white;
-        }
-        @media (min-width: 768px) {       
-            font-size: 2em;
-            color: white; 
-            transition: all .3s;
-        } 
-    }
-    .navbar-toggle-custom {
-        background-color: slategray;
-        border-color: slategray;
-        &:hover,
-        &:focus,
-        &:active {
-            background-color: slategray;
-        }
-        .icon-bar {
-            background-color: white;
+        &:focus {
+            color: @brand-primary;
         }
     }
 }
@@ -75,10 +25,5 @@
     padding: 0;
     @media (min-width: 768px) {
         padding: 10px 0;
-    }
-    .navbar-brand-custom {
-        @media (min-width: 768px) {
-            font-size: 1.5em;
-        }
     }
 }
