@@ -16,7 +16,9 @@ class PageController extends Controller
     public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
+        $user = $em->getRepository('UniAdminBundle:User')->findOneByAbsoluteurl($this->getRequest()->getHost());
         return $this->render('UniPageBundle:Page:index.html.twig', array(
+            'user' => $user,
         ));
     }
 }

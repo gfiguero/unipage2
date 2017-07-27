@@ -13,11 +13,6 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class FeatureController extends Controller
 {
-
-    /**
-     * Lists all Feature entities.
-     *
-     */
     public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
@@ -34,10 +29,6 @@ class FeatureController extends Controller
         ));
     }
 
-    /**
-     * Creates a new Feature entity.
-     *
-     */
     public function newAction(Request $request)
     {
         $feature = new Feature();
@@ -50,7 +41,7 @@ class FeatureController extends Controller
                 $em->persist($feature);
                 $em->flush();
                 $request->getSession()->getFlashBag()->add( 'success', 'feature.new.flash' );
-                return $this->redirect($this->generateUrl('page_feature_index'));
+                return $this->redirect($this->generateUrl('panel_feature_index'));
             }
         }
 
@@ -59,24 +50,6 @@ class FeatureController extends Controller
         ));
     }
 
-
-    /**
-     * Finds and displays a Feature entity.
-     *
-     */
-    public function showAction(Feature $feature)
-    {
-        $deleteForm = $this->createDeleteForm($feature);
-        return $this->render('UniPageBundle:Feature:show.html.twig', array(
-            'feature' => $feature,
-            'deleteForm' => $deleteForm->createView(),
-        ));
-    }
-
-    /**
-     * Displays a form to edit an existing Feature entity.
-     *
-     */
     public function editAction(Request $request, Feature $feature)
     {
         $editForm = $this->createForm(new FeatureType(), $feature);
@@ -89,7 +62,7 @@ class FeatureController extends Controller
                 $em->persist($feature);
                 $em->flush();
                 $request->getSession()->getFlashBag()->add( 'success', 'feature.edit.flash' );
-                return $this->redirect($this->generateUrl('page_feature_index'));
+                return $this->redirect($this->generateUrl('panel_feature_index'));
             }
         }
 
@@ -100,10 +73,6 @@ class FeatureController extends Controller
         ));
     }
 
-    /**
-     * Deletes a Feature entity.
-     *
-     */
     public function deleteAction(Request $request, Feature $feature)
     {
         $deleteForm = $this->createDeleteForm($feature);
@@ -116,7 +85,7 @@ class FeatureController extends Controller
             $request->getSession()->getFlashBag()->add( 'danger', 'feature.delete.flash' );
         }
 
-        return $this->redirect($this->generateUrl('page_feature_index'));
+        return $this->redirect($this->generateUrl('panel_feature_index'));
     }
 
     /**
@@ -129,7 +98,7 @@ class FeatureController extends Controller
     private function createDeleteForm(Feature $feature)
     {
         return $this->createFormBuilder()
-            ->setAction($this->generateUrl('page_feature_delete', array('id' => $feature->getId())))
+            ->setAction($this->generateUrl('panel_feature_delete', array('id' => $feature->getId())))
             ->setMethod('DELETE')
             ->getForm()
         ;

@@ -5,8 +5,8 @@
 
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h1 class="page-header contact-title">{{ 'contact.title'|trans }}</h1>
-                    <p>{{ 'contact.subtitle'|trans }}</p>
+                    <h1 class="page-header contact-title">{{ user.contacttitle }}</h1>
+                    <p>{{ user.contactcontent }}</p>
                 </div>
             </div>
 
@@ -18,7 +18,7 @@
                                 <div class="col-xs-3 text-left">
                                     {{ icon('phone fa-fw fa-2x') }}
                                 </div>
-                                <div class="col-xs-9 text-right"><p>+56 9 82785909</p></div>
+                                <div class="col-xs-9 text-right"><p>{{ user.contactphone }}</p></div>
                             </div>
                         </div>
                     </div>
@@ -28,7 +28,7 @@
                                 <div class="col-xs-3 text-left">
                                     {{ icon('envelope fa-fw fa-2x') }}
                                 </div>
-                                <div class="col-xs-9 text-right"><p>contacto@unisign.cl</p></div>
+                                <div class="col-xs-9 text-right"><p>{{ user.contactemail }}</p></div>
                             </div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                                 <div class="col-xs-3 text-left">
                                     {{ icon('map-marker fa-fw fa-2x') }}
                                 </div>
-                                <div class="col-xs-9 text-right"><p>Carmen 446 Depto 2608</p></div>
+                                <div class="col-xs-9 text-right"><p>{{ user.contactaddress }}</p></div>
                             </div>
                         </div>
                     </div>

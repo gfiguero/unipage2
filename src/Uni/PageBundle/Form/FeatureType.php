@@ -13,24 +13,19 @@ class FeatureType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder 
+        $builder
             ->add('title', null, array(
                 'label' => 'feature.form.title',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
-            )) 
+            ))
             ->add('content', null, array(
                 'label' => 'feature.form.content',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
-            )) 
+            ))
             ->add('image', null, array(
                 'label' => 'feature.form.image',
-                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
-                'translation_domain' => 'UniAdminBundle',
-            )) 
-            ->add('user', null, array(
-                'label' => 'feature.form.user',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
             ))
