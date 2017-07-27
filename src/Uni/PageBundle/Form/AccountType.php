@@ -13,49 +13,54 @@ class AccountType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder
+       $builder 
             ->add('brand', null, array(
                 'label' => 'user.form.brand',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
             ))
-            ->add('contactname', null, array(
-                'label' => 'user.form.contactname',
+            ->add('name', null, array(
+                'label' => 'user.form.name',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
             ))
-            ->add('contactemail', null, array(
-                'label' => 'user.form.contactemail',
+            ->add('domain', null, array(
+                'label' => 'user.form.domain',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
             ))
-            ->add('contactphone', null, array(
-                'label' => 'user.form.contactphone',
+            ->add('clientname', null, array(
+                'label' => 'user.form.clientname',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
             ))
-            ->add('contactaddress', null, array(
-                'label' => 'user.form.contactaddress',
+            ->add('clientphone', null, array(
+                'label' => 'user.form.clientphone',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
             ))
-            ->add('absoluteurl', null, array(
-                'label' => 'user.form.absoluteurl',
+            ->add('clientemail', null, array(
+                'label' => 'user.form.clientemail',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
             ))
-            ->add('pagetitle', null, array(
-                'label' => 'user.form.pagetitle',
+            ->add('clientaddress', null, array(
+                'label' => 'user.form.clientaddress',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
             ))
-            ->add('pagesubtitle', null, array(
-                'label' => 'user.form.pagesubtitle',
+            ->add('maintitle', null, array(
+                'label' => 'user.form.maintitle',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
             ))
-            ->add('pagecalltoaction', null, array(
-                'label' => 'user.form.pagecalltoaction',
+            ->add('mainsubtitle', null, array(
+                'label' => 'user.form.mainsubtitle',
+                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
+                'translation_domain' => 'UniAdminBundle',
+            ))
+            ->add('maincalltoaction', null, array(
+                'label' => 'user.form.maincalltoaction',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
             ))
@@ -86,6 +91,21 @@ class AccountType extends AbstractType
             ))
             ->add('contactcontent', null, array(
                 'label' => 'user.form.contactcontent',
+                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
+                'translation_domain' => 'UniAdminBundle',
+            ))
+            ->add('contactphone', null, array(
+                'label' => 'user.form.contactphone',
+                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
+                'translation_domain' => 'UniAdminBundle',
+            ))
+            ->add('contactemail', null, array(
+                'label' => 'user.form.contactemail',
+                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
+                'translation_domain' => 'UniAdminBundle',
+            ))
+            ->add('contactaddress', null, array(
+                'label' => 'user.form.contactaddress',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
             ))

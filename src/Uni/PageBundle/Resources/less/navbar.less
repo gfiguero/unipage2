@@ -1,31 +1,29 @@
 @import "../../../../../vendor/bower_components/bootstrap/less/navbar.less";
 .navbar-scroll { 
-    background: @gray-darker;
+    background: rgba(0, 0, 0, 0.5);
     border-color: transparent;
-    a {
-        .transition(all .3s ease);
-    }
-    @media (min-width: 768px) {
-        background: transparent;
-        border-color: transparent;
-        padding: 25px 0;
-        .transition(all .3s ease);
-    }
     .navbar-brand {
-        padding: 10px 15px;
+        height: 25px;
+    }
+    .navbar-brand, .navbar-nav > li > a {
+        .transition(all 0.3s ease);
         &:hover,
         &:focus {
-            color: @brand-primary;
+            background-color: @brand-primary;
+            color: white;
+        }
+    }
+    @media (min-width: 768px) {
+        .navbar-brand, .navbar-nav > li > a {
+            padding: 30px;
         }
     }
 }
 
 .affix {
-    background: #333;
-    border-color: transparent;
-    transition: .3s;
-    padding: 0;
     @media (min-width: 768px) {
-        padding: 10px 0;
+        .navbar-brand, .navbar-nav > li > a {
+            padding: 20px;
+        }
     }
 }

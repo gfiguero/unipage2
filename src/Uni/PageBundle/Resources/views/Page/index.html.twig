@@ -6,7 +6,7 @@
 {% use 'UniPageBundle:Page:contact.html.twig' %}
 {% use 'UniPageBundle:Page:footer.html.twig' %}
 
-{% block title %}{% endblock %}
+{% block title %}{{ user.brand }}{% endblock %}
 
 {% block body %}
     {% block header %}{{ parent() }}{% endblock %}
@@ -15,7 +15,4 @@
     {% block feature %}{{ parent() }}{% endblock %}
     {% block contact %}{{ parent() }}{% endblock %}
     {% block footer %}{{ parent() }}{% endblock %}
-{% endblock %}
-
-{% block stylesheet %}
 {% endblock %}

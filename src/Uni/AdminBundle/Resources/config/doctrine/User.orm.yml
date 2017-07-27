@@ -17,36 +17,41 @@ Uni\AdminBundle\Entity\User:
             type: string
             length: 100
             nullable: true
-        contactname:
-            type: string
-            length: 200
-            nullable: true
-        contactemail:
+        name:
             type: string
             length: 100
             nullable: true
-        contactphone:
-            type: string
-            length: 20
-            nullable: true
-        contactaddress:
-            type: string
-            length: 100
-            nullable: true
-        absoluteurl:
+        domain:
             type: string
             length: 100
             nullable: true
 
-        pagetitle:
-            type: string
-            length: 20
-            nullable: true
-        pagesubtitle:
+        clientname:
             type: string
             length: 100
             nullable: true
-        pagecalltoaction:
+        clientphone:
+            type: string
+            length: 20
+            nullable: true
+        clientemail:
+            type: string
+            length: 100
+            nullable: true
+        clientaddress:
+            type: string
+            length: 100
+            nullable: true
+
+        maintitle:
+            type: string
+            length: 20
+            nullable: true
+        mainsubtitle:
+            type: string
+            length: 100
+            nullable: true
+        maincalltoaction:
             type: string
             length: 20
             nullable: true
@@ -73,6 +78,18 @@ Uni\AdminBundle\Entity\User:
             nullable: true
         contactcontent:
             type: text
+            nullable: true
+        contactphone:
+            type: string
+            length: 20
+            nullable: true
+        contactemail:
+            type: string
+            length: 100
+            nullable: true
+        contactaddress:
+            type: string
+            length: 100
             nullable: true
 
         created_at:

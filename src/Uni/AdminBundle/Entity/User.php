@@ -643,4 +643,236 @@ class User extends BaseUser
     {
         return $this->features;
     }
+    /**
+     * @var string
+     */
+    private $domain;
+
+    /**
+     * @var string
+     */
+    private $clientname;
+
+    /**
+     * @var string
+     */
+    private $clientphone;
+
+    /**
+     * @var string
+     */
+    private $clientemail;
+
+    /**
+     * @var string
+     */
+    private $clientaddress;
+
+    /**
+     * @var string
+     */
+    private $maintitle;
+
+    /**
+     * @var string
+     */
+    private $mainsubtitle;
+
+    /**
+     * @var string
+     */
+    private $maincalltoaction;
+
+
+    /**
+     * Set domain
+     *
+     * @param string $domain
+     *
+     * @return User
+     */
+    public function setDomain($domain)
+    {
+        $this->domain = $domain;
+
+        return $this;
+    }
+
+    /**
+     * Get domain
+     *
+     * @return string
+     */
+    public function getDomain()
+    {
+        return $this->domain;
+    }
+
+    /**
+     * Set clientname
+     *
+     * @param string $clientname
+     *
+     * @return User
+     */
+    public function setClientname($clientname)
+    {
+        $this->clientname = $clientname;
+
+        return $this;
+    }
+
+    /**
+     * Get clientname
+     *
+     * @return string
+     */
+    public function getClientname()
+    {
+        return $this->clientname;
+    }
+
+    /**
+     * Set clientphone
+     *
+     * @param string $clientphone
+     *
+     * @return User
+     */
+    public function setClientphone($clientphone)
+    {
+        $this->clientphone = $clientphone;
+
+        return $this;
+    }
+
+    /**
+     * Get clientphone
+     *
+     * @return string
+     */
+    public function getClientphone()
+    {
+        return $this->clientphone;
+    }
+
+    /**
+     * Set clientemail
+     *
+     * @param string $clientemail
+     *
+     * @return User
+     */
+    public function setClientemail($clientemail)
+    {
+        $this->clientemail = $clientemail;
+
+        return $this;
+    }
+
+    /**
+     * Get clientemail
+     *
+     * @return string
+     */
+    public function getClientemail()
+    {
+        return $this->clientemail;
+    }
+
+    /**
+     * Set clientaddress
+     *
+     * @param string $clientaddress
+     *
+     * @return User
+     */
+    public function setClientaddress($clientaddress)
+    {
+        $this->clientaddress = $clientaddress;
+
+        return $this;
+    }
+
+    /**
+     * Get clientaddress
+     *
+     * @return string
+     */
+    public function getClientaddress()
+    {
+        return $this->clientaddress;
+    }
+
+    /**
+     * Set maintitle
+     *
+     * @param string $maintitle
+     *
+     * @return User
+     */
+    public function setMaintitle($maintitle)
+    {
+        $this->maintitle = $maintitle;
+
+        return $this;
+    }
+
+    /**
+     * Get maintitle
+     *
+     * @return string
+     */
+    public function getMaintitle()
+    {
+        return $this->maintitle;
+    }
+
+    /**
+     * Set mainsubtitle
+     *
+     * @param string $mainsubtitle
+     *
+     * @return User
+     */
+    public function setMainsubtitle($mainsubtitle)
+    {
+        $this->mainsubtitle = $mainsubtitle;
+
+        return $this;
+    }
+
+    /**
+     * Get mainsubtitle
+     *
+     * @return string
+     */
+    public function getMainsubtitle()
+    {
+        return $this->mainsubtitle;
+    }
+
+    /**
+     * Set maincalltoaction
+     *
+     * @param string $maincalltoaction
+     *
+     * @return User
+     */
+    public function setMaincalltoaction($maincalltoaction)
+    {
+        $this->maincalltoaction = $maincalltoaction;
+
+        return $this;
+    }
+
+    /**
+     * Get maincalltoaction
+     *
+     * @return string
+     */
+    public function getMaincalltoaction()
+    {
+        return $this->maincalltoaction;
+    }
 }

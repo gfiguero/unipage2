@@ -41,22 +41,24 @@
                                 <dd>{% if user.id %}{{ user.id }}{% endif %}</dd>
                             <dt>{{ 'user.form.brand'|trans }}</dt>
                                 <dd>{% if user.brand %}{{ user.brand }}{% endif %}</dd>
-                            <dt>{{ 'user.form.contactname'|trans }}</dt>
-                                <dd>{% if user.contactname %}{{ user.contactname }}{% endif %}</dd>
-                            <dt>{{ 'user.form.contactemail'|trans }}</dt>
-                                <dd>{% if user.contactemail %}{{ user.contactemail }}{% endif %}</dd>
-                            <dt>{{ 'user.form.contactphone'|trans }}</dt>
-                                <dd>{% if user.contactphone %}{{ user.contactphone }}{% endif %}</dd>
-                            <dt>{{ 'user.form.contactaddress'|trans }}</dt>
-                                <dd>{% if user.contactaddress %}{{ user.contactaddress }}{% endif %}</dd>
-                            <dt>{{ 'user.form.absoluteurl'|trans }}</dt>
-                                <dd>{% if user.absoluteurl %}{{ user.absoluteurl }}{% endif %}</dd>
-                            <dt>{{ 'user.form.pagetitle'|trans }}</dt>
-                                <dd>{% if user.pagetitle %}{{ user.pagetitle }}{% endif %}</dd>
-                            <dt>{{ 'user.form.pagesubtitle'|trans }}</dt>
-                                <dd>{% if user.pagesubtitle %}{{ user.pagesubtitle }}{% endif %}</dd>
-                            <dt>{{ 'user.form.pagecalltoaction'|trans }}</dt>
-                                <dd>{% if user.pagecalltoaction %}{{ user.pagecalltoaction }}{% endif %}</dd>
+                            <dt>{{ 'user.form.name'|trans }}</dt>
+                                <dd>{% if user.name %}{{ user.name }}{% endif %}</dd>
+                            <dt>{{ 'user.form.domain'|trans }}</dt>
+                                <dd>{% if user.domain %}{{ user.domain }}{% endif %}</dd>
+                            <dt>{{ 'user.form.clientname'|trans }}</dt>
+                                <dd>{% if user.clientname %}{{ user.clientname }}{% endif %}</dd>
+                            <dt>{{ 'user.form.clientphone'|trans }}</dt>
+                                <dd>{% if user.clientphone %}{{ user.clientphone }}{% endif %}</dd>
+                            <dt>{{ 'user.form.clientemail'|trans }}</dt>
+                                <dd>{% if user.clientemail %}{{ user.clientemail }}{% endif %}</dd>
+                            <dt>{{ 'user.form.clientaddress'|trans }}</dt>
+                                <dd>{% if user.clientaddress %}{{ user.clientaddress }}{% endif %}</dd>
+                            <dt>{{ 'user.form.maintitle'|trans }}</dt>
+                                <dd>{% if user.maintitle %}{{ user.maintitle }}{% endif %}</dd>
+                            <dt>{{ 'user.form.mainsubtitle'|trans }}</dt>
+                                <dd>{% if user.mainsubtitle %}{{ user.mainsubtitle }}{% endif %}</dd>
+                            <dt>{{ 'user.form.maincalltoaction'|trans }}</dt>
+                                <dd>{% if user.maincalltoaction %}{{ user.maincalltoaction }}{% endif %}</dd>
                             <dt>{{ 'user.form.abouttitle'|trans }}</dt>
                                 <dd>{% if user.abouttitle %}{{ user.abouttitle }}{% endif %}</dd>
                             <dt>{{ 'user.form.aboutcontent'|trans }}</dt>
@@ -69,6 +71,12 @@
                                 <dd>{% if user.contacttitle %}{{ user.contacttitle }}{% endif %}</dd>
                             <dt>{{ 'user.form.contactcontent'|trans }}</dt>
                                 <dd>{% if user.contactcontent %}{{ user.contactcontent }}{% endif %}</dd>
+                            <dt>{{ 'user.form.contactphone'|trans }}</dt>
+                                <dd>{% if user.contactphone %}{{ user.contactphone }}{% endif %}</dd>
+                            <dt>{{ 'user.form.contactemail'|trans }}</dt>
+                                <dd>{% if user.contactemail %}{{ user.contactemail }}{% endif %}</dd>
+                            <dt>{{ 'user.form.contactaddress'|trans }}</dt>
+                                <dd>{% if user.contactaddress %}{{ user.contactaddress }}{% endif %}</dd>
                             <dt>{{ 'user.form.created_at'|trans }}</dt>
                                 <dd>{% if user.createdat %}{{ user.createdat|localizeddate('full', 'full', 'es_ES', 'America/Santiago', "d 'de' LLLL 'de' Y - HH:mm") }}&nbsp;({{ user.createdat|ago }}){% endif %}</dd>
                             <dt>{{ 'user.form.updated_at'|trans }}</dt>
