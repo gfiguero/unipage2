@@ -6860,7 +6860,7 @@ section#login {
   padding: 120px 0;
   display: flex;
   align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://static.pexels.com/photos/487498/pexels-photo-487498.jpeg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://static.pexels.com/photos/487498/pexels-photo-487498.jpeg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
