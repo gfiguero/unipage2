@@ -4,7 +4,7 @@
     border-color: transparent;
     .navbar-brand {
         .transition(all 0.3s ease);
-        height: 25px;
+        height: 50px;
         &:hover,
         &:focus {
             color: white;
@@ -19,6 +19,9 @@
         }
     }
     @media (min-width: 768px) {
+        .navbar-brand {
+            height: 85px;
+        }
         .navbar-brand, .navbar-nav > li > a {
             padding: 30px;
         }
@@ -27,6 +30,9 @@
 
 .affix {
     @media (min-width: 768px) {
+        .navbar-brand {
+            height: 65px;
+        }
         .navbar-brand, .navbar-nav > li > a {
             padding: 20px;
         }

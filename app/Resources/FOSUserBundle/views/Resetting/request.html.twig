@@ -5,19 +5,25 @@
 {% block title %}Reestablecer Contraseña{% endblock %}
 
 {% block controlpanel %}
-    <section class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <h1 class="page-header">Restablecer Contraseña</h1>
-                <form action="{{ path('fos_user_resetting_send_email') }}" method="POST" role="form" class="fos_user_resetting_request">
-                    <div class="form-group">
-                        <label for="username" class="control-label">{{ 'resetting.request.username'|trans }}</label>
-                        <input type="text" id="username" name="username" required="required" class="form-control" />
+    <section id="uiuser">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="panel panel-default uiuser-panel">
+                        <div class="panel-body">
+                            <h1 class="page-header">Restablecer Contraseña</h1>
+                            <form action="{{ path('fos_user_resetting_send_email') }}" method="POST" role="form" class="fos_user_resetting_request">
+                                <div class="form-group">
+                                    <label for="username" class="control-label">{{ 'resetting.request.username'|trans }}</label>
+                                    <input type="text" id="username" name="username" required="required" class="form-control uiuser-form-control" />
+                                </div>
+                                <div class="form-group pull-right">
+                                    <input type="submit" value="{{ 'resetting.request.submit'|trans }}" class="btn btn-default btn-primary" />
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div class="form-group pull-right">
-                        <input type="submit" value="{{ 'resetting.request.submit'|trans }}" class="btn btn-default" />
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
     </section>

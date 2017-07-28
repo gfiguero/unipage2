@@ -4709,7 +4709,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  height: 25px;
+  height: 50px;
 }
 .navbar-scroll .navbar-brand:hover,
 .navbar-scroll .navbar-brand:focus {
@@ -4726,12 +4726,18 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   color: white;
 }
 @media (min-width: 768px) {
+  .navbar-scroll .navbar-brand {
+    height: 85px;
+  }
   .navbar-scroll .navbar-brand,
   .navbar-scroll .navbar-nav > li > a {
     padding: 30px;
   }
 }
 @media (min-width: 768px) {
+  .affix .navbar-brand {
+    height: 65px;
+  }
   .affix .navbar-brand,
   .affix .navbar-nav > li > a {
     padding: 20px;
