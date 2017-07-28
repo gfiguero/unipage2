@@ -3,9 +3,14 @@
     background: rgba(0, 0, 0, 0.5);
     border-color: transparent;
     .navbar-brand {
+        .transition(all 0.3s ease);
         height: 25px;
+        &:hover,
+        &:focus {
+            color: white;
+        }
     }
-    .navbar-brand, .navbar-nav > li > a {
+    .navbar-nav > li > a {
         .transition(all 0.3s ease);
         &:hover,
         &:focus {

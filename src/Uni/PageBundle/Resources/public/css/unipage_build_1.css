@@ -4706,17 +4706,21 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   border-color: transparent;
 }
 .navbar-scroll .navbar-brand {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   height: 25px;
 }
-.navbar-scroll .navbar-brand,
+.navbar-scroll .navbar-brand:hover,
+.navbar-scroll .navbar-brand:focus {
+  color: white;
+}
 .navbar-scroll .navbar-nav > li > a {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.navbar-scroll .navbar-brand:hover,
 .navbar-scroll .navbar-nav > li > a:hover,
-.navbar-scroll .navbar-brand:focus,
 .navbar-scroll .navbar-nav > li > a:focus {
   background-color: #337ab7;
   color: white;
@@ -6924,5 +6928,5 @@ section#contact .row.contact-info .contact-panel {
 }
 footer#footer {
   background: #333333;
-  padding: 120px 0;
+  padding: 80px 0;
 }
