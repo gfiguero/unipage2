@@ -28,6 +28,7 @@ class AppKernel extends Kernel
             new Uni\AdminBundle\UniAdminBundle(),
             new Uni\PageBundle\UniPageBundle(),
 //            new Uni\UserBundle\UniUserBundle(),
+            new Uni\ControlPanelBundle\UniControlPanelBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

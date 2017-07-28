@@ -1,0 +1,11 @@
+{% extends 'UniControlPanelBundle:Base:base.html.twig' %}
+{% use 'UniControlPanelBundle:Base:header.html.twig' %}
+{% use 'UniControlPanelBundle:Base:footer.html.twig' %}
+{% use 'UniControlPanelBundle:Base:flashbag.html.twig' %}
+
+{% block body %}
+    {% block header %}{{ parent() }}{% endblock %}
+    {% block controlpanel %}{% endblock %}
+    {% block footer %}{{ parent() }}{% endblock %}
+{% endblock %}
+

@@ -1,0 +1,5 @@
+user:
+    form:
+        brand: Marca
+        name: Nombre o razón social
+        domain: Dominio de internet

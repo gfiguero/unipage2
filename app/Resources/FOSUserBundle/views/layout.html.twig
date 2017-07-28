@@ -1,11 +1,10 @@
-{% extends 'UniPageBundle:Panel:base.html.twig' %}
-{% use 'UniPageBundle:Panel:flashbag.html.twig' %}
-{% use 'UniPageBundle:Panel:header.html.twig' %}
-{% use 'UniPageBundle:Page:footer.html.twig' %}
+{% extends 'UniControlPanelBundle:Base:base.html.twig' %}
+{% use 'UniControlPanelBundle:Base:flashbag.html.twig' %}
+{% use 'UniControlPanelBundle:Base:header.html.twig' %}
+{% use 'UniControlPanelBundle:Base:footer.html.twig' %}
 
 {% block body %}
     {% block header %}{{ parent() }}{% endblock %}
-    {% block flashbag %}{{ parent() }}{% endblock %}
-    {% block user %}{% endblock %}
+    {% block controlpanel %}{% endblock %}
     {% block footer %}{{ parent() }}{% endblock %}
 {% endblock %}

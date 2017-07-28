@@ -11,13 +11,13 @@ assetic:
     read_from: %kernel.root_dir%/..
     write_to: %kernel.root_dir%/..
     assets:
-        uni_page_css:
-            inputs:
-                - src/Uni/PageBundle/Resources/less/build.less
-            filters:
-                - less
-                - cssrewrite
-            output: src/Uni/PageBundle/Resources/public/css/unipage.css
+#        uni_page_css:
+#            inputs:
+#                - src/Uni/PageBundle/Resources/less/build.less
+#            filters:
+#                - less
+#                - cssrewrite
+#            output: src/Uni/PageBundle/Resources/public/css/unipage.css
 #        uni_admin_css:
 #            inputs:
 #                - src/Uni/AdminBundle/Resources/less/build.less
@@ -25,3 +25,11 @@ assetic:
 #                - less
 #                - cssrewrite
 #            output: src/Uni/AdminBundle/Resources/public/css/uniadmin.css
+        uni_controlpanel_css:
+            inputs:
+                - src/Uni/ControlPanelBundle/Resources/less/build.less
+            filters:
+                - less
+                - cssrewrite
+            output: src/Uni/ControlPanelBundle/Resources/public/css/unicontrolpanel.css
+

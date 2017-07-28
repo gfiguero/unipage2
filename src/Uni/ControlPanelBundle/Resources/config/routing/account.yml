@@ -1,0 +1,4 @@
+controlpanel_account_edit:
+    path:     /edit
+    defaults: { _controller: "UniControlPanelBundle:Account:edit" }
+    methods:  [GET, POST]

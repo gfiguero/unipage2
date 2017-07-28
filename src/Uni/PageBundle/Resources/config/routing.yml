@@ -1,11 +1,3 @@
 uni_page_index:
     path: /
     defaults: { _controller: UniPageBundle:Page:index }
-
-uni_page_feature:
-    resource: "@UniPageBundle/Resources/config/routing/feature.yml"
-    prefix:   /panel/feature
-
-uni_page_panel_account:
-    resource: "@UniPageBundle/Resources/config/routing/account.yml"
-    prefix:   /panel/account

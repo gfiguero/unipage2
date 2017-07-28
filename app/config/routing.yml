@@ -1,3 +1,7 @@
+uni_control_panel:
+    resource: "@UniControlPanelBundle/Resources/config/routing.yml"
+    prefix:   /controlpanel
+
 #kore_user:
 #    resource: "@UniUserBundle/Resources/config/routing.yml"
 #    prefix:   /

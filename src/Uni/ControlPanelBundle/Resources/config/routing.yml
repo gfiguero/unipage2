@@ -1,0 +1,7 @@
+uni_control_panel_feature:
+    resource: "@UniControlPanelBundle/Resources/config/routing/feature.yml"
+    prefix:   /feature
+
+uni_control_panel_account:
+    resource: "@UniControlPanelBundle/Resources/config/routing/account.yml"
+    prefix:   /account

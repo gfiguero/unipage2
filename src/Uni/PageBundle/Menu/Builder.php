@@ -27,8 +27,8 @@ class Builder implements ContainerAwareInterface
 //        $topmenu->addChild('topmenu.product', array('uri' => '#'))->setExtras(array('translation_domain' => 'UniPageBundle'))->setLinkAttribute('class', 'page-scroll');
 
         if ($checker->isGranted('ROLE_USER')) {
-            $topmenu->addChild('topmenu.account', array('route' => 'panel_account_edit'))->setExtras(array('translation_domain' => 'UniPageBundle'));
-            $topmenu->addChild('topmenu.feature', array('route' => 'panel_feature_index'))->setExtras(array('translation_domain' => 'UniPageBundle'));
+            $topmenu->addChild('topmenu.account', array('route' => 'controlpanel_account_edit'))->setExtras(array('translation_domain' => 'UniPageBundle'));
+            $topmenu->addChild('topmenu.feature', array('route' => 'controlpanel_feature_index'))->setExtras(array('translation_domain' => 'UniPageBundle'));
 
             $topmenu->addChild('topmenu.user');
             $topmenu['topmenu.user']->setUri('#');

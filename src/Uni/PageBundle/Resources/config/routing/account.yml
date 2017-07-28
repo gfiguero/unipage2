@@ -1,4 +1,0 @@
-panel_account_edit:
-    path:     /edit
-    defaults: { _controller: "UniPageBundle:Panel:editAccount" }
-    methods:  [GET, POST]
