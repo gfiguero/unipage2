@@ -12,6 +12,9 @@ Uni\AdminBundle\Entity\User:
         features:
             targetEntity: Uni\AdminBundle\Entity\Feature
             mappedBy: user
+        photographies:
+            targetEntity: Uni\AdminBundle\Entity\Photography
+            mappedBy: user
     fields:
         brand:
             type: string

@@ -17,7 +17,12 @@ class PageController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $user = $em->getRepository('UniAdminBundle:User')->findOneByDomain($this->getRequest()->getHost());
+        $photographies = $em->getRepository('UniAdminBundle:Photography')->findByUser($user);
+        $features = $em->getRepository('UniAdminBundle:Feature')->findByUser($user);
+        shuffle($photographies);
         return $this->render('UniPageBundle:Page:index.html.twig', array(
+            'features' => $features,
+            'photographies' => $photographies,
             'user' => $user,
         ));
     }

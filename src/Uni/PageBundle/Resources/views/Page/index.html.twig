@@ -16,3 +16,14 @@
     {% block contact %}{{ parent() }}{% endblock %}
     {% block footer %}{{ parent() }}{% endblock %}
 {% endblock %}
+
+{% block stylesheet %}
+    {% if photographies is not empty %}
+        {% set photography1 = attribute(photographies, 1) %}
+        <style type="text/css">main#main {background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('{{ vich_uploader_asset(photography1, 'imagefile', 'Uni\\AdminBundle\\Entity\\Photography')|imagine_filter('main_photography') }}');}</style>
+        {% if photographies|length > 1 %}
+            {% set photography2 = attribute(photographies, 2) %}
+            <style type="text/css">section#contact {background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('{{ vich_uploader_asset(photography2, 'imagefile', 'Uni\\AdminBundle\\Entity\\Photography')|imagine_filter('main_photography') }}');}</style>
+        {% endif %}
+    {% endif %}
+{% endblock %}

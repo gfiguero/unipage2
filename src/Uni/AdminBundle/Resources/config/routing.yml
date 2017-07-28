@@ -6,3 +6,7 @@ uni_admin_feature:
     resource: "@UniAdminBundle/Resources/config/routing/feature.yml"
     prefix:   /feature
 
+uni_admin_photography:
+    resource: "@UniAdminBundle/Resources/config/routing/photography.yml"
+    prefix:   /photography
+

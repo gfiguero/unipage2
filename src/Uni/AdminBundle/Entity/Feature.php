@@ -2,8 +2,14 @@
 
 namespace Uni\AdminBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+
 /**
  * Feature
+ * @ORM\Entity
+ * @Vich\Uploadable
  */
 class Feature
 {
@@ -26,6 +32,12 @@ class Feature
      * @var string
      */
     private $image;
+
+    /**
+     * @Vich\UploadableField(mapping="feature_photography", fileNameProperty="image")
+     * @var File
+     */
+    private $imagefile;
 
     /**
      * @var \DateTime
@@ -123,6 +135,30 @@ class Feature
     public function getImage()
     {
         return $this->image;
+    }
+
+    /**
+     * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile $image
+     *
+     * @return Photography
+     */
+    public function setImagefile(File $image = null)
+    {
+        $this->imagefile = $image;
+
+        if ($image) {
+            $this->updatedAt = new \DateTime();
+        }
+        
+        return $this;
+    }
+
+    /**
+     * @return File|null
+     */
+    public function getImagefile()
+    {
+        return $this->imagefile;
     }
 
     /**

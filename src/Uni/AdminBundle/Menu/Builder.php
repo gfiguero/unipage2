@@ -43,6 +43,13 @@ class Builder implements ContainerAwareInterface
             'admin_feature_edit',
         )));
 
+        $sidemenu->addChild('sidemenu.photography.root', array('route' => 'admin_photography_index'))->setExtras(array('translation_domain' => 'UniAdminBundle', 'routes' => array(
+            'admin_photography_index',
+            'admin_photography_new',
+            'admin_photography_show',
+            'admin_photography_edit',
+        )));
+
         return $sidemenu;
     }
 

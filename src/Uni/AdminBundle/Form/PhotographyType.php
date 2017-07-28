@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class FeatureType extends AbstractType
+class PhotographyType extends AbstractType
 {
     /**
      * {@inheritdoc}
@@ -14,23 +14,13 @@ class FeatureType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder 
-            ->add('title', null, array(
-                'label' => 'feature.form.title',
-                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
-                'translation_domain' => 'UniAdminBundle',
-            )) 
-            ->add('content', null, array(
-                'label' => 'feature.form.content',
-                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
-                'translation_domain' => 'UniAdminBundle',
-            )) 
             ->add('imagefile', 'file', array(
-                'label' => 'feature.form.image',
+                'label' => 'photography.form.image',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
             )) 
             ->add('user', null, array(
-                'label' => 'feature.form.user',
+                'label' => 'photography.form.user',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
             ))
@@ -43,7 +33,7 @@ class FeatureType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Uni\AdminBundle\Entity\Feature'
+            'data_class' => 'Uni\AdminBundle\Entity\Photography'
         ));
     }
 
@@ -52,7 +42,7 @@ class FeatureType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'uni_adminbundle_feature';
+        return 'uni_adminbundle_photography';
     }
 
 
