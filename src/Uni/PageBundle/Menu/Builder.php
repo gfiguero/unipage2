@@ -13,13 +13,15 @@ class Builder implements ContainerAwareInterface
 
     public function topMenu(FactoryInterface $factory, array $options)
     {
-        $checker = $this->container->get('security.authorization_checker');
-        $user = $this->container->get('security.token_storage')->getToken()->getUser();
+//        $checker = $this->container->get('security.authorization_checker');
+//        $user = $this->container->get('security.token_storage')->getToken()->getUser();
+        $user = $options['user'];
 
         $topmenu = $factory->createItem('root');
         $topmenu->setChildrenAttribute('class', 'nav navbar-nav navbar-nav-custom navbar-right');
         $topmenu->setChildrenAttribute('id', 'topmenu');
 
+        dump($user);
 //        $topmenu->addChild('topmenu.home', array('route' => 'uni_page_index'))->setExtras(array('translation_domain' => 'UniPageBundle'))->setLinkAttribute('class', 'page-scroll');
         $aboutLink = 'Nosotros';
         if ($user->getAboutTitle()) $aboutLink = $user->getAboutTitle();
