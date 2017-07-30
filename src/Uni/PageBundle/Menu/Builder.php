@@ -21,7 +21,6 @@ class Builder implements ContainerAwareInterface
         $topmenu->setChildrenAttribute('class', 'nav navbar-nav navbar-nav-custom navbar-right');
         $topmenu->setChildrenAttribute('id', 'topmenu');
 
-        dump($user);
 //        $topmenu->addChild('topmenu.home', array('route' => 'uni_page_index'))->setExtras(array('translation_domain' => 'UniPageBundle'))->setLinkAttribute('class', 'page-scroll');
         $aboutLink = 'Nosotros';
         if ($user->getAboutTitle()) $aboutLink = $user->getAboutTitle();
