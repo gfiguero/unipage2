@@ -4687,17 +4687,18 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .navbar-scroll {
   background-color: rgba(0, 0, 0, 0.5);
-  border-color: transparent;
+  border: none;
 }
 .navbar-scroll .navbar-brand {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  border: none;
   height: 50px;
 }
 .navbar-scroll .navbar-brand:hover,
 .navbar-scroll .navbar-brand:focus {
-  color: white;
+  color: #337ab7;
 }
 .navbar-scroll .navbar-nav > li > a {
   -webkit-transition: all 0.3s ease;
@@ -4710,21 +4711,17 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   color: white;
 }
 @media (min-width: 768px) {
-  .navbar-scroll .navbar-brand {
-    height: 85px;
-  }
   .navbar-scroll .navbar-brand,
   .navbar-scroll .navbar-nav > li > a {
+    height: 85px;
     padding: 30px;
   }
 }
 @media (min-width: 768px) {
-  .affix .navbar-brand {
-    height: 65px;
-  }
   .affix .navbar-brand,
   .affix .navbar-nav > li > a {
-    padding: 20px;
+    height: 70px;
+    padding: 22.5px;
   }
 }
 .breadcrumb {
