@@ -6,16 +6,20 @@
 {% use 'UniPageBundle:Page:contact.html.twig' %}
 {% use 'UniPageBundle:Page:footer.html.twig' %}
 
-{% if user %}
-{% block title %}{% if user.brand %}{{ user.brand|raw }}{% endif %}{% endblock %}
+
+{% block title %}{% if user %}{% if user.brand %}{{ user.brand|raw }}{% endif %}{% endif %}{% endblock %}
 
 {% block body %}
-    {% block header %}{{ parent() }}{% endblock %}
-    {% block main %}{{ parent() }}{% endblock %}
-    {% block about %}{{ parent() }}{% endblock %}
-    {% block feature %}{{ parent() }}{% endblock %}
-    {% block contact %}{{ parent() }}{% endblock %}
-    {% block footer %}{{ parent() }}{% endblock %}
+    {% if user %}
+        {% block header %}{{ parent() }}{% endblock %}
+        {% block main %}{{ parent() }}{% endblock %}
+        {% block about %}{{ parent() }}{% endblock %}
+        {% block feature %}{{ parent() }}{% endblock %}
+        {% block contact %}{{ parent() }}{% endblock %}
+        {% block footer %}{{ parent() }}{% endblock %}
+    {% else %}
+        {{ 'Inactive Host' }}
+    {% endif %}
 {% endblock %}
 
 {% block stylesheet %}
@@ -28,6 +32,3 @@
         {% endif %}
     {% endif %}
 {% endblock %}
-{% else %}
-    {{ 'Inactive Host' }}
-{% endif %}
