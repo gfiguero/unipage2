@@ -27,8 +27,6 @@ class Builder implements ContainerAwareInterface
 //        $topmenu->addChild('topmenu.product', array('uri' => '#'))->setExtras(array('translation_domain' => 'UniControlPanelBundle'))->setLinkAttribute('class', 'page-scroll');
 
         if ($checker->isGranted('ROLE_USER')) {
-            $topmenu->addChild('topmenu.account', array('route' => 'controlpanel_account_edit'))->setExtras(array('translation_domain' => 'UniControlPanelBundle'));
-            $topmenu->addChild('topmenu.feature', array('route' => 'controlpanel_feature_index'))->setExtras(array('translation_domain' => 'UniControlPanelBundle'));
 
             $topmenu->addChild('topmenu.user');
             $topmenu['topmenu.user']->setUri('#');
@@ -37,8 +35,14 @@ class Builder implements ContainerAwareInterface
             $topmenu['topmenu.user']->setExtras(array('dropdown' => true, 'translation_domain' => 'UniControlPanelBundle'));
             $topmenu['topmenu.user']->setChildrenAttributes(array('class' => 'dropdown-menu'));
 
-            $topmenu['topmenu.user']->addChild('topmenu.profile', array('route' => 'fos_user_profile_show'));
+            $topmenu['topmenu.user']->addChild('topmenu.profile', array('route' => 'fos_user_profile_edit'));
             $topmenu['topmenu.user']['topmenu.profile']->setExtras(array('translation_domain' => 'UniControlPanelBundle', 'icon' => 'user fa-fw'));
+
+            $topmenu['topmenu.user']->addChild('topmenu.feature', array('route' => 'controlpanel_feature_index'));
+            $topmenu['topmenu.user']['topmenu.feature']->setExtras(array('translation_domain' => 'UniControlPanelBundle', 'icon' => 'check-circle fa-fw'));
+
+            $topmenu['topmenu.user']->addChild('topmenu.account', array('route' => 'controlpanel_account_edit'));
+            $topmenu['topmenu.user']['topmenu.account']->setExtras(array('translation_domain' => 'UniControlPanelBundle', 'icon' => 'tasks fa-fw'));
 
             $topmenu['topmenu.user']->addChild('topmenu.change_password', array('route' => 'fos_user_change_password'));
             $topmenu['topmenu.user']['topmenu.change_password']->setExtras(array('translation_domain' => 'UniControlPanelBundle', 'icon' => 'unlock-alt fa-fw'));

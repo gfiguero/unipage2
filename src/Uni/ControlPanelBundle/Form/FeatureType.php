@@ -24,10 +24,11 @@ class FeatureType extends AbstractType
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniControlPanelBundle',
             ))
-            ->add('image', null, array(
+            ->add('imagefile', 'file', array(
                 'label' => 'feature.form.image',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniControlPanelBundle',
+                'required' => false,
             ))
         ;
     }

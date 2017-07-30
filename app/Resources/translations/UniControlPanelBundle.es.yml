@@ -1,5 +1,61 @@
+topmenu:
+    home: Inicio
+    profile: Mi Perfil
+    feature: Características
+    account: Configuración
+    change_password: Cambiar Password
+    logout: Salir
+
 user:
     form:
         brand: Marca
         name: Nombre o razón social
         domain: Dominio de internet
+        clientname: Nombre
+        clientphone: Teléfono
+        clientemail: Email
+        clientaddress: Dirección
+        maintitle: Título
+        mainsubtitle: Subtítulo
+        maincalltoaction: Botón
+        abouttitle: Título
+        aboutcontent: Contenido
+        featuretitle: Título
+        featurecontent: Contenido
+        contacttitle: Título
+        contactcontent: Contenido
+        contactphone: Teléfono
+        contactemail: Email
+        contactaddress: Dirección
+
+controlpanel:
+    account:
+        title: Panel de Control
+        submit: Guardar cambios
+    profile:
+        title: Perfil de Usuario
+        submit: Guardar cambios
+    feature:
+        submit: Guardar cambios
+
+feature:
+    index:
+        title: Características del Negocio
+        list: Lista de características
+        link: Volver a la lista
+    new:
+        link: Nueva característica
+        form: Nueva característica
+        submit: Guardar
+    edit:
+        form: Editar característica
+        submit: Guardar cambios
+    delete:
+        link: Eliminar característica
+        form: Eliminar característica
+        message: Los datos de la característica no podrán ser recuperados.
+        submit: Confirmar eliminación
+    form:
+        title: Título
+        content: Contenido
+        image: Imagen

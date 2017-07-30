@@ -14,3 +14,8 @@ liip_imagine:
             filters:
                 upscale: { min: [800, 600] }
                 thumbnail: { size: [800, 600], mode: outbound }
+        feature_photography_small:
+            quality: 75
+            filters:
+                upscale: { min: [160, 120] }
+                thumbnail: { size: [160, 120], mode: outbound }

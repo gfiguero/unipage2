@@ -1,22 +1,24 @@
-{% extends "@FOSUser/layout.html.twig" %}
+{% extends 'UniControlPanelBundle:Base:layout.html.twig' %}
 
-{% trans_default_domain 'FOSUserBundle' %}
+{% trans_default_domain 'UniControlPanelBundle' %}
 
-{% block title %}Perfil de Usuario{% endblock %}
+{% block title %}{{ 'controlpanel.profile.title'|trans }}{% endblock %}
 
 {% block controlpanel %}
-    <section class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <h1 class="page-header">Perfil de Usuario</h1>
-                {{ form_start(form, {'style' : 'horizontal', 'label_col' : 4 , 'widget_col' : 8, 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
-                    {{ form_widget(form) }}
-                    <div class="form-group">
-                        <div class="col-md-8 col-md-offset-4">
-                            <input type="submit" value="{{ 'profile.edit.submit'|trans }}" class="btn btn-default" />
+    <section id="controlpanel">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h1 class="page-header">{{ 'controlpanel.profile.title'|trans }}</h1>
+                    {{ form_start(form, {'style' : 'horizontal', 'label_col' : 4 , 'widget_col' : 8, 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
+                        {{ form_widget(form) }}
+                        <div class="form-group">
+                            <div class="col-md-8 col-md-offset-4">
+                                <input type="submit" value="{{ 'controlpanel.profile.submit'|trans }}" class="btn btn-default" />
+                            </div>
                         </div>
-                    </div>
-                {{ form_end(form) }}
+                    {{ form_end(form) }}
+                </div>
             </div>
         </div>
     </section>

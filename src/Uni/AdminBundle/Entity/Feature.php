@@ -147,7 +147,7 @@ class Feature
         $this->imagefile = $image;
 
         if ($image) {
-            $this->updatedAt = new \DateTime();
+            $this->updated_at = new \DateTime();
         }
         
         return $this;

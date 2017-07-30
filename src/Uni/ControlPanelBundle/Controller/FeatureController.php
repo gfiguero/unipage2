@@ -37,6 +37,8 @@ class FeatureController extends Controller
 
         if ($newForm->isSubmitted()) {
             if($newForm->isValid()) {
+                $user = $this->getUser();
+                $feature->setUser($user);
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($feature);
                 $em->flush();
@@ -58,6 +60,8 @@ class FeatureController extends Controller
 
         if ($editForm->isSubmitted()) {
             if($editForm->isValid()) {
+                $user = $this->getUser();
+                $feature->setUser($user);
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($feature);
                 $em->flush();
