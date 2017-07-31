@@ -21,6 +21,7 @@
     "font-awesome": "^4.7.0",
     "jquery-ui": "jqueryui#^1.12.1",
     "metismenu": "^2.7.0",
-    "bootstrap-fileinput": "^4.4.2"
+    "bootstrap-fileinput": "^4.4.2",
+    "jquery-minicolors": "2.2.6"
   }
 }
