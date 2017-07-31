@@ -799,4 +799,33 @@ class User extends BaseUser
     {
         return $this->brand_secondary_color;
     }
+    /**
+     * @var string
+     */
+    private $brand_tertiary_color;
+
+
+    /**
+     * Set brandTertiaryColor
+     *
+     * @param string $brandTertiaryColor
+     *
+     * @return User
+     */
+    public function setBrandTertiaryColor($brandTertiaryColor)
+    {
+        $this->brand_tertiary_color = $brandTertiaryColor;
+
+        return $this;
+    }
+
+    /**
+     * Get brandTertiaryColor
+     *
+     * @return string
+     */
+    public function getBrandTertiaryColor()
+    {
+        return $this->brand_tertiary_color;
+    }
 }

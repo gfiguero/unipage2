@@ -13,6 +13,7 @@ user:
         domain: Dominio de internet
         brandprimarycolor: Color primario
         brandsecondarycolor: Color secundario
+        brandtertiarycolor: Color terciario
         clientname: Nombre
         clientphone: Teléfono
         clientemail: Email

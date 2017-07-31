@@ -32,13 +32,15 @@ class AccountType extends AbstractType
             ->add('brand_primary_color', null, array(
                 'label' => 'user.form.brandprimarycolor',
                 'translation_domain' => 'UniControlPanelBundle',
-                'attr'  => array(
-                    'label_col' => 4,
-                    'widget_col' => 8,
-                ),
+                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
             ))
             ->add('brand_secondary_color', null, array(
                 'label' => 'user.form.brandsecondarycolor',
+                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
+                'translation_domain' => 'UniControlPanelBundle',
+            ))
+            ->add('brand_tertiary_color', null, array(
+                'label' => 'user.form.brandtertiarycolor',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniControlPanelBundle',
             ))
@@ -66,36 +68,43 @@ class AccountType extends AbstractType
                 'label' => 'user.form.maintitle',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniControlPanelBundle',
+                'required' => true,
             ))
             ->add('mainsubtitle', null, array(
                 'label' => 'user.form.mainsubtitle',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniControlPanelBundle',
+                'required' => true,
             ))
             ->add('maincalltoaction', null, array(
                 'label' => 'user.form.maincalltoaction',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniControlPanelBundle',
+                'required' => true,
             ))
             ->add('abouttitle', null, array(
                 'label' => 'user.form.abouttitle',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniControlPanelBundle',
+                'required' => true,
             ))
             ->add('aboutcontent', null, array(
                 'label' => 'user.form.aboutcontent',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniControlPanelBundle',
+                'required' => true,
             ))
             ->add('featuretitle', null, array(
                 'label' => 'user.form.featuretitle',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniControlPanelBundle',
+                'required' => true,
             ))
             ->add('featurecontent', null, array(
                 'label' => 'user.form.featurecontent',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniControlPanelBundle',
+                'required' => true,
             ))
             ->add('contacttitle', null, array(
                 'label' => 'user.form.contacttitle',

@@ -39,6 +39,11 @@ class UserType extends AbstractType
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
             )) 
+            ->add('brand_tertiary_color', null, array(
+                'label' => 'user.form.brand_tertiary_color',
+                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
+                'translation_domain' => 'UniAdminBundle',
+            )) 
             ->add('clientname', null, array(
                 'label' => 'user.form.clientname',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),

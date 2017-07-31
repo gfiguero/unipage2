@@ -28,6 +28,7 @@
                         {{ form_row(editForm.domain) }}
                         {{ form_row(editForm.brand_primary_color) }}
                         {{ form_row(editForm.brand_secondary_color) }}
+                        {{ form_row(editForm.brand_tertiary_color) }}
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
                                 <button class="btn btn-default btn-primary" type="submit">{{ icon('save fa-fw') }}&nbsp;{{ 'controlpanel.account.submit'|trans }}</button>
@@ -113,5 +114,6 @@
 minicolorsOptions = {theme: 'bootstrap'};
 $('#uni_controlpanelbundle_account_brand_primary_color').minicolors(minicolorsOptions);
 $('#uni_controlpanelbundle_account_brand_secondary_color').minicolors(minicolorsOptions);
+$('#uni_controlpanelbundle_account_brand_tertiary_color').minicolors(minicolorsOptions);
 </script>
 {% endblock %}

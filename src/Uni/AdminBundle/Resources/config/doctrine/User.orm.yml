@@ -30,11 +30,15 @@ Uni\AdminBundle\Entity\User:
             nullable: true
         brand_primary_color:
             type: string
-            length: 100
+            length: 10
             nullable: true
         brand_secondary_color:
             type: string
-            length: 100
+            length: 10
+            nullable: true
+        brand_tertiary_color:
+            type: string
+            length: 10
             nullable: true
 
         clientname:
