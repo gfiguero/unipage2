@@ -29,6 +29,19 @@ class AccountType extends AbstractType
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniControlPanelBundle',
             ))
+            ->add('brand_primary_color', null, array(
+                'label' => 'user.form.brandprimarycolor',
+                'translation_domain' => 'UniControlPanelBundle',
+                'attr'  => array(
+                    'label_col' => 4,
+                    'widget_col' => 8,
+                ),
+            ))
+            ->add('brand_secondary_color', null, array(
+                'label' => 'user.form.brandsecondarycolor',
+                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
+                'translation_domain' => 'UniControlPanelBundle',
+            ))
             ->add('clientname', null, array(
                 'label' => 'user.form.clientname',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),

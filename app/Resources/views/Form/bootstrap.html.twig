@@ -654,14 +654,18 @@
         {% endif %}
         {% set input_group = input_group|default({}) %}
         {% if input_group is not empty %}
+            {% set ig_class = '' %}
             {% set ig_size_class = '' %}
+            {% if input_group.class is defined %}
+                {% set ig_class = ' ' ~ input_group.class %}
+            {% endif  %}
             {% if input_group.size is defined and input_group.size == 'large' %}
                 {% set ig_size_class = ' input-group-lg' %}
             {% endif  %}
             {% if input_group.size is defined and input_group.size == 'small' %}
                 {% set ig_size_class = ' input-group-sm' %}
             {% endif  %}
-            <div class="input-group{{ ig_size_class }}">
+            <div class="input-group{{ ig_size_class ~ ig_class }}">
                 {% if input_group.prepend is defined and input_group.prepend is not empty %}
                     <span class="input-group-addon">{{ input_group.prepend|raw|parse_icons }}</span>
                 {% endif %}

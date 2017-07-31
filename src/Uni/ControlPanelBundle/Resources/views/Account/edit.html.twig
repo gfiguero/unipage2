@@ -18,10 +18,85 @@
             <div class="row" id="page-edit">
                 <div class="col-md-12">
                     {{ form_start(editForm, {'style' : 'horizontal' }) }}
-                        {{ form_widget(editForm) }}
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
-                                <input class="btn btn-default btn-primary" type="submit" value="{{ 'controlpanel.account.submit'|trans }}" />
+                                <h2>{{ 'controlpanel.account.brandinfo'|trans }}</h2>
+                            </div>
+                        </div>
+                        {{ form_row(editForm.brand) }}
+                        {{ form_row(editForm.name) }}
+                        {{ form_row(editForm.domain) }}
+                        {{ form_row(editForm.brand_primary_color) }}
+                        {{ form_row(editForm.brand_secondary_color) }}
+                        <div class="form-group">
+                            <div class="col-md-8 col-md-offset-4">
+                                <button class="btn btn-default btn-primary" type="submit">{{ icon('save fa-fw') }}&nbsp;{{ 'controlpanel.account.submit'|trans }}</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-8 col-md-offset-4">
+                                <h2>{{ 'controlpanel.account.clientinfo'|trans }}</h2>
+                            </div>
+                        </div>
+                        {{ form_row(editForm.clientname) }}
+                        {{ form_row(editForm.clientphone) }}
+                        {{ form_row(editForm.clientemail) }}
+                        {{ form_row(editForm.clientaddress) }}
+                        <div class="form-group">
+                            <div class="col-md-8 col-md-offset-4">
+                                <button class="btn btn-default btn-primary" type="submit">{{ icon('save fa-fw') }}&nbsp;{{ 'controlpanel.account.submit'|trans }}</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-8 col-md-offset-4">
+                                <h2>{{ 'controlpanel.account.maininfo'|trans }}</h2>
+                            </div>
+                        </div>
+                        {{ form_row(editForm.maintitle) }}
+                        {{ form_row(editForm.mainsubtitle) }}
+                        {{ form_row(editForm.maincalltoaction) }}
+                        <div class="form-group">
+                            <div class="col-md-8 col-md-offset-4">
+                                <button class="btn btn-default btn-primary" type="submit">{{ icon('save fa-fw') }}&nbsp;{{ 'controlpanel.account.submit'|trans }}</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-8 col-md-offset-4">
+                                <h2>{{ 'controlpanel.account.aboutinfo'|trans }}</h2>
+                            </div>
+                        </div>
+                        {{ form_row(editForm.abouttitle) }}
+                        {{ form_row(editForm.aboutcontent) }}
+                        <div class="form-group">
+                            <div class="col-md-8 col-md-offset-4">
+                                <button class="btn btn-default btn-primary" type="submit">{{ icon('save fa-fw') }}&nbsp;{{ 'controlpanel.account.submit'|trans }}</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-8 col-md-offset-4">
+                                <h2>{{ 'controlpanel.account.featureinfo'|trans }}</h2>
+                            </div>
+                        </div>
+                        {{ form_row(editForm.featuretitle) }}
+                        {{ form_row(editForm.featurecontent) }}
+                        <div class="form-group">
+                            <div class="col-md-8 col-md-offset-4">
+                                <button class="btn btn-default btn-primary" type="submit">{{ icon('save fa-fw') }}&nbsp;{{ 'controlpanel.account.submit'|trans }}</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-8 col-md-offset-4">
+                                <h2>{{ 'controlpanel.account.contactinfo'|trans }}</h2>
+                            </div>
+                        </div>
+                        {{ form_row(editForm.contacttitle) }}
+                        {{ form_row(editForm.contactcontent) }}
+                        {{ form_row(editForm.contactphone) }}
+                        {{ form_row(editForm.contactemail) }}
+                        {{ form_row(editForm.contactaddress) }}
+                        <div class="form-group">
+                            <div class="col-md-8 col-md-offset-4">
+                                <button class="btn btn-default btn-primary" type="submit">{{ icon('save fa-fw') }}&nbsp;{{ 'controlpanel.account.submit'|trans }}</button>
                             </div>
                         </div>
                     {{ form_end(editForm) }}
@@ -33,3 +108,10 @@
     </section>
 {% endblock %}
 
+{% block javascript %}
+<script type="text/javascript">
+minicolorsOptions = {theme: 'bootstrap'};
+$('#uni_controlpanelbundle_account_brand_primary_color').minicolors(minicolorsOptions);
+$('#uni_controlpanelbundle_account_brand_secondary_color').minicolors(minicolorsOptions);
+</script>
+{% endblock %}

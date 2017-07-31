@@ -11,6 +11,8 @@ user:
         brand: Marca
         name: Nombre o razón social
         domain: Dominio de internet
+        brandprimarycolor: Color primario
+        brandsecondarycolor: Color secundario
         clientname: Nombre
         clientphone: Teléfono
         clientemail: Email
@@ -32,6 +34,12 @@ controlpanel:
     account:
         title: Panel de Control
         submit: Guardar cambios
+        brandinfo: Información de marca
+        clientinfo: Información del cliente
+        maininfo: Portada
+        aboutinfo: Descripción de marca
+        featureinfo: Características
+        contactinfo: Información de contacto
     profile:
         title: Perfil de Usuario
         submit: Guardar cambios
@@ -59,3 +67,7 @@ feature:
         title: Título
         content: Contenido
         image: Imagen
+
+account:
+    edit:
+        flash: Cambios realizados con éxito.

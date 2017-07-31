@@ -31,4 +31,27 @@
             <style type="text/css">#contact {background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('{{ vich_uploader_asset(photography2, 'imagefile', 'Uni\\AdminBundle\\Entity\\Photography')|imagine_filter('main_photography') }}');}</style>
         {% endif %}
     {% endif %}
+    {% if user.brandprimarycolor %}
+        <style type="text/css">
+            .navbar-scroll .navbar-nav > li > a:hover, .navbar-scroll .navbar-nav > li > a:focus {
+                background-color: {{ user.brandprimarycolor }};
+            }
+            .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+                background-color: {{ color_darken(user.brandprimarycolor, 20) }};
+            }
+            .main-calltoaction {
+                background-color: {{ user.brandprimarycolor }};
+            }
+            #about {
+                background-color: {{ user.brandprimarycolor }};
+            }
+        </style>
+    {% endif %}
+    {% if user.brandsecondarycolor %}
+        <style type="text/css">
+            .contact-panel {
+                background-color: {{ color_alpha(user.brandsecondarycolor, 50) }};
+            }
+        </style>
+    {% endif %}
 {% endblock %}

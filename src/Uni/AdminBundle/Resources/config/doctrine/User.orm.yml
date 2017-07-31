@@ -28,6 +28,14 @@ Uni\AdminBundle\Entity\User:
             type: string
             length: 100
             nullable: true
+        brand_primary_color:
+            type: string
+            length: 100
+            nullable: true
+        brand_secondary_color:
+            type: string
+            length: 100
+            nullable: true
 
         clientname:
             type: string

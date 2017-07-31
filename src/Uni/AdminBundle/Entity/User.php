@@ -741,4 +741,62 @@ class User extends BaseUser
     {
         return $this->photographies;
     }
+    /**
+     * @var string
+     */
+    private $brand_primary_color;
+
+    /**
+     * @var string
+     */
+    private $brand_secondary_color;
+
+
+    /**
+     * Set brandPrimaryColor
+     *
+     * @param string $brandPrimaryColor
+     *
+     * @return User
+     */
+    public function setBrandPrimaryColor($brandPrimaryColor)
+    {
+        $this->brand_primary_color = $brandPrimaryColor;
+
+        return $this;
+    }
+
+    /**
+     * Get brandPrimaryColor
+     *
+     * @return string
+     */
+    public function getBrandPrimaryColor()
+    {
+        return $this->brand_primary_color;
+    }
+
+    /**
+     * Set brandSecondaryColor
+     *
+     * @param string $brandSecondaryColor
+     *
+     * @return User
+     */
+    public function setBrandSecondaryColor($brandSecondaryColor)
+    {
+        $this->brand_secondary_color = $brandSecondaryColor;
+
+        return $this;
+    }
+
+    /**
+     * Get brandSecondaryColor
+     *
+     * @return string
+     */
+    public function getBrandSecondaryColor()
+    {
+        return $this->brand_secondary_color;
+    }
 }
