@@ -9,6 +9,11 @@ liip_imagine:
             filters:
                 upscale: { min: [1920, 1080] }
                 thumbnail: { size: [1366, 900], mode: outbound }
+        feature_photography_large:
+            quality: 75
+            filters:
+                upscale: { min: [1366, 768] }
+                thumbnail: { size: [1366, 768], mode: outbound }
         feature_photography:
             quality: 75
             filters:
