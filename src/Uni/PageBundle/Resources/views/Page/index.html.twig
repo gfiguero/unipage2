@@ -3,6 +3,7 @@
 {% use 'UniPageBundle:Page:main.html.twig' %}
 {% use 'UniPageBundle:Page:about.html.twig' %}
 {% use 'UniPageBundle:Page:feature.html.twig' %}
+{% use 'UniPageBundle:Page:location.html.twig' %}
 {% use 'UniPageBundle:Page:contact.html.twig' %}
 {% use 'UniPageBundle:Page:footer.html.twig' %}
 {% use 'UniPageBundle:Page:style.html.twig' %}
@@ -16,6 +17,7 @@
         {% block main %}{{ parent() }}{% endblock %}
         {% block about %}{{ parent() }}{% endblock %}
         {% block feature %}{{ parent() }}{% endblock %}
+        {% block location %}{{ parent() }}{% endblock %}
         {% block contact %}{{ parent() }}{% endblock %}
         {% block footer %}{{ parent() }}{% endblock %}
     {% else %}
