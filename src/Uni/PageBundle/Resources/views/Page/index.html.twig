@@ -6,6 +6,7 @@
 {% use 'UniPageBundle:Page:contact.html.twig' %}
 {% use 'UniPageBundle:Page:footer.html.twig' %}
 {% use 'UniPageBundle:Page:style.html.twig' %}
+{% use 'UniPageBundle:Page:script.html.twig' %}
 
 {% block title %}{% if user %}{% if user.brand %}{{ user.brand|raw }}{% endif %}{% endif %}{% endblock %}
 
@@ -24,4 +25,8 @@
 
 {% block stylesheet %}
     {% block style %}{{ parent() }}{% endblock %}
+{% endblock %}
+
+{% block javascript %}
+    {% block script %}{{ parent() }}{% endblock %}
 {% endblock %}

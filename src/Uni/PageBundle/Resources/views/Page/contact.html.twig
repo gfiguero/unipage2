@@ -1,6 +1,16 @@
 {% block contact %}
     {% trans_default_domain 'UniPageBundle' %}
     {% if user.contacttitle %}
+    <section class="container-fluid">   
+        <div id="google-map">
+            <div class="container-fluid">
+                <div class="row google-map">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <section id="contact">
         <div class="container">
 
@@ -58,5 +68,6 @@
 
         </div>
     </section>
+
     {% endif %}
 {% endblock %}

@@ -1,0 +1,28 @@
+{% block script %}
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7ZPKyx-HdAyiZO_U5gExvUuxuraxtcwg&callback=initMap"></script>
+    <script>
+        function initMap() {
+            var myLatLng = {lat: -32.449372, lng: -71.233255};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                scrollwheel: false,
+                draggable: false,
+                center: myLatLng
+            });
+
+            var infowindow = new google.maps.InfoWindow({
+    
+            });
+
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: ''
+            });
+
+            marker.addListener('click', function() {
+                infowindow.open(map, marker);
+            });
+        }
+    </script>
+{% endblock %}
