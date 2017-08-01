@@ -28,6 +28,10 @@ Uni\AdminBundle\Entity\User:
             type: string
             length: 100
             nullable: true
+        location:
+            type: string
+            length: 100
+            nullable: true
         brand_primary_color:
             type: string
             length: 10

@@ -43,6 +43,11 @@ class User extends BaseUser
     /**
      * @var string
      */
+    private $location;
+
+    /**
+     * @var string
+     */
     private $clientname;
 
     /**
@@ -216,6 +221,30 @@ class User extends BaseUser
     public function getDomain()
     {
         return $this->domain;
+    }
+
+    /**
+     * Set location
+     *
+     * @param string $location
+     *
+     * @return User
+     */
+    public function setLocation($location)
+    {
+        $this->location = $location;
+
+        return $this;
+    }
+
+    /**
+     * Get location
+     *
+     * @return string
+     */
+    public function getLocation()
+    {
+        return $this->location;
     }
 
     /**

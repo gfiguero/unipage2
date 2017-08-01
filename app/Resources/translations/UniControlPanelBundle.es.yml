@@ -11,6 +11,7 @@ user:
         brand: Marca
         name: Nombre o razón social
         domain: Dominio de internet
+        location: Ubicación
         brandprimarycolor: Color primario
         brandsecondarycolor: Color secundario
         brandtertiarycolor: Color terciario
