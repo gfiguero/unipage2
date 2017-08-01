@@ -5,20 +5,18 @@
 {% block title %}Registro de Usuarios{% endblock %}
 
 {% block controlpanel %}
-    <section class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <h1 class="page-header">Registro de Usuarios</h1>
-                <p>{{ 'registration.check_email'|trans({'%email%': user.email}) }}</p>
+    <section id="uiuser">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="panel panel-default uiuser-panel">
+                        <div class="panel-body">
+                            <h1 class="page-header">Registro de Usuarios</h1>
+                            <p>{{ 'registration.check_email'|trans({'%email%': user.email}) }}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-{% endblock %}
-
-{% block stylesheet %}
-    <style type="text/css">
-        section {
-            padding: 80px 0px;
-        }
-    </style>
 {% endblock %}

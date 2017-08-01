@@ -5,18 +5,24 @@
 {% block title %}Reestablecer Contraseña{% endblock %}
 
 {% block controlpanel %}
-    <section class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <h1 class="page-header">Restablecer Contraseña</h1>
-                {{ form_start(form, { 'style' : 'horizontal', 'label_col' : 4 , 'widget_col' : 8, 'action': path('fos_user_resetting_reset', {'token': token}), 'attr': { 'class': 'fos_user_resetting_reset' } }) }}
-                    {{ form_widget(form) }}
-                    <div class="form-group">
-                        <div class="col-lg-8 col-lg-offset-4">
-                            <input type="submit" id="_submit" name="_submit" value="{{ 'resetting.reset.submit'|trans }}" class="btn btn-default" />
+    <section class="uiuser">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="panel panel-default uiuser-panel">
+                        <div class="panel-body">
+                            <h1 class="page-header">Restablecer Contraseña</h1>
+                            {{ form_start(form, { 'style' : 'horizontal', 'label_col' : 4 , 'widget_col' : 8, 'action': path('fos_user_resetting_reset', {'token': token}), 'attr': { 'class': 'fos_user_resetting_reset' } }) }}
+                                {{ form_widget(form) }}
+                                <div class="form-group">
+                                    <div class="col-lg-8 col-lg-offset-4">
+                                        <input type="submit" id="_submit" name="_submit" value="{{ 'resetting.reset.submit'|trans }}" class="btn btn-default" />
+                                    </div>
+                                </div>
+                            {{ form_end(form) }}
                         </div>
                     </div>
-                {{ form_end(form) }}
+                </div>
             </div>
         </div>
     </section>
