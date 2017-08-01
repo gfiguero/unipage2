@@ -6893,6 +6893,12 @@ button.close {
 #feature .feature-item-content {
   text-align: center;
 }
+#location {
+  padding: 0;
+}
+#location #map {
+  height: 300px;
+}
 #contact {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://static.pexels.com/photos/196656/pexels-photo-196656.jpeg');
   background-attachment: fixed;
