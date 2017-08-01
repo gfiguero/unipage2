@@ -2,23 +2,27 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvqD3pcje01o5H1x5dD_M04R67pLc01X0&callback=initMap"></script>
     <script>
         function initMap() {
-            var myLatLng = {lat: -32.449372, lng: -71.233255};
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 15,
-                scrollwheel: false,
-                draggable: false,
-                center: myLatLng
-            });
-
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map,
-                title: ''
-            });
-
-            marker.addListener('click', function() {
-                infowindow.open(map, marker);
+            var address = '{{ user.contactaddress }}';
+            var geocoder = new google.maps.Geocoder()
+            var latlng = new google.maps.LatLng(-33.000, -70.000);
+            var mapOptions = { zoom: 8, center: latlng }
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+            var marker;
+            geocoder.geocode( {'address': address}, function(results, status) {
+                if (status == 'OK') {
+                    map.setCenter(results[0].geometry.location);
+                    map.setZoom(16);
+                    marker = new google.maps.Marker({
+                        map: map,
+                        position: results[0].geometry.location
+                    });
+                } else {
+                    console.log('Geocode was not successful for the following reason: ' + status);
+                }
             });
         }
     </script>
+    <style type="text/css">
+    #map {height: 600px;}
+    </style>
 {% endblock %}
