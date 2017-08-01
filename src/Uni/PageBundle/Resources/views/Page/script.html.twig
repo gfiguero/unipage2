@@ -5,7 +5,7 @@
             var address = '{{ user.contactaddress }}';
             var geocoder = new google.maps.Geocoder()
             var latlng = new google.maps.LatLng(-33.000, -70.000);
-            var mapOptions = { zoom: 8, center: latlng }
+            var mapOptions = { zoom: 8, scrollwheel: false, draggable: false, center: latlng }
             var map = new google.maps.Map(document.getElementById('map'), mapOptions);
             var marker;
             geocoder.geocode( {'address': address}, function(results, status) {
