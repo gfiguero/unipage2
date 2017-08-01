@@ -2,29 +2,29 @@
 
 namespace Uni\ControlPanelBundle\Controller;
 
-use Uni\AdminBundle\Entity\Feature;
-use Uni\ControlPanelBundle\Form\FeatureType;
+use Uni\AdminBundle\Entity\Photography;
+use Uni\ControlPanelBundle\Form\PhotographyType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- * Feature controller.
+ * Photography controller.
  *
  */
-class FeatureController extends Controller
+class PhotographyController extends Controller
 {
     public function indexAction(Request $request)
     {
         $user = $this->getUser();
         $em = $this->getDoctrine()->getManager();
-        $features = $em->getRepository('UniAdminBundle:Feature')->findByUser($user);
+        $features = $em->getRepository('UniAdminBundle:Photography')->findByUser($user);
 
         $deleteForms = array();
         foreach($features as $key => $feature) {
             $deleteForms[] = $this->createDeleteForm($feature)->createView();
         }
 
-        return $this->render('UniControlPanelBundle:Feature:index.html.twig', array(
+        return $this->render('UniControlPanelBundle:Photography:index.html.twig', array(
             'features' => $features,
             'deleteForms' => $deleteForms,
         ));
@@ -32,8 +32,8 @@ class FeatureController extends Controller
 
     public function newAction(Request $request)
     {
-        $feature = new Feature();
-        $newForm = $this->createForm(new FeatureType(), $feature);
+        $feature = new Photography();
+        $newForm = $this->createForm(new PhotographyType(), $feature);
         $newForm->handleRequest($request);
 
         if ($newForm->isSubmitted()) {
@@ -48,14 +48,14 @@ class FeatureController extends Controller
             }
         }
 
-        return $this->render('UniControlPanelBundle:Feature:new.html.twig', array(
+        return $this->render('UniControlPanelBundle:Photography:new.html.twig', array(
             'newForm' => $newForm->createView(),
         ));
     }
 
-    public function editAction(Request $request, Feature $feature)
+    public function editAction(Request $request, Photography $feature)
     {
-        $editForm = $this->createForm(new FeatureType(), $feature);
+        $editForm = $this->createForm(new PhotographyType(), $feature);
         $deleteForm = $this->createDeleteForm($feature);
         $editForm->handleRequest($request);
 
@@ -71,14 +71,14 @@ class FeatureController extends Controller
             }
         }
 
-        return $this->render('UniControlPanelBundle:Feature:edit.html.twig', array(
+        return $this->render('UniControlPanelBundle:Photography:edit.html.twig', array(
             'feature' => $feature,
             'editForm' => $editForm->createView(),
             'deleteForm' => $deleteForm->createView(),
         ));
     }
 
-    public function deleteAction(Request $request, Feature $feature)
+    public function deleteAction(Request $request, Photography $feature)
     {
         $deleteForm = $this->createDeleteForm($feature);
         $deleteForm->handleRequest($request);
@@ -94,13 +94,13 @@ class FeatureController extends Controller
     }
 
     /**
-     * Creates a form to delete a Feature entity.
+     * Creates a form to delete a Photography entity.
      *
-     * @param Feature $feature The Feature entity
+     * @param Photography $feature The Photography entity
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createDeleteForm(Feature $feature)
+    private function createDeleteForm(Photography $feature)
     {
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('controlpanel_feature_delete', array('id' => $feature->getId())))
