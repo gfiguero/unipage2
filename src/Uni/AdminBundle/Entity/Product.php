@@ -2,8 +2,14 @@
 
 namespace Uni\AdminBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+
 /**
  * Product
+ * @ORM\Entity
+ * @Vich\Uploadable
  */
 class Product
 {
@@ -26,6 +32,12 @@ class Product
      * @var string
      */
     private $image;
+
+    /**
+     * @Vich\UploadableField(mapping="product_photography", fileNameProperty="image")
+     * @var File
+     */
+    private $imagefile;
 
     /**
      * @var \DateTime
@@ -128,6 +140,30 @@ class Product
     public function getImage()
     {
         return $this->image;
+    }
+
+    /**
+     * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile $image
+     *
+     * @return Product
+     */
+    public function setImagefile(File $image = null)
+    {
+        $this->imagefile = $image;
+
+        if ($image) {
+            $this->updated_at = new \DateTime();
+        }
+        
+        return $this;
+    }
+
+    /**
+     * @return File|null
+     */
+    public function getImagefile()
+    {
+        return $this->imagefile;
     }
 
     /**
