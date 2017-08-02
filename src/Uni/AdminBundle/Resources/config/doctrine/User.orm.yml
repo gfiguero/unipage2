@@ -110,6 +110,34 @@ Uni\AdminBundle\Entity\User:
             type: string
             length: 100
             nullable: true
+        contactschedule:
+            type: string
+            length: 50
+            nullable: true
+
+        rrsstitle:
+            type: string
+            length: 50
+            nullable: true
+        rrsscontent:
+            type: text
+            nullable: true
+        facebook:
+            type: string
+            length: 50
+            nullable: true
+        twitter:
+            type: string
+            length: 50
+            nullable: true
+        youtube:
+            type: string
+            length: 50
+            nullable: true
+        instagram:
+            type: string
+            length: 50
+            nullable: true
 
         created_at:
             type: datetime

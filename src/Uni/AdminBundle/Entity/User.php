@@ -126,6 +126,41 @@ class User extends BaseUser
     private $contactaddress;
 
     /**
+     * @var string
+     */
+    private $contactschedule;
+
+    /**
+     * @var string
+     */
+    private $rrsstitle;
+
+    /**
+     * @var string
+     */
+    private $rrsscontent;
+
+    /**
+     * @var string
+     */
+    private $facebook;
+
+    /**
+     * @var string
+     */
+    private $twitter;
+
+    /**
+     * @var string
+     */
+    private $youtube;
+
+    /**
+     * @var string
+     */
+    private $instagram;
+
+    /**
      * @var \DateTime
      */
     private $created_at;
@@ -629,6 +664,174 @@ class User extends BaseUser
     public function getContactaddress()
     {
         return $this->contactaddress;
+    }
+
+     /**
+     * Set contactschedule
+     *
+     * @param string $contactschedule
+     *
+     * @return User
+     */
+    public function setContactschedule($contactschedule)
+    {
+        $this->contactschedule = $contactschedule;
+
+        return $this;
+    }
+
+    /**
+     * Get contactschedule
+     *
+     * @return string
+     */
+    public function getContactschedule()
+    {
+        return $this->contactschedule;
+    }
+
+    /**
+     * Set rrsstitle
+     *
+     * @param string $rrsstitle
+     *
+     * @return User
+     */
+    public function setRrsstitle($rrsstitle)
+    {
+        $this->rrsstitle = $rrsstitle;
+
+        return $this;
+    }
+
+    /**
+     * Get rrsstitle
+     *
+     * @return string
+     */
+    public function getRrsstitle()
+    {
+        return $this->rrsstitle;
+    }
+
+    /**
+     * Set rrsscontent
+     *
+     * @param string $rrsscontent
+     *
+     * @return User
+     */
+    public function setRrsscontent($rrsscontent)
+    {
+        $this->rrsscontent = $rrsscontent;
+
+        return $this;
+    }
+
+    /**
+     * Get rrsscontent
+     *
+     * @return string
+     */
+    public function getRrsscontent()
+    {
+        return $this->rrsscontent;
+    }
+
+     /**
+     * Set facebook
+     *
+     * @param string $facebook
+     *
+     * @return User
+     */
+    public function setFacebook($facebook)
+    {
+        $this->facebook = $facebook;
+
+        return $this;
+    }
+
+    /**
+     * Get facebook
+     *
+     * @return string
+     */
+    public function getFacebook()
+    {
+        return $this->facebook;
+    }
+
+   /**
+     * Set twitter
+     *
+     * @param string $twitter
+     *
+     * @return User
+     */
+    public function setTwitter($twitter)
+    {
+        $this->twitter = $twitter;
+
+        return $this;
+    }
+
+    /**
+     * Get twitter
+     *
+     * @return string
+     */
+    public function getTwitter()
+    {
+        return $this->twitter;
+    }
+
+    /**
+     * Set youtube
+     *
+     * @param string $youtube
+     *
+     * @return User
+     */
+    public function setYoutube($youtube)
+    {
+        $this->youtube = $youtube;
+
+        return $this;
+    }
+
+    /**
+     * Get youtube
+     *
+     * @return string
+     */
+    public function getYoutube()
+    {
+        return $this->youtube;
+    }
+
+    /**
+     * Set instagram
+     *
+     * @param string $instagram
+     *
+     * @return User
+     */
+    public function setInstagram($instagram)
+    {
+        $this->instagram = $instagram;
+
+        return $this;
+    }
+
+    /**
+     * Get instagram
+     *
+     * @return string
+     */
+    public function getInstagram()
+    {
+        return $this->instagram;
     }
 
     /**

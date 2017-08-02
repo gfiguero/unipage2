@@ -31,6 +31,13 @@ user:
         contactphone: Teléfono
         contactemail: Email
         contactaddress: Dirección
+        contactschedule: Horario de atención
+        rrsstitle: Título
+        rrsscontent: Contenido
+        facebook: Facebook
+        twitter: Twitter
+        youtube: Youtube
+        instagram: Instagram
 
 controlpanel:
     account:
@@ -42,6 +49,7 @@ controlpanel:
         aboutinfo: Descripción de marca
         featureinfo: Características
         contactinfo: Información de contacto
+        rrssinfo: Redes Sociales
     profile:
         title: Perfil de Usuario
         submit: Guardar cambios

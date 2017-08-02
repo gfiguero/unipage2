@@ -128,6 +128,41 @@ class UserType extends AbstractType
                 'label' => 'user.form.contactaddress',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
+            )) 
+            ->add('contactschedule', null, array(
+                'label' => 'user.form.contactschedule',
+                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
+                'translation_domain' => 'UniAdminBundle',
+            )) 
+            ->add('rrsstitle', null, array(
+                'label' => 'user.form.rrsstitle',
+                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
+                'translation_domain' => 'UniAdminBundle',
+            )) 
+            ->add('rrsscontent', null, array(
+                'label' => 'user.form.rrsscontent',
+                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
+                'translation_domain' => 'UniAdminBundle',
+            )) 
+            ->add('facebook', null, array(
+                'label' => 'user.form.facebook',
+                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
+                'translation_domain' => 'UniAdminBundle',
+            )) 
+            ->add('twitter', null, array(
+                'label' => 'user.form.twitter',
+                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
+                'translation_domain' => 'UniAdminBundle',
+            )) 
+            ->add('youtube', null, array(
+                'label' => 'user.form.youtube',
+                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
+                'translation_domain' => 'UniAdminBundle',
+            )) 
+            ->add('instagram', null, array(
+                'label' => 'user.form.instagram',
+                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
+                'translation_domain' => 'UniAdminBundle',
             ))
         ;
     }

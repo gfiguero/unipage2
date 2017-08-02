@@ -9,3 +9,7 @@ uni_control_panel_photography:
 uni_control_panel_account:
     resource: "@UniControlPanelBundle/Resources/config/routing/account.yml"
     prefix:   /account
+
+uni_control_panel_product:
+    resource: "@UniControlPanelBundle/Resources/config/routing/product.yml"
+    prefix:   /product

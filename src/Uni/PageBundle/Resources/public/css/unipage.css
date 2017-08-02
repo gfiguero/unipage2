@@ -6905,11 +6905,37 @@ button.close {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding-bottom: 160px;
 }
 #contact .contact-title,
 #contact .contact-content {
   text-align: center;
+}
+#rrss {
+  background: #554094;
+  padding-bottom: 160px;
+  text-align: center;
+}
+#rrss ul.list-social a {
+  display: block;
+  height: 80px;
+  width: 80px;
+  line-height: 80px;
+  font-size: 40px;
+  border-radius: 100%;
+  color: white;
+  margin-bottom: 10px;
+}
+#rrss ul.list-social li.social-facebook a {
+  background-color: #3b5998;
+}
+#rrss ul.list-social li.social-twitter a {
+  background-color: #4099FF;
+}
+#rrss ul.list-social li.social-youtube a {
+  background-color: #c4302b;
+}
+#rrss ul.list-social li.social-instagram a {
+  background-color: #8a3ab9;
 }
 #footer {
   padding: 17.5px 0px;

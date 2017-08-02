@@ -85,6 +85,20 @@
                                 <dd>{% if user.contactemail %}{{ user.contactemail }}{% endif %}</dd>
                             <dt>{{ 'user.form.contactaddress'|trans }}</dt>
                                 <dd>{% if user.contactaddress %}{{ user.contactaddress }}{% endif %}</dd>
+                            <dt>{{ 'user.form.contactschedule'|trans }}</dt>
+                                <dd>{% if user.contactschedule %}{{ user.contactschedule }}{% endif %}</dd>
+                            <dt>{{ 'user.form.rrsstitle'|trans }}</dt>
+                                <dd>{% if user.rrsstitle %}{{ user.rrsstitle }}{% endif %}</dd>
+                            <dt>{{ 'user.form.rrsscontent'|trans }}</dt>
+                                <dd>{% if user.rrsscontent %}{{ user.rrsscontent }}{% endif %}</dd>
+                            <dt>{{ 'user.form.facebook'|trans }}</dt>
+                                <dd>{% if user.facebook %}{{ user.facebook }}{% endif %}</dd>
+                            <dt>{{ 'user.form.twitter'|trans }}</dt>
+                                <dd>{% if user.twitter %}{{ user.twitter }}{% endif %}</dd>
+                            <dt>{{ 'user.form.youtube'|trans }}</dt>
+                                <dd>{% if user.youtube %}{{ user.youtube }}{% endif %}</dd>
+                            <dt>{{ 'user.form.instagram'|trans }}</dt>
+                                <dd>{% if user.instagram %}{{ user.instagram }}{% endif %}</dd>
                             <dt>{{ 'user.form.created_at'|trans }}</dt>
                                 <dd>{% if user.createdat %}{{ user.createdat|localizeddate('full', 'full', 'es_ES', 'America/Santiago', "d 'de' LLLL 'de' Y - HH:mm") }}&nbsp;({{ user.createdat|ago }}){% endif %}</dd>
                             <dt>{{ 'user.form.updated_at'|trans }}</dt>

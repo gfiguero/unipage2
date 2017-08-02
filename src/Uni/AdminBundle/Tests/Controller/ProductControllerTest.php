@@ -19,7 +19,7 @@ class ProductControllerTest extends WebTestCase
 
         // Fill in the form and submit it
         $form = $crawler->selectButton('Create')->form(array(
-            'kore_adminbundle_product[field_name]'  => 'Test',
+            'uni_adminbundle_product[field_name]'  => 'Test',
             // ... other fields to fill
         ));
 
@@ -33,7 +33,7 @@ class ProductControllerTest extends WebTestCase
         $crawler = $client->click($crawler->selectLink('Edit')->link());
 
         $form = $crawler->selectButton('Update')->form(array(
-            'kore_adminbundle_product[field_name]'  => 'Foo',
+            'uni_adminbundle_product[field_name]'  => 'Foo',
             // ... other fields to fill
         ));
 

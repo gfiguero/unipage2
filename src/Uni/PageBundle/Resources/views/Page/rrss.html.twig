@@ -1,0 +1,43 @@
+{% block rrss %}
+    {% trans_default_domain 'UniPageBundle' %}
+    {% if user.rrsstitle %}
+        <section id="rrss">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-header">
+                            <h1 class="section-title contact-title">{{ user.rrsstitle|raw }}</h1>
+                            {% if user.rrsscontent %}<p class="section-content contact-content">{{ user.rrsscontent|raw }}</p>{% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ul class="list-inline list-social">
+                            {% if user.facebook %}
+                                <li class="social-facebook">
+                                    <a href="{{ user.facebook|raw }}" target="_blank">{{ icon('facebook fa-fw') }}</a>
+                                </li>
+                            {% endif %}
+                            {% if user.twitter %}
+                                <li class="social-twitter">
+                                    <a href="{{ user.twitter|raw }}" target="_blank">{{ icon('twitter fa-fw') }}</a>
+                                </li>
+                            {% endif %}
+                            {% if user.youtube %}
+                                <li class="social-youtube">
+                                    <a href="{{ user.youtube|raw }}" target="_blank">{{ icon('youtube fa-fw') }}</a>
+                                </li>
+                            {% endif %}
+                            {% if user.contactphone %}
+                                <li class="social-instagram">
+                                    <a href="{{ user.instagram|raw }}" target="_blank">{{ icon('instagram fa-fw') }}</a>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+{% endblock %}
