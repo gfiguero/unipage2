@@ -1,5 +1,5 @@
 #rrss {
-    background: #554094; 
+    background: @brand-secondary;
     padding-bottom: @section-padding-vertical + @footer-heigth;
     text-align: center;
     ul.list-social {
@@ -15,22 +15,42 @@
         }
         li.social-facebook {
             a {
-                background-color: #3b5998;
+                background-color: @facebook;
+                &:hover,
+                &:active,
+                &:focus {
+                    background-color: @facebook-darker;
+                }
             }
         }
         li.social-twitter {
             a {
-                background-color: #4099FF;
+                background-color: @twitter;
+                &:hover,
+                &:active,
+                &:focus {
+                    background-color: @twitter-darker;
+                }
             }
         }
         li.social-youtube {
             a {
-                background-color: #c4302b;
+                background-color: @youtube;
+                &:hover,
+                &:active,
+                &:focus {
+                    background-color: @youtube-darker;
+                }
             }
         }
         li.social-instagram {
             a {
-                background-color: #8a3ab9;
+                background-color: @instagram;
+                &:hover,
+                &:active,
+                &:focus {
+                    background-color: @instagram-darker;
+                }
             }
         }
     }
