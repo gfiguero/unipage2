@@ -151,16 +151,11 @@ product:
         submit: Confirmar borrado
         flash: El producto fué borrado totalmente.
     form:
-        id: ID
         name: Nombre
         description: Descripción
-        cm: CM
-        size: Dimensiones
-        netprice: Precio Neto
+        price: Precio
         image: Imagen
-        provider: Proveedor
-        created_at: Registro
-        updated_at: Actualización
+        user: Usuario
 
 item:
     index:

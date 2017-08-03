@@ -78,6 +78,21 @@ feature:
         content: Contenido
         image: Imagen
 
+product:
+    index:
+        title: Productos
+        list: Lista de productos
+        link: Volver a la lista
+    new:
+        link: Nuevo producto
+        form: Lista de productos
+        submit: Guardar
+    form:
+        name: Nombre del producto
+        description: Descripción
+        price: Precio
+        image: Imagen
+
 account:
     edit:
         flash: Cambios realizados con éxito.

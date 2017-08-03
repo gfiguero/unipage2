@@ -13,12 +13,15 @@ Uni\AdminBundle\Entity\Product:
             targetEntity: Uni\AdminBundle\Entity\User
             inversedBy: products
     fields:
-        title:
+        name:
             type: string
             length: 100
             nullable: true
-        content:
+        description:
             type: text
+            nullable: true
+        price:
+            type: integer
             nullable: true
         image:
             type: string

@@ -38,8 +38,9 @@
                                             <div class="btn-group" role="group"><a type="button" class="btn btn-xs btn-default disabled">{{ icon('edit fa-fw') }}</a></div>
                                             <div class="btn-group" role="group"><a type="button" class="btn btn-xs btn-default disabled">{{ icon('trash fa-fw') }}</a></div>
                                         </th>
-                                        <th>{{ 'product.form.title'|trans }}</th>
-                                        <th>{{ 'product.form.content'|trans }}</th>
+                                        <th>{{ 'product.form.name'|trans }}</th>
+                                        <th>{{ 'product.form.description'|trans }}</th>
+                                        <th>{{ 'product.form.price'|trans }}</th>
                                         <th>{{ 'product.form.image'|trans }}</th>
                                     </tr>
                                 </thead>
@@ -50,8 +51,9 @@
                                             <div class="btn-group" role="group"><a type="button" class="btn btn-xs btn-primary" href="{{ path('controlpanel_product_edit', { 'id': product.id }) }}">{{ icon('edit fa-fw') }}</a></div>
                                             <div class="btn-group" role="group"><button type="button" class="btn btn-xs btn-danger" data-toggle="modal" data-target="#modalDelete{{ product.id }}">{{ icon('trash fa-fw') }}</button></div>
                                         </td>
-                                        <td>{% if product.title %}{{ product.title }}{% endif %}</td>
-                                        <td>{% if product.content %}{{ product.content }}{% endif %}</td>
+                                        <td>{% if product.name %}{{ product.name }}{% endif %}</td>
+                                        <td>{% if product.description %}{{ product.description }}{% endif %}</td>
+                                        <td>{% if product.price %}{{ product.price }}{% endif %}</td>
                                         <td>{% if product.image %}<img class="product-item-image" src="{{ vich_uploader_asset(product, 'imagefile', 'Uni\\AdminBundle\\Entity\\Product')|imagine_filter('product_photography_small') }}">{% endif %}</td>                                        
                                     </tr>
                                 {% endfor %}
