@@ -26,4 +26,15 @@ class PageController extends Controller
             'user' => $user,
         ));
     }
+
+    public function productAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $user = $em->getRepository('UniAdminBundle:User')->findOneByDomain($this->getRequest()->getHost());
+        $products = $em->getRepository('UniAdminBundle:Product')->findByUser($user);
+        return $this->render('UniPageBundle:Page:product.html.twig', array(
+            'products' => $products,
+            'user' => $user,
+        ));
+    }
 }

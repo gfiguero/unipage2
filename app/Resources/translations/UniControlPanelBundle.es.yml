@@ -50,6 +50,7 @@ controlpanel:
         featureinfo: Características
         contactinfo: Información de contacto
         rrssinfo: Redes Sociales
+        productinfo: Productos
     profile:
         title: Perfil de Usuario
         submit: Guardar cambios

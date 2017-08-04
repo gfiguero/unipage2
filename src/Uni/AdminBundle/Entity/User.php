@@ -161,6 +161,16 @@ class User extends BaseUser
     private $instagram;
 
     /**
+     * @var string
+     */
+    private $producttitle;
+
+    /**
+     * @var string
+     */
+    private $productcontent;
+
+    /**
      * @var \DateTime
      */
     private $created_at;
@@ -832,6 +842,54 @@ class User extends BaseUser
     public function getInstagram()
     {
         return $this->instagram;
+    }
+
+    /**
+     * Set producttitle
+     *
+     * @param string $producttitle
+     *
+     * @return User
+     */
+    public function setProducttitle($producttitle)
+    {
+        $this->producttitle = $producttitle;
+
+        return $this;
+    }
+
+    /**
+     * Get producttitle
+     *
+     * @return string
+     */
+    public function getProducttitle()
+    {
+        return $this->producttitle;
+    }
+
+    /**
+     * Set productcontent
+     *
+     * @param string $productcontent
+     *
+     * @return User
+     */
+    public function setProductcontent($productcontent)
+    {
+        $this->productcontent = $productcontent;
+
+        return $this;
+    }
+
+    /**
+     * Get productcontent
+     *
+     * @return string
+     */
+    public function getProductcontent()
+    {
+        return $this->productcontent;
     }
 
     /**

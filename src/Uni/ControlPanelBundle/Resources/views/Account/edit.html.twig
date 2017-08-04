@@ -110,6 +110,14 @@
                         {{ form_row(editForm.instagram) }}
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
+                                <h2>{{ 'controlpanel.account.productinfo'|trans }}</h2>
+                            </div>
+                        </div>
+                        {{ form_row(editForm.producttitle) }}
+                        {{ form_row(editForm.productcontent) }}
+                       
+                        <div class="form-group">
+                            <div class="col-md-8 col-md-offset-4">
                                 <button class="btn btn-default btn-primary" type="submit">{{ icon('save fa-fw') }}&nbsp;{{ 'controlpanel.account.submit'|trans }}</button>
                             </div>
                         </div>

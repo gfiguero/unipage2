@@ -29,3 +29,18 @@ liip_imagine:
             filters:
                 upscale: { min: [160, 120] }
                 thumbnail: { size: [160, 120], mode: outbound }
+        product_photography_large:
+            quality: 75
+            filters:
+                upscale: { min: [1600, 900] }
+                thumbnail: { size: [1600, 900], mode: outbound }
+        product_photography:
+            quality: 75
+            filters:
+                upscale: { min: [800, 600] }
+                thumbnail: { size: [800, 600], mode: outbound }
+        product_photography_small:
+            quality: 75
+            filters:
+                upscale: { min: [160, 120] }
+                thumbnail: { size: [160, 120], mode: outbound }

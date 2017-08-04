@@ -99,6 +99,10 @@
                                 <dd>{% if user.youtube %}{{ user.youtube }}{% endif %}</dd>
                             <dt>{{ 'user.form.instagram'|trans }}</dt>
                                 <dd>{% if user.instagram %}{{ user.instagram }}{% endif %}</dd>
+                            <dt>{{ 'user.form.producttitle'|trans }}</dt>
+                                <dd>{% if user.producttitle %}{{ user.producttitle }}{% endif %}</dd>
+                            <dt>{{ 'user.form.productcontent'|trans }}</dt>
+                                <dd>{% if user.productcontent %}{{ user.productcontent }}{% endif %}</dd>
                             <dt>{{ 'user.form.created_at'|trans }}</dt>
                                 <dd>{% if user.createdat %}{{ user.createdat|localizeddate('full', 'full', 'es_ES', 'America/Santiago', "d 'de' LLLL 'de' Y - HH:mm") }}&nbsp;({{ user.createdat|ago }}){% endif %}</dd>
                             <dt>{{ 'user.form.updated_at'|trans }}</dt>

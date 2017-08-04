@@ -5076,6 +5076,10 @@ a.thumbnail.active {
 .feature-thumbnail:hover {
   background-color: #337ab7;
 }
+.product-thumbnail {
+  border: none;
+  position: relative;
+}
 .alert {
   padding: 15px;
   margin-bottom: 25px;
@@ -6049,6 +6053,11 @@ button.close {
     width: 900px;
   }
 }
+@media (min-width: 1200px) {
+  .modal-image {
+    width: 1200px;
+  }
+}
 .modal-image .modal-content {
   border: 0px;
 }
@@ -6966,6 +6975,36 @@ button.close {
   margin: 0;
   text-align: center;
 }
+#product {
+  text-align: center;
+  background: radial-gradient(#2d2c2d, #171717, black);
+}
+#product .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+}
+#product .product-thumbnail:hover .overlay {
+  opacity: 1;
+}
+#product .product-thumbnail .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#product .product-modal-content {
+  background-color: transparent;
+}
+#product .product-modal-content .product-modal-footer {
+  position: inherit;
+}
 section {
   padding: 100px 0px;
 }
@@ -6979,4 +7018,11 @@ section {
   width: 100px;
   margin: 10px auto 30px;
   border: 2px solid;
+}
+.row-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.col-flex {
+  display: flex;
 }

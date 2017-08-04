@@ -113,19 +113,22 @@
         .feature-thumbnail:hover {
             background-color: {{ color_darken(user.brandprimarycolor, 40) }};
         }
+        .overlay {
+            background-color: {{ color_alpha(user.brandprimarycolor, 50) }}; 
+        }
 
-        #about {
-            background-color: {{ color_darken(user.brandprimarycolor, 20) }};
-        }
-        #rrss {
-            background-color: {{ color_darken(user.brandsecondarycolor, 20) }};
-        }
         </style>
     {% endif %}
     {% if user.brandsecondarycolor %}
         <style type="text/css">
             .contact-panel {
                 background-color: {{ color_alpha(user.brandsecondarycolor, 50) }};
+            }
+            #about {
+                background-color: {{ color_darken(user.brandprimarycolor, 20) }};
+            }
+            #rrss {
+                background-color: {{ color_darken(user.brandsecondarycolor, 20) }};
             }
         </style>
     {% endif %}

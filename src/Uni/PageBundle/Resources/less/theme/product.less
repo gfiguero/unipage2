@@ -1,0 +1,35 @@
+#product {
+    text-align: center;
+    background: radial-gradient(#2d2c2d, #171717, black);
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+    }
+    .product-thumbnail {
+        &:hover {
+            .overlay {
+                opacity: 1;
+            }
+        }
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .product-modal-content {
+        background-color: transparent;
+        .product-modal-footer {
+            position: inherit;
+        }
+    }    
+}

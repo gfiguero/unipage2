@@ -139,6 +139,14 @@ Uni\AdminBundle\Entity\User:
             length: 50
             nullable: true
 
+        producttitle:
+            type: string
+            length: 50
+            nullable: true
+        productcontent:
+            type: text
+            nullable: true
+
         created_at:
             type: datetime
             gedmo:

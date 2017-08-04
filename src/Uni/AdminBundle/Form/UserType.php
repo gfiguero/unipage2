@@ -163,6 +163,16 @@ class UserType extends AbstractType
                 'label' => 'user.form.instagram',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
+            )) 
+            ->add('producttitle', null, array(
+                'label' => 'user.form.producttitle',
+                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
+                'translation_domain' => 'UniAdminBundle',
+            )) 
+            ->add('productcontent', null, array(
+                'label' => 'user.form.productcontent',
+                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
+                'translation_domain' => 'UniAdminBundle',
             ))
         ;
     }

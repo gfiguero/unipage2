@@ -1,0 +1,17 @@
+{% block styleproduct %}
+    {% if user.brandprimarycolor %}
+        <style type="text/css">
+            .overlay {
+                background-color: {{ color_alpha(user.brandprimarycolor, 50) }};
+            }
+            .product-modal-footer {
+                background-color: {{ color_alpha(user.brandsecondarycolor, 50) }}!important;
+            }
+        </style>
+    {% endif %}
+    {% if user.brandsecondarycolor %}
+        <style type="text/css">
+          
+        </style>
+    {% endif %}
+{% endblock %}
