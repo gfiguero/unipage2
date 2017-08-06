@@ -1,10 +1,20 @@
 php app/console doctrine:generate:entities UniAdminBundle:User --path=src
 php app/console doctrine:generate:entities UniAdminBundle:Feature --path=src
 php app/console doctrine:generate:entities UniAdminBundle:Photography --path=src
+php app/console doctrine:generate:entities UniAdminBundle:Product --path=src
+php app/console doctrine:generate:entities UniAdminBundle:ProductSubcategory --path=src
+php app/console doctrine:generate:entities UniAdminBundle:ProductCategory --path=src
+php app/console doctrine:generate:entities UniAdminBundle:SocialMediaAvailable --path=src
+php app/console doctrine:generate:entities UniAdminBundle:SocialMediaEnabled --path=src
 
 php app/console uni:admingenerate:crud --overwrite --format=yml --with-write --no-interaction --entity=UniAdminBundle:User --route-prefix=admin_user
 php app/console uni:admingenerate:crud --overwrite --format=yml --with-write --no-interaction --entity=UniAdminBundle:Feature --route-prefix=admin_feature
 php app/console uni:admingenerate:crud --overwrite --format=yml --with-write --no-interaction --entity=UniAdminBundle:Photography --route-prefix=admin_photography
+php app/console uni:admingenerate:crud --overwrite --format=yml --with-write --no-interaction --entity=UniAdminBundle:Product --route-prefix=admin_product
+php app/console uni:admingenerate:crud --overwrite --format=yml --with-write --no-interaction --entity=UniAdminBundle:ProductSubcategory --route-prefix=admin_productsubcategory
+php app/console uni:admingenerate:crud --overwrite --format=yml --with-write --no-interaction --entity=UniAdminBundle:ProductCategory --route-prefix=admin_productcategory
+php app/console uni:admingenerate:crud --overwrite --format=yml --with-write --no-interaction --entity=UniAdminBundle:SocialMediaAvailable --route-prefix=admin_socialmediaavailable
+php app/console uni:admingenerate:crud --overwrite --format=yml --with-write --no-interaction --entity=UniAdminBundle:SocialMediaEnabled --route-prefix=admin_socialmediaenabled
 
 php app/console uni:admingenerate:crud --format=yml --with-write --no-interaction --entity=UniAdminBundle:User --route-prefix=admin_user
 php app/console uni:admingenerate:crud --format=yml --with-write --no-interaction --entity=UniAdminBundle:Feature --route-prefix=admin_feature

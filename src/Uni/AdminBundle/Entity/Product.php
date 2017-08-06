@@ -290,5 +290,33 @@ class Product
     {
         return $this->user;
     }
-}
+    /**
+     * @var \Uni\AdminBundle\Entity\ProductSubcategory
+     */
+    private $subcategory;
 
+
+    /**
+     * Set subcategory
+     *
+     * @param \Uni\AdminBundle\Entity\ProductSubcategory $subcategory
+     *
+     * @return Product
+     */
+    public function setSubcategory(\Uni\AdminBundle\Entity\ProductSubcategory $subcategory = null)
+    {
+        $this->subcategory = $subcategory;
+
+        return $this;
+    }
+
+    /**
+     * Get subcategory
+     *
+     * @return \Uni\AdminBundle\Entity\ProductSubcategory
+     */
+    public function getSubcategory()
+    {
+        return $this->subcategory;
+    }
+}

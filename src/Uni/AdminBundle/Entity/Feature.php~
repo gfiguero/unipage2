@@ -2,8 +2,14 @@
 
 namespace Uni\AdminBundle\Entity;
 
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+
 /**
  * Feature
+ * @ORM\Entity
+ * @Vich\Uploadable
  */
 class Feature
 {
@@ -26,6 +32,12 @@ class Feature
      * @var string
      */
     private $image;
+
+    /**
+     * @Vich\UploadableField(mapping="feature_photography", fileNameProperty="image")
+     * @var File
+     */
+    private $imagefile;
 
     /**
      * @var \DateTime
@@ -126,6 +138,30 @@ class Feature
     }
 
     /**
+     * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile $image
+     *
+     * @return Photography
+     */
+    public function setImagefile(File $image = null)
+    {
+        $this->imagefile = $image;
+
+        if ($image) {
+            $this->updated_at = new \DateTime();
+        }
+        
+        return $this;
+    }
+
+    /**
+     * @return File|null
+     */
+    public function getImagefile()
+    {
+        return $this->imagefile;
+    }
+
+    /**
      * Set createdAt
      *
      * @param \DateTime $createdAt
@@ -196,5 +232,33 @@ class Feature
     {
         return $this->deleted_at;
     }
-}
+    /**
+     * @var \Uni\AdminBundle\Entity\User
+     */
+    private $user;
 
+
+    /**
+     * Set user
+     *
+     * @param \Uni\AdminBundle\Entity\User $user
+     *
+     * @return Feature
+     */
+    public function setUser(\Uni\AdminBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \Uni\AdminBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+}

@@ -4,7 +4,6 @@ namespace Uni\AdminBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class ProductType extends AbstractType
@@ -30,14 +29,18 @@ class ProductType extends AbstractType
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
             )) 
-            ->add('imagefile', FileType::class, array(
+            ->add('image', null, array(
                 'label' => 'product.form.image',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
-                'translation_domain' => 'UniControlPanelBundle',
-                'required' => false,
-            ))
+                'translation_domain' => 'UniAdminBundle',
+            )) 
             ->add('user', null, array(
                 'label' => 'product.form.user',
+                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
+                'translation_domain' => 'UniAdminBundle',
+            )) 
+            ->add('subcategory', null, array(
+                'label' => 'product.form.subcategory',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
             ))

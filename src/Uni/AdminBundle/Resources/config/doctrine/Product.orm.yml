@@ -13,10 +13,10 @@ Uni\AdminBundle\Entity\Product:
             targetEntity: Uni\AdminBundle\Entity\User
             inversedBy: products
         subcategory:
-            targetEntity: Uni\AdminBundle\Entity\Subcategory
+            targetEntity: Uni\AdminBundle\Entity\ProductSubcategory
             inversedBy: products
             joinColumn:
-                onDelete: SET NULL
+                onDelete: Cascade
     fields:
         name:
             type: string

@@ -1147,4 +1147,160 @@ class User extends BaseUser
     {
         return $this->brand_tertiary_color;
     }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $categories;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $subcategories;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $products;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $socialmediaenabled;
+
+
+    /**
+     * Add category
+     *
+     * @param \Uni\AdminBundle\Entity\ProductCategory $category
+     *
+     * @return User
+     */
+    public function addCategory(\Uni\AdminBundle\Entity\ProductCategory $category)
+    {
+        $this->categories[] = $category;
+
+        return $this;
+    }
+
+    /**
+     * Remove category
+     *
+     * @param \Uni\AdminBundle\Entity\ProductCategory $category
+     */
+    public function removeCategory(\Uni\AdminBundle\Entity\ProductCategory $category)
+    {
+        $this->categories->removeElement($category);
+    }
+
+    /**
+     * Get categories
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
+
+    /**
+     * Add subcategory
+     *
+     * @param \Uni\AdminBundle\Entity\ProductSubcategory $subcategory
+     *
+     * @return User
+     */
+    public function addSubcategory(\Uni\AdminBundle\Entity\ProductSubcategory $subcategory)
+    {
+        $this->subcategories[] = $subcategory;
+
+        return $this;
+    }
+
+    /**
+     * Remove subcategory
+     *
+     * @param \Uni\AdminBundle\Entity\ProductSubcategory $subcategory
+     */
+    public function removeSubcategory(\Uni\AdminBundle\Entity\ProductSubcategory $subcategory)
+    {
+        $this->subcategories->removeElement($subcategory);
+    }
+
+    /**
+     * Get subcategories
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSubcategories()
+    {
+        return $this->subcategories;
+    }
+
+    /**
+     * Add product
+     *
+     * @param \Uni\AdminBundle\Entity\Product $product
+     *
+     * @return User
+     */
+    public function addProduct(\Uni\AdminBundle\Entity\Product $product)
+    {
+        $this->products[] = $product;
+
+        return $this;
+    }
+
+    /**
+     * Remove product
+     *
+     * @param \Uni\AdminBundle\Entity\Product $product
+     */
+    public function removeProduct(\Uni\AdminBundle\Entity\Product $product)
+    {
+        $this->products->removeElement($product);
+    }
+
+    /**
+     * Get products
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getProducts()
+    {
+        return $this->products;
+    }
+
+    /**
+     * Add socialmediaenabled
+     *
+     * @param \Uni\AdminBundle\Entity\SocialMediaEnabled $socialmediaenabled
+     *
+     * @return User
+     */
+    public function addSocialmediaenabled(\Uni\AdminBundle\Entity\SocialMediaEnabled $socialmediaenabled)
+    {
+        $this->socialmediaenabled[] = $socialmediaenabled;
+
+        return $this;
+    }
+
+    /**
+     * Remove socialmediaenabled
+     *
+     * @param \Uni\AdminBundle\Entity\SocialMediaEnabled $socialmediaenabled
+     */
+    public function removeSocialmediaenabled(\Uni\AdminBundle\Entity\SocialMediaEnabled $socialmediaenabled)
+    {
+        $this->socialmediaenabled->removeElement($socialmediaenabled);
+    }
+
+    /**
+     * Get socialmediaenabled
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSocialmediaenabled()
+    {
+        return $this->socialmediaenabled;
+    }
 }

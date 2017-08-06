@@ -43,6 +43,11 @@ class User extends BaseUser
     /**
      * @var string
      */
+    private $location;
+
+    /**
+     * @var string
+     */
     private $clientname;
 
     /**
@@ -119,6 +124,56 @@ class User extends BaseUser
      * @var string
      */
     private $contactaddress;
+
+    /**
+     * @var string
+     */
+    private $contactschedule;
+
+    /**
+     * @var string
+     */
+    private $rrsstitle;
+
+    /**
+     * @var string
+     */
+    private $rrsscontent;
+
+    /**
+     * @var string
+     */
+    private $facebook;
+
+    /**
+     * @var string
+     */
+    private $twitter;
+
+    /**
+     * @var string
+     */
+    private $youtube;
+
+    /**
+     * @var string
+     */
+    private $instagram;
+
+    /**
+     * @var string
+     */
+    private $productname;
+
+    /**
+     * @var string
+     */
+    private $productdescription;
+
+    /**
+     * @var integer
+     */
+    private $productprice;
 
     /**
      * @var \DateTime
@@ -216,6 +271,30 @@ class User extends BaseUser
     public function getDomain()
     {
         return $this->domain;
+    }
+
+    /**
+     * Set location
+     *
+     * @param string $location
+     *
+     * @return User
+     */
+    public function setLocation($location)
+    {
+        $this->location = $location;
+
+        return $this;
+    }
+
+    /**
+     * Get location
+     *
+     * @return string
+     */
+    public function getLocation()
+    {
+        return $this->location;
     }
 
     /**
@@ -602,6 +681,246 @@ class User extends BaseUser
         return $this->contactaddress;
     }
 
+     /**
+     * Set contactschedule
+     *
+     * @param string $contactschedule
+     *
+     * @return User
+     */
+    public function setContactschedule($contactschedule)
+    {
+        $this->contactschedule = $contactschedule;
+
+        return $this;
+    }
+
+    /**
+     * Get contactschedule
+     *
+     * @return string
+     */
+    public function getContactschedule()
+    {
+        return $this->contactschedule;
+    }
+
+    /**
+     * Set rrsstitle
+     *
+     * @param string $rrsstitle
+     *
+     * @return User
+     */
+    public function setRrsstitle($rrsstitle)
+    {
+        $this->rrsstitle = $rrsstitle;
+
+        return $this;
+    }
+
+    /**
+     * Get rrsstitle
+     *
+     * @return string
+     */
+    public function getRrsstitle()
+    {
+        return $this->rrsstitle;
+    }
+
+    /**
+     * Set rrsscontent
+     *
+     * @param string $rrsscontent
+     *
+     * @return User
+     */
+    public function setRrsscontent($rrsscontent)
+    {
+        $this->rrsscontent = $rrsscontent;
+
+        return $this;
+    }
+
+    /**
+     * Get rrsscontent
+     *
+     * @return string
+     */
+    public function getRrsscontent()
+    {
+        return $this->rrsscontent;
+    }
+
+     /**
+     * Set facebook
+     *
+     * @param string $facebook
+     *
+     * @return User
+     */
+    public function setFacebook($facebook)
+    {
+        $this->facebook = $facebook;
+
+        return $this;
+    }
+
+    /**
+     * Get facebook
+     *
+     * @return string
+     */
+    public function getFacebook()
+    {
+        return $this->facebook;
+    }
+
+   /**
+     * Set twitter
+     *
+     * @param string $twitter
+     *
+     * @return User
+     */
+    public function setTwitter($twitter)
+    {
+        $this->twitter = $twitter;
+
+        return $this;
+    }
+
+    /**
+     * Get twitter
+     *
+     * @return string
+     */
+    public function getTwitter()
+    {
+        return $this->twitter;
+    }
+
+    /**
+     * Set youtube
+     *
+     * @param string $youtube
+     *
+     * @return User
+     */
+    public function setYoutube($youtube)
+    {
+        $this->youtube = $youtube;
+
+        return $this;
+    }
+
+    /**
+     * Get youtube
+     *
+     * @return string
+     */
+    public function getYoutube()
+    {
+        return $this->youtube;
+    }
+
+    /**
+     * Set instagram
+     *
+     * @param string $instagram
+     *
+     * @return User
+     */
+    public function setInstagram($instagram)
+    {
+        $this->instagram = $instagram;
+
+        return $this;
+    }
+
+    /**
+     * Get instagram
+     *
+     * @return string
+     */
+    public function getInstagram()
+    {
+        return $this->instagram;
+    }
+
+    /**
+     * Set productname
+     *
+     * @param string $productname
+     *
+     * @return User
+     */
+    public function setProductname($productname)
+    {
+        $this->productname = $productname;
+
+        return $this;
+    }
+
+    /**
+     * Get productname
+     *
+     * @return string
+     */
+    public function getProductname()
+    {
+        return $this->productname;
+    }
+
+    /**
+     * Set productdescription
+     *
+     * @param string $productdescription
+     *
+     * @return User
+     */
+    public function setProductdescription($productdescription)
+    {
+        $this->productdescription = $productdescription;
+
+        return $this;
+    }
+
+    /**
+     * Get productdescription
+     *
+     * @return string
+     */
+    public function getProductdescription()
+    {
+        return $this->productdescription;
+    }
+
+    /**
+     * Set productprice
+     *
+     * @param string $productprice
+     *
+     * @return Product
+     */
+    public function setProductprice($productprice)
+    {
+        $this->productprice = $productprice;
+
+        return $this;
+    }
+
+    /**
+     * Get productprice
+     *
+     * @return string
+     */
+    public function getProductprice()
+    {
+        return $this->productprice;
+    }
+
     /**
      * Set createdAt
      *
@@ -798,5 +1117,190 @@ class User extends BaseUser
     public function getBrandSecondaryColor()
     {
         return $this->brand_secondary_color;
+    }
+    /**
+     * @var string
+     */
+    private $brand_tertiary_color;
+
+
+    /**
+     * Set brandTertiaryColor
+     *
+     * @param string $brandTertiaryColor
+     *
+     * @return User
+     */
+    public function setBrandTertiaryColor($brandTertiaryColor)
+    {
+        $this->brand_tertiary_color = $brandTertiaryColor;
+
+        return $this;
+    }
+
+    /**
+     * Get brandTertiaryColor
+     *
+     * @return string
+     */
+    public function getBrandTertiaryColor()
+    {
+        return $this->brand_tertiary_color;
+    }
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $categories;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $subcategories;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $products;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $socialmediaenabled;
+
+
+    /**
+     * Add category
+     *
+     * @param \Uni\AdminBundle\Entity\ProductCategory $category
+     *
+     * @return User
+     */
+    public function addCategory(\Uni\AdminBundle\Entity\ProductCategory $category)
+    {
+        $this->categories[] = $category;
+
+        return $this;
+    }
+
+    /**
+     * Remove category
+     *
+     * @param \Uni\AdminBundle\Entity\ProductCategory $category
+     */
+    public function removeCategory(\Uni\AdminBundle\Entity\ProductCategory $category)
+    {
+        $this->categories->removeElement($category);
+    }
+
+    /**
+     * Get categories
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
+
+    /**
+     * Add subcategory
+     *
+     * @param \Uni\AdminBundle\Entity\ProductSubcategory $subcategory
+     *
+     * @return User
+     */
+    public function addSubcategory(\Uni\AdminBundle\Entity\ProductSubcategory $subcategory)
+    {
+        $this->subcategories[] = $subcategory;
+
+        return $this;
+    }
+
+    /**
+     * Remove subcategory
+     *
+     * @param \Uni\AdminBundle\Entity\ProductSubcategory $subcategory
+     */
+    public function removeSubcategory(\Uni\AdminBundle\Entity\ProductSubcategory $subcategory)
+    {
+        $this->subcategories->removeElement($subcategory);
+    }
+
+    /**
+     * Get subcategories
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSubcategories()
+    {
+        return $this->subcategories;
+    }
+
+    /**
+     * Add product
+     *
+     * @param \Uni\AdminBundle\Entity\Product $product
+     *
+     * @return User
+     */
+    public function addProduct(\Uni\AdminBundle\Entity\Product $product)
+    {
+        $this->products[] = $product;
+
+        return $this;
+    }
+
+    /**
+     * Remove product
+     *
+     * @param \Uni\AdminBundle\Entity\Product $product
+     */
+    public function removeProduct(\Uni\AdminBundle\Entity\Product $product)
+    {
+        $this->products->removeElement($product);
+    }
+
+    /**
+     * Get products
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getProducts()
+    {
+        return $this->products;
+    }
+
+    /**
+     * Add socialmediaenabled
+     *
+     * @param \Uni\AdminBundle\Entity\SocialMediaEnabled $socialmediaenabled
+     *
+     * @return User
+     */
+    public function addSocialmediaenabled(\Uni\AdminBundle\Entity\SocialMediaEnabled $socialmediaenabled)
+    {
+        $this->socialmediaenabled[] = $socialmediaenabled;
+
+        return $this;
+    }
+
+    /**
+     * Remove socialmediaenabled
+     *
+     * @param \Uni\AdminBundle\Entity\SocialMediaEnabled $socialmediaenabled
+     */
+    public function removeSocialmediaenabled(\Uni\AdminBundle\Entity\SocialMediaEnabled $socialmediaenabled)
+    {
+        $this->socialmediaenabled->removeElement($socialmediaenabled);
+    }
+
+    /**
+     * Get socialmediaenabled
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getSocialmediaenabled()
+    {
+        return $this->socialmediaenabled;
     }
 }

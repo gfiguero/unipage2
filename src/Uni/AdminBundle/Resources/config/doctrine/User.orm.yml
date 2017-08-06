@@ -15,6 +15,18 @@ Uni\AdminBundle\Entity\User:
         photographies:
             targetEntity: Uni\AdminBundle\Entity\Photography
             mappedBy: user
+        categories:
+            targetEntity: Uni\AdminBundle\Entity\ProductCategory
+            mappedBy: user
+        subcategories:
+            targetEntity: Uni\AdminBundle\Entity\ProductSubcategory
+            mappedBy: user
+        products:
+            targetEntity: Uni\AdminBundle\Entity\Product
+            mappedBy: user
+        socialmediaenabled:
+            targetEntity: Uni\AdminBundle\Entity\SocialMediaEnabled
+            mappedBy: user
     fields:
         brand:
             type: string
@@ -113,41 +125,6 @@ Uni\AdminBundle\Entity\User:
         contactschedule:
             type: string
             length: 50
-            nullable: true
-
-        rrsstitle:
-            type: string
-            length: 50
-            nullable: true
-        rrsscontent:
-            type: text
-            nullable: true
-        facebook:
-            type: string
-            length: 50
-            nullable: true
-        twitter:
-            type: string
-            length: 50
-            nullable: true
-        youtube:
-            type: string
-            length: 50
-            nullable: true
-        instagram:
-            type: string
-            length: 50
-            nullable: true
-
-        productname:
-            type: string
-            length: 50
-            nullable: true
-        productdescription:
-            type: text
-            nullable: true
-        productprice:
-            type: integer
             nullable: true
 
         created_at:

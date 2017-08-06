@@ -14,7 +14,7 @@ class PhotographyType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder 
-            ->add('imagefile', 'file', array(
+            ->add('image', null, array(
                 'label' => 'photography.form.image',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',

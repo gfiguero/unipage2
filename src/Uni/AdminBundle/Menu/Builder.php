@@ -57,6 +57,34 @@ class Builder implements ContainerAwareInterface
             'admin_product_edit',
         )));
 
+        $sidemenu->addChild('sidemenu.productcategory.root', array('route' => 'admin_productcategory_index'))->setExtras(array('translation_domain' => 'UniAdminBundle', 'routes' => array(
+            'admin_productcategory_index',
+            'admin_productcategory_new',
+            'admin_productcategory_show',
+            'admin_productcategory_edit',
+        )));
+
+        $sidemenu->addChild('sidemenu.productsubcategory.root', array('route' => 'admin_productsubcategory_index'))->setExtras(array('translation_domain' => 'UniAdminBundle', 'routes' => array(
+            'admin_productsubcategory_index',
+            'admin_productsubcategory_new',
+            'admin_productsubcategory_show',
+            'admin_productsubcategory_edit',
+        )));
+
+        $sidemenu->addChild('sidemenu.socialmediaenabled.root', array('route' => 'admin_socialmediaenabled_index'))->setExtras(array('translation_domain' => 'UniAdminBundle', 'routes' => array(
+            'admin_socialmediaenabled_index',
+            'admin_socialmediaenabled_new',
+            'admin_socialmediaenabled_show',
+            'admin_socialmediaenabled_edit',
+        )));
+
+        $sidemenu->addChild('sidemenu.socialmediaavailable.root', array('route' => 'admin_socialmediaavailable_index'))->setExtras(array('translation_domain' => 'UniAdminBundle', 'routes' => array(
+            'admin_socialmediaavailable_index',
+            'admin_socialmediaavailable_new',
+            'admin_socialmediaavailable_show',
+            'admin_socialmediaavailable_edit',
+        )));
+
         return $sidemenu;
     }
 
