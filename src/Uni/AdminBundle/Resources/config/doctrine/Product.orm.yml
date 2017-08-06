@@ -12,6 +12,11 @@ Uni\AdminBundle\Entity\Product:
         user:
             targetEntity: Uni\AdminBundle\Entity\User
             inversedBy: products
+        subcategory:
+            targetEntity: Uni\AdminBundle\Entity\Subcategory
+            inversedBy: products
+            joinColumn:
+                onDelete: SET NULL
     fields:
         name:
             type: string
