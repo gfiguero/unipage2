@@ -164,13 +164,18 @@ class UserType extends AbstractType
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
             )) 
-            ->add('producttitle', null, array(
-                'label' => 'user.form.producttitle',
+            ->add('productname', null, array(
+                'label' => 'user.form.productname',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
             )) 
-            ->add('productcontent', null, array(
-                'label' => 'user.form.productcontent',
+            ->add('productdescription', null, array(
+                'label' => 'user.form.productdescription',
+                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
+                'translation_domain' => 'UniAdminBundle',
+            ))
+            ->add('productprice', null, array(
+                'label' => 'user.form.productprice',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
             ))

@@ -163,12 +163,17 @@ class User extends BaseUser
     /**
      * @var string
      */
-    private $producttitle;
+    private $productname;
 
     /**
      * @var string
      */
-    private $productcontent;
+    private $productdescription;
+
+    /**
+     * @var integer
+     */
+    private $productprice;
 
     /**
      * @var \DateTime
@@ -845,51 +850,75 @@ class User extends BaseUser
     }
 
     /**
-     * Set producttitle
+     * Set productname
      *
-     * @param string $producttitle
+     * @param string $productname
      *
      * @return User
      */
-    public function setProducttitle($producttitle)
+    public function setProductname($productname)
     {
-        $this->producttitle = $producttitle;
+        $this->productname = $productname;
 
         return $this;
     }
 
     /**
-     * Get producttitle
+     * Get productname
      *
      * @return string
      */
-    public function getProducttitle()
+    public function getProductname()
     {
-        return $this->producttitle;
+        return $this->productname;
     }
 
     /**
-     * Set productcontent
+     * Set productdescription
      *
-     * @param string $productcontent
+     * @param string $productdescription
      *
      * @return User
      */
-    public function setProductcontent($productcontent)
+    public function setProductdescription($productdescription)
     {
-        $this->productcontent = $productcontent;
+        $this->productdescription = $productdescription;
 
         return $this;
     }
 
     /**
-     * Get productcontent
+     * Get productdescription
      *
      * @return string
      */
-    public function getProductcontent()
+    public function getProductdescription()
     {
-        return $this->productcontent;
+        return $this->productdescription;
+    }
+
+    /**
+     * Set productprice
+     *
+     * @param string $productprice
+     *
+     * @return Product
+     */
+    public function setProductprice($productprice)
+    {
+        $this->productprice = $productprice;
+
+        return $this;
+    }
+
+    /**
+     * Get productprice
+     *
+     * @return string
+     */
+    public function getProductprice()
+    {
+        return $this->productprice;
     }
 
     /**

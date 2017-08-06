@@ -139,12 +139,15 @@ Uni\AdminBundle\Entity\User:
             length: 50
             nullable: true
 
-        producttitle:
+        productname:
             type: string
             length: 50
             nullable: true
-        productcontent:
+        productdescription:
             type: text
+            nullable: true
+        productprice:
+            type: integer
             nullable: true
 
         created_at:
