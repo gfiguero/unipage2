@@ -1,0 +1,39 @@
+Uni\AdminBundle\Entity\SocialMediaEnabled:
+    type: entity
+    table: SocialMediaEnabled
+    repositoryClass: Uni\AdminBundle\Entity\SocialMediaEnabledRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    manyToOne:
+        user:
+            targetEntity: Uni\AdminBundle\Entity\User
+            inversedBy: socialmediaenabled
+        socialmedia:
+            targetEntity: Uni\AdminBundle\Entity\SocialMediaAvailable
+    fields:
+        url:
+            type: string
+            length: 200
+            nullable: true
+        created_at:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+        updated_at:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: update
+        deleted_at:
+            type: datetime
+            nullable: true
+    gedmo:
+        soft_deleteable:
+            field_name: deleted_at
+            time_aware: false
+    lifecycleCallbacks: {  }

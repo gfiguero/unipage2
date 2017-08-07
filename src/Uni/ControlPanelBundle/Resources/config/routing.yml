@@ -1,3 +1,7 @@
+uni_control_panel_socialmediaenabled:
+    resource: "@UniControlPanelBundle/Resources/config/routing/socialmediaenabled.yml"
+    prefix:   /socialmediaenabled
+
 uni_control_panel_feature:
     resource: "@UniControlPanelBundle/Resources/config/routing/feature.yml"
     prefix:   /feature

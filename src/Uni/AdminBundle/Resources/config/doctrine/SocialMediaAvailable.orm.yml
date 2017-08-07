@@ -1,0 +1,19 @@
+Uni\AdminBundle\Entity\SocialMediaAvailable:
+    type: entity
+    table: SocialMediaAvailable
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 100
+        fontawesomeicon:
+            type: string
+            length: 100
+        hexcolor:
+            type: string
+            length: 10

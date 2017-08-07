@@ -1,0 +1,24 @@
+controlpanel_socialmediaenabled_index:
+    path:     /
+    defaults: { _controller: "UniControlPanelBundle:SocialMediaEnabled:index" }
+    methods:  GET
+
+controlpanel_socialmediaenabled_show:
+    path:     /{id}/show
+    defaults: { _controller: "UniControlPanelBundle:SocialMediaEnabled:show" }
+    methods:  GET
+
+controlpanel_socialmediaenabled_new:
+    path:     /new
+    defaults: { _controller: "UniControlPanelBundle:SocialMediaEnabled:new" }
+    methods:  [GET, POST]
+
+controlpanel_socialmediaenabled_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "UniControlPanelBundle:SocialMediaEnabled:edit" }
+    methods:  [GET, POST]
+
+controlpanel_socialmediaenabled_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "UniControlPanelBundle:SocialMediaEnabled:delete" }
+    methods:  DELETE

@@ -41,6 +41,9 @@ class Builder implements ContainerAwareInterface
             $topmenu['topmenu.user']->addChild('topmenu.photography', array('route' => 'controlpanel_photography_index'));
             $topmenu['topmenu.user']['topmenu.photography']->setExtras(array('translation_domain' => 'UniControlPanelBundle', 'icon' => 'picture-o fa-fw'));
 
+            $topmenu['topmenu.user']->addChild('topmenu.socialmediaenabled', array('route' => 'controlpanel_socialmediaenabled_index'));
+            $topmenu['topmenu.user']['topmenu.socialmediaenabled']->setExtras(array('translation_domain' => 'UniControlPanelBundle', 'icon' => 'facebook fa-fw'));
+
             $topmenu['topmenu.user']->addChild('topmenu.feature', array('route' => 'controlpanel_feature_index'));
             $topmenu['topmenu.user']['topmenu.feature']->setExtras(array('translation_domain' => 'UniControlPanelBundle', 'icon' => 'check-circle fa-fw'));
 

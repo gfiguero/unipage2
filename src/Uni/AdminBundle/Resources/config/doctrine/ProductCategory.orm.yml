@@ -1,0 +1,45 @@
+Uni\AdminBundle\Entity\ProductCategory:
+    type: entity
+    table: ProductCategory
+    repositoryClass:  Uni\AdminBundle\Entity\ProductCategoryRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    manyToOne:
+        user:
+            targetEntity: Uni\AdminBundle\Entity\User
+            inversedBy: products
+    oneToMany:
+        subcategories:
+            targetEntity:  Uni\AdminBundle\Entity\ProductSubcategory
+            mappedBy: category
+    fields:
+        name:
+            type: string
+            length: 100
+            nullable: true
+        slug:
+            type: string
+            length: 100
+            nullable: true
+        createdAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            gedmo:
+                timestampable:
+                    on: update
+        deleted_at:
+            type: datetime
+            nullable: true
+    gedmo:
+        soft_deleteable:
+            field_name: deleted_at
+            time_aware: false
+    lifecycleCallbacks: {  }

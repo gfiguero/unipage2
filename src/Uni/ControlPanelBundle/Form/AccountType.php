@@ -141,47 +141,6 @@ class AccountType extends AbstractType
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniControlPanelBundle',
             ))
-            ->add('rrsstitle', null, array(
-                'label' => 'user.form.rrsstitle',
-                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
-                'translation_domain' => 'UniControlPanelBundle',
-            ))->add('rrsscontent', null, array(
-                'label' => 'user.form.rrsscontent',
-                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
-                'translation_domain' => 'UniControlPanelBundle',
-            ))
-            ->add('facebook', null, array(
-                'label' => 'user.form.facebook',
-                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
-                'translation_domain' => 'UniControlPanelBundle',
-            ))
-            ->add('twitter', null, array(
-                'label' => 'user.form.twitter',
-                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
-                'translation_domain' => 'UniControlPanelBundle',
-            ))
-            ->add('youtube', null, array(
-                'label' => 'user.form.youtube',
-                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
-                'translation_domain' => 'UniControlPanelBundle',
-            ))
-            ->add('instagram', null, array(
-                'label' => 'user.form.instagram',
-                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
-                'translation_domain' => 'UniControlPanelBundle',
-            ))
-            ->add('producttitle', null, array(
-                'label' => 'user.form.abouttitle',
-                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
-                'translation_domain' => 'UniControlPanelBundle',
-                'required' => true,
-            ))
-            ->add('productcontent', null, array(
-                'label' => 'user.form.aboutcontent',
-                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
-                'translation_domain' => 'UniControlPanelBundle',
-                'required' => true,
-            ))
         ;
     }
     
