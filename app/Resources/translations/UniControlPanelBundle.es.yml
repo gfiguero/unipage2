@@ -38,6 +38,8 @@ user:
         twitter: Twitter
         youtube: Youtube
         instagram: Instagram
+        producttitle: Título
+        productcontent: Contenido
 
 controlpanel:
     account:
@@ -97,9 +99,14 @@ product:
         subcategory: Subcategoría
     delete:
         link: Eliminar producto
+        form: Eliminar producto
+        message: Los datos del producto no podrán ser recuperados.
+        submit: Confirmar eliminación
+        flash: El producto ha sido eliminado.
     edit: 
         form: Producto
         submit: Guardar cambios
+        flash: Los datos se han guardado correctamente.
 
 productsubcategory:
     index:
@@ -122,6 +129,7 @@ productsubcategory:
         message: Los datos de la característica no podrán ser recuperados.
         submit: Confirmar eliminación
         link: Eliminar subcategoría
+        flash: La subcategoría ha sido eliminada.
     form:
         id: ID
         name: Nombre
@@ -149,6 +157,7 @@ productcategory:
         message: Los datos de la característica no podrán ser recuperados.
         submit: Confirmar eliminación
         link: Eliminar categoría
+        flash: La categoría ha sido eliminada.
     form:
         id: ID
         name: Nombre

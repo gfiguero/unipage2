@@ -53,10 +53,12 @@ class ProductSubcategoryController extends Controller
 
         if ($newForm->isSubmitted()) {
             if($newForm->isValid()) {
+                $user = $this->getUser();
+                $productSubcategory->setUser($user);
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($productSubcategory);
                 $em->flush();
-                $request->getSession()->getFlashBag()->add( 'success', 'productSubcategory.new.flash' );
+                $request->getSession()->getFlashBag()->add( 'success', 'productsubcategory.new.flash' );
                 return $this->redirect($this->generateUrl('controlpanel_productsubcategory_index'));
             }
         }
@@ -92,10 +94,12 @@ class ProductSubcategoryController extends Controller
 
         if ($editForm->isSubmitted()) {
             if($editForm->isValid()) {
+                $user = $this->getUser();
+                $productSubcategory->setUser($user);
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($productSubcategory);
                 $em->flush();
-                $request->getSession()->getFlashBag()->add( 'success', 'productSubcategory.edit.flash' );
+                $request->getSession()->getFlashBag()->add( 'success', 'productsubcategory.edit.flash' );
                 return $this->redirect($this->generateUrl('controlpanel_productsubcategory_index'));
             }
         }
@@ -134,7 +138,7 @@ class ProductSubcategoryController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->remove($productSubcategory);
             $em->flush();
-            $request->getSession()->getFlashBag()->add( 'danger', 'productSubcategory.delete.flash' );
+            $request->getSession()->getFlashBag()->add( 'danger', 'productsubcategory.delete.flash' );
         }
 
         return $this->redirect($this->generateUrl('controlpanel_productsubcategory_index'));

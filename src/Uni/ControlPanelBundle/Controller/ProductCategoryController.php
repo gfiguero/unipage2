@@ -53,6 +53,8 @@ class ProductCategoryController extends Controller
 
         if ($newForm->isSubmitted()) {
             if($newForm->isValid()) {
+                $user = $this->getUser();
+                $productCategory->setUser($user);
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($productCategory);
                 $em->flush();
@@ -92,6 +94,8 @@ class ProductCategoryController extends Controller
 
         if ($editForm->isSubmitted()) {
             if($editForm->isValid()) {
+                $user = $this->getUser();
+                $productCategory->setUser($user);
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($productCategory);
                 $em->flush();
