@@ -36,6 +36,11 @@ class ProductType extends AbstractType
                 'translation_domain' => 'UniControlPanelBundle',
                 'required' => false,
             ))
+            ->add('subcategory', null, array(
+                'label' => 'product.form.subcategory',
+                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
+                'translation_domain' => 'UniControlPanelBundle',
+            ))
         ;
     }
     

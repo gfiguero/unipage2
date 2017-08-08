@@ -1,0 +1,105 @@
+{% extends 'UniControlPanelBundle:Base:layout.html.twig' %}
+
+{% trans_default_domain 'UniControlPanelBundle' %}
+
+{% block title %}{{ 'productsubcategory.index.title'|trans }}{% endblock %}
+
+{% block controlpanel %}
+    <section id="controlpanel">
+        <div class="container">
+            <div class="row" id="page-heading">
+                <div class="col-sm-12">
+                    <h1 class="page-header">{{ 'productsubcategory.index.title'|trans }}</h1>
+                    {% block flashbag %}{{ parent() }}{% endblock %}
+                </div>
+            </div>
+            <!-- /#page-heading -->
+
+            <div class="row" id="page-toolbar">
+                <div class="col-lg-12">
+                    <div class="btn-toolbar">
+                        <a type="button" class="btn btn-success" href="{{ path('controlpanel_productsubcategory_new') }}">{{ icon('plus fa-fw') }}&nbsp;{{ 'productsubcategory.new.link'|trans }}</a>
+                    </div>
+                </div>
+            </div>
+            <!-- /#page-toolbar -->
+
+            <div class="row" id="page-list">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2 class="panel-title">{{ 'productsubcategory.index.list'|trans }}</h2>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="records_list table table-striped table-hover table-middle">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="btn-group" role="group"><a type="button" class="btn btn-xs btn-default disabled">{{ icon('edit fa-fw') }}</a></div>
+                                            <div class="btn-group" role="group"><a type="button" class="btn btn-xs btn-default disabled">{{ icon('trash fa-fw') }}</a></div>
+                                        </th>
+                                        <th>{{ knp_pagination_sortable(productSubcategories, 'productsubcategory.form.id'|trans, 'id') }}{% if sort == 'id' %}{% if direction == 'desc' %}{{ icon('caret-down') }}{% else %}{{ icon('caret-up') }}{% endif %}{% endif %}</th>
+                                        <th>{{ knp_pagination_sortable(productSubcategories, 'productsubcategory.form.name'|trans, 'name') }}{% if sort == 'name' %}{% if direction == 'desc' %}{{ icon('caret-down') }}{% else %}{{ icon('caret-up') }}{% endif %}{% endif %}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                {% for key, productsubcategory in productSubcategories %}
+                                    <tr>
+                                        <td>
+                                            <div class="btn-group" role="group"><a type="button" class="btn btn-xs btn-primary" href="{{ path('controlpanel_productsubcategory_edit', { 'id': productsubcategory.id }) }}">{{ icon('edit fa-fw') }}</a></div>
+                                            <div class="btn-group" role="group"><button type="button" class="btn btn-xs btn-danger" data-toggle="modal" data-target="#modalDelete{{ productsubcategory.id }}">{{ icon('trash fa-fw') }}</button></div>
+                                        </td>
+                                        <td>{% if productsubcategory.id %}{{ productsubcategory.id }}{% endif %}</td>
+                                        <td>{% if productsubcategory.name %}{{ productsubcategory.name }}{% endif %}</td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="text-center">
+                                {{ knp_pagination_render(productSubcategories) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /#page-list -->
+
+            <div id="page-modal">
+                {% for key, productsubcategory in productSubcategories %}
+                <div class="modal fade" id="modalDelete{{ productsubcategory.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog modal-md" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">{{ icon('times') }}</button>
+                                <h4 class="modal-title" id="myModalLabel">{{ 'productsubcategory.delete.title'|trans }}</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-xs-2 text-center">{{ icon('exclamation-triangle fa-5x') }}</div>
+                                    <div class="col-xs-10"><p>{{ 'productsubcategory.delete.message'|trans }}</p></div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                {% set deleteForm = attribute(deleteForms, key) %}
+                                {{ form_start(deleteForm) }}
+                                    {{ form_widget(deleteForm) }}
+                                    <button type="submit" class="btn btn-danger pull-right">{{ icon('trash fa-fw') }}&nbsp;{{ 'productsubcategory.delete.submit'|trans }}</button>
+                                {{ form_end(deleteForm) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <!-- /#page-modal -->
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascript %}
+    <script type="text/javascript">
+        $(function () { $('[data-toggle="tooltip"]').tooltip() })
+    </script>
+{% endblock %}

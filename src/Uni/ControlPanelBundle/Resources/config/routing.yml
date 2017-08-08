@@ -17,3 +17,11 @@ uni_control_panel_account:
 uni_control_panel_product:
     resource: "@UniControlPanelBundle/Resources/config/routing/product.yml"
     prefix:   /product
+
+uni_control_panel_productcategory:
+    resource: "@UniControlPanelBundle/Resources/config/routing/productcategory.yml"
+    prefix:   /productcategory
+
+uni_admin_productsubcategory:
+    resource: "@UniControlPanelBundle/Resources/config/routing/productsubcategory.yml"
+    prefix:   /productsubcategory

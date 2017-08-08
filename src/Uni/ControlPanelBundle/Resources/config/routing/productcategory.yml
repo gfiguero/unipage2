@@ -1,0 +1,24 @@
+controlpanel_productcategory_index:
+    path:     /
+    defaults: { _controller: "UniControlPanelBundle:ProductCategory:index" }
+    methods:  GET
+
+controlpanel_productcategory_show:
+    path:     /{id}/show
+    defaults: { _controller: "UniControlPanelBundle:ProductCategory:show" }
+    methods:  GET
+
+controlpanel_productcategory_new:
+    path:     /new
+    defaults: { _controller: "UniControlPanelBundle:ProductCategory:new" }
+    methods:  [GET, POST]
+
+controlpanel_productcategory_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "UniControlPanelBundle:ProductCategory:edit" }
+    methods:  [GET, POST]
+
+controlpanel_productcategory_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "UniControlPanelBundle:ProductCategory:delete" }
+    methods:  DELETE

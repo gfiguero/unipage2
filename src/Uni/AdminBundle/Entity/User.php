@@ -133,47 +133,12 @@ class User extends BaseUser
     /**
      * @var string
      */
-    private $rrsstitle;
+    private $producttitle;
 
     /**
      * @var string
      */
-    private $rrsscontent;
-
-    /**
-     * @var string
-     */
-    private $facebook;
-
-    /**
-     * @var string
-     */
-    private $twitter;
-
-    /**
-     * @var string
-     */
-    private $youtube;
-
-    /**
-     * @var string
-     */
-    private $instagram;
-
-    /**
-     * @var string
-     */
-    private $productname;
-
-    /**
-     * @var string
-     */
-    private $productdescription;
-
-    /**
-     * @var integer
-     */
-    private $productprice;
+    private $productcontent;
 
     /**
      * @var \DateTime
@@ -681,7 +646,7 @@ class User extends BaseUser
         return $this->contactaddress;
     }
 
-     /**
+    /**
      * Set contactschedule
      *
      * @param string $contactschedule
@@ -706,219 +671,51 @@ class User extends BaseUser
     }
 
     /**
-     * Set rrsstitle
+     * Set producttitle
      *
-     * @param string $rrsstitle
-     *
-     * @return User
-     */
-    public function setRrsstitle($rrsstitle)
-    {
-        $this->rrsstitle = $rrsstitle;
-
-        return $this;
-    }
-
-    /**
-     * Get rrsstitle
-     *
-     * @return string
-     */
-    public function getRrsstitle()
-    {
-        return $this->rrsstitle;
-    }
-
-    /**
-     * Set rrsscontent
-     *
-     * @param string $rrsscontent
+     * @param string $producttitle
      *
      * @return User
      */
-    public function setRrsscontent($rrsscontent)
+    public function setProducttitle($producttitle)
     {
-        $this->rrsscontent = $rrsscontent;
+        $this->producttitle = $producttitle;
 
         return $this;
     }
 
     /**
-     * Get rrsscontent
+     * Get producttitle
      *
      * @return string
      */
-    public function getRrsscontent()
+    public function getProducttitle()
     {
-        return $this->rrsscontent;
+        return $this->producttitle;
     }
 
-     /**
-     * Set facebook
+    /**
+     * Set productcontent
      *
-     * @param string $facebook
+     * @param string $productcontent
      *
      * @return User
      */
-    public function setFacebook($facebook)
+    public function setProductcontent($productcontent)
     {
-        $this->facebook = $facebook;
+        $this->productcontent = $productcontent;
 
         return $this;
     }
 
     /**
-     * Get facebook
+     * Get productcontent
      *
      * @return string
      */
-    public function getFacebook()
+    public function getProductcontent()
     {
-        return $this->facebook;
-    }
-
-   /**
-     * Set twitter
-     *
-     * @param string $twitter
-     *
-     * @return User
-     */
-    public function setTwitter($twitter)
-    {
-        $this->twitter = $twitter;
-
-        return $this;
-    }
-
-    /**
-     * Get twitter
-     *
-     * @return string
-     */
-    public function getTwitter()
-    {
-        return $this->twitter;
-    }
-
-    /**
-     * Set youtube
-     *
-     * @param string $youtube
-     *
-     * @return User
-     */
-    public function setYoutube($youtube)
-    {
-        $this->youtube = $youtube;
-
-        return $this;
-    }
-
-    /**
-     * Get youtube
-     *
-     * @return string
-     */
-    public function getYoutube()
-    {
-        return $this->youtube;
-    }
-
-    /**
-     * Set instagram
-     *
-     * @param string $instagram
-     *
-     * @return User
-     */
-    public function setInstagram($instagram)
-    {
-        $this->instagram = $instagram;
-
-        return $this;
-    }
-
-    /**
-     * Get instagram
-     *
-     * @return string
-     */
-    public function getInstagram()
-    {
-        return $this->instagram;
-    }
-
-    /**
-     * Set productname
-     *
-     * @param string $productname
-     *
-     * @return User
-     */
-    public function setProductname($productname)
-    {
-        $this->productname = $productname;
-
-        return $this;
-    }
-
-    /**
-     * Get productname
-     *
-     * @return string
-     */
-    public function getProductname()
-    {
-        return $this->productname;
-    }
-
-    /**
-     * Set productdescription
-     *
-     * @param string $productdescription
-     *
-     * @return User
-     */
-    public function setProductdescription($productdescription)
-    {
-        $this->productdescription = $productdescription;
-
-        return $this;
-    }
-
-    /**
-     * Get productdescription
-     *
-     * @return string
-     */
-    public function getProductdescription()
-    {
-        return $this->productdescription;
-    }
-
-    /**
-     * Set productprice
-     *
-     * @param string $productprice
-     *
-     * @return Product
-     */
-    public function setProductprice($productprice)
-    {
-        $this->productprice = $productprice;
-
-        return $this;
-    }
-
-    /**
-     * Get productprice
-     *
-     * @return string
-     */
-    public function getProductprice()
-    {
-        return $this->productprice;
+        return $this->productcontent;
     }
 
     /**

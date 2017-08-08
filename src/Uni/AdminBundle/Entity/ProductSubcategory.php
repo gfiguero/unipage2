@@ -47,6 +47,11 @@ class ProductSubcategory
      */
     private $category;
 
+    public function __toString()
+    {
+        return (string) $this->name;
+    }
+
     /**
      * Constructor
      */
