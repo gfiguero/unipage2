@@ -1,9 +1,7 @@
 @import "../../../../../vendor/bower_components/bootstrap/less/modals.less";
 
 .modal-image {
-    @media(min-width: 1200px) {
-        width: 1200px;
-    }
+    
     .modal-content {
         border: 0px;
     }
@@ -28,13 +26,16 @@
     }
 
     .modal-footer {
-        background-color: fade(@gray-base, 50%);
+        background-color: @gray-base;
         padding: @modal-title-padding;
         border-top: 0px;
-        position: fixed;
         bottom: 0;
         z-index: 1030;
         width: 100%;
+        @media(min-width: 992px) {
+            background-color: fade(@gray-base, 50%);
+            position: fixed;
+        }
     }
 }
 

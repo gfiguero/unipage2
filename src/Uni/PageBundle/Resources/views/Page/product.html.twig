@@ -27,7 +27,7 @@
                         {% if product.image %}
                             <img class="product-item-image" src="{{ vich_uploader_asset(product, 'imagefile', 'Uni\\AdminBundle\\Entity\\Product')|imagine_filter('product_photography') }}">
                             <div class="overlay">
-                                <div class="text">{{ icon('plus-circle fa-fw fa-4x') }}</div>
+                                <div class="overlay-content">{{ icon('plus-circle fa-fw fa-4x') }}</div>
                             </div>
                         {% endif %}
                     </div>
@@ -42,16 +42,17 @@
                         <div class="modal-dialog modal-lg modal-image">
 
                             <!-- Modal content-->
-                            <div class="modal-content product-modal-content">
+                            <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 </div>
                                 <div class="modal-body">
                                     <img class="product-item-image img-responsive" src="{{ vich_uploader_asset(product, 'imagefile', 'Uni\\AdminBundle\\Entity\\Product')|imagine_filter('product_photography_large') }}">
                                 </div>
-                                <div class="modal-footer product-modal-footer">
+                                <div class="modal-footer">
                                 {% if product.name %}
                                     <h4 class="modal-title">{{ product.name|raw }}</h4>
+                                     {% if product.subcategory %}<small>{{ product.subcategory|raw }}</small>{% endif %}
                                     {% if product.description %}<p>{{ product.description|raw }}</p>{% endif %}
                                     {% if product.price %}<p>$&nbsp;{{ product.price|raw|number_format(0, ',', '.') }}</p>{% endif %}
                                 {% endif %}

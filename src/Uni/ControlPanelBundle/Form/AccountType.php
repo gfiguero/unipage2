@@ -141,6 +141,16 @@ class AccountType extends AbstractType
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniControlPanelBundle',
             ))
+            ->add('producttitle', null, array(
+                'label' => 'user.form.producttitle',
+                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
+                'translation_domain' => 'UniControlPanelBundle',
+            ))
+            ->add('productcontent', null, array(
+                'label' => 'user.form.productcontent',
+                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
+                'translation_domain' => 'UniControlPanelBundle',
+            ))
         ;
     }
     

@@ -40,6 +40,8 @@ user:
         twitter: Twitter
         youtube: Youtube
         instagram: Instagram
+        producttitle: Título
+        productcontent: Contenido
 
 controlpanel:
     account:
@@ -111,11 +113,79 @@ product:
         link: Nuevo producto
         form: Lista de productos
         submit: Guardar
+        flash: Los datos se han guardado correctamente.
     form:
         name: Nombre del producto
         description: Descripción
         price: Precio
         image: Imagen
+        subcategory: Subcategoría
+    delete:
+        link: Eliminar producto
+        form: Eliminar producto
+        message: Los datos del producto no podrán ser recuperados.
+        submit: Confirmar eliminación
+        flash: El producto ha sido eliminado.
+    edit: 
+        form: Producto
+        submit: Guardar cambios
+        flash: Los datos se han guardado correctamente.
+
+productsubcategory:
+    index:
+        title: Subcategoría 
+        list: Lista de subcategorías
+        link: Volver a la lista
+    new:
+        title: Agregar subcategoría
+        link: Nueva subcategoría
+        form: Nueva subcategoría
+        flash: Los datos se han guardado correctamente
+        submit: Guardar
+    edit:
+        title: Editar subcategoría
+        form: Subcategoría
+        submit: Guardar cambios
+        flash: Cambios realizados con éxito.
+    delete:
+        title: Eliminar subcategoría
+        message: Los datos de la característica no podrán ser recuperados.
+        submit: Confirmar eliminación
+        link: Eliminar subcategoría
+        flash: La subcategoría ha sido eliminada.
+    form:
+        id: ID
+        name: Nombre
+        slug: Slug
+        category: Categoría
+
+productcategory:
+    index:
+        title: Categoría 
+        list: Lista de categorías
+        link: Volver a la lista
+    new:
+        title: Agregar categoría
+        link: Nueva categoría
+        form: Nueva categoría
+        flash: Los datos se han guardado correctamente.
+        submit: Guardar
+    edit:
+        title: Editar categoría
+        form: Categoría
+        submit: Guardar cambios
+        flash: Cambios realizados con éxito.
+    delete:
+        title: Eliminar categoría
+        message: Los datos de la característica no podrán ser recuperados.
+        submit: Confirmar eliminación
+        link: Eliminar categoría
+        flash: La categoría ha sido eliminada.
+    form:
+        id: ID
+        name: Nombre
+        slug: Slug
+        category: Categoría
 
 account:
     edit:

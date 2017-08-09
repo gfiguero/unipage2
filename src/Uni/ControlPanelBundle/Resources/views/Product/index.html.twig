@@ -42,6 +42,7 @@
                                         <th>{{ 'product.form.description'|trans }}</th>
                                         <th>{{ 'product.form.price'|trans }}</th>
                                         <th>{{ 'product.form.image'|trans }}</th>
+                                        <th>{{ 'product.form.subcategory'|trans }}</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -54,7 +55,8 @@
                                         <td>{% if product.name %}{{ product.name }}{% endif %}</td>
                                         <td>{% if product.description %}{{ product.description }}{% endif %}</td>
                                         <td>{% if product.price %}{{ product.price }}{% endif %}</td>
-                                        <td>{% if product.image %}<img class="product-item-image" src="{{ vich_uploader_asset(product, 'imagefile', 'Uni\\AdminBundle\\Entity\\Product')|imagine_filter('product_photography_small') }}">{% endif %}</td>                                        
+                                        <td>{% if product.image %}<img class="product-item-image" src="{{ vich_uploader_asset(product, 'imagefile', 'Uni\\AdminBundle\\Entity\\Product')|imagine_filter('product_photography_small') }}">{% endif %}</td>
+                                        <td>{% if product.subcategory %}{{ product.subcategory }}{% endif %}</td>                                  
                                     </tr>
                                 {% endfor %}
                                 </tbody>
