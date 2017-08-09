@@ -1,6 +1,9 @@
 topmenu:
     home: Inicio
     profile: Mi Perfil
+    photography: Fotografía
+    socialmediaenabled: Social Media
+    product: Productos
     feature: Características
     account: Configuración
     change_password: Cambiar Password

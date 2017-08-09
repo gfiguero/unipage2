@@ -22,6 +22,6 @@ uni_control_panel_productcategory:
     resource: "@UniControlPanelBundle/Resources/config/routing/productcategory.yml"
     prefix:   /productcategory
 
-uni_admin_productsubcategory:
+uni_control_panel_productsubcategory:
     resource: "@UniControlPanelBundle/Resources/config/routing/productsubcategory.yml"
     prefix:   /productsubcategory
