@@ -20,7 +20,7 @@ class SocialMediaAvailable
     /**
      * @var string
      */
-    private $fontawesomeicon;
+    private $icon;
 
     /**
      * @var string
@@ -67,27 +67,27 @@ class SocialMediaAvailable
     }
 
     /**
-     * Set fontawesomeicon
+     * Set icon
      *
-     * @param string $fontawesomeicon
+     * @param string $icon
      *
      * @return SocialMediaAvailable
      */
-    public function setFontawesomeicon($fontawesomeicon)
+    public function setIcon($icon)
     {
-        $this->fontawesomeicon = $fontawesomeicon;
+        $this->icon = $icon;
 
         return $this;
     }
 
     /**
-     * Get fontawesomeicon
+     * Get icon
      *
      * @return string
      */
-    public function getFontawesomeicon()
+    public function getIcon()
     {
-        return $this->fontawesomeicon;
+        return $this->icon;
     }
 
     /**

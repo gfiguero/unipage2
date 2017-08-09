@@ -19,8 +19,8 @@ class SocialMediaAvailableType extends AbstractType
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
             )) 
-            ->add('fontawesomeicon', null, array(
-                'label' => 'socialmediaavailable.form.fontawesomeicon',
+            ->add('icon', null, array(
+                'label' => 'socialmediaavailable.form.icon',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
             )) 

@@ -5,7 +5,7 @@
 {% use 'UniPageBundle:Page:feature.html.twig' %}
 {% use 'UniPageBundle:Page:location.html.twig' %}
 {% use 'UniPageBundle:Page:contact.html.twig' %}
-{% use 'UniPageBundle:Page:rrss.html.twig' %}
+{% use 'UniPageBundle:Page:socialmedia.html.twig' %}
 {% use 'UniPageBundle:Page:footer.html.twig' %}
 {% use 'UniPageBundle:Page:style.html.twig' %}
 {% use 'UniPageBundle:Page:script.html.twig' %}
@@ -18,9 +18,9 @@
         {% block main %}{{ parent() }}{% endblock %}
         {% block about %}{{ parent() }}{% endblock %}
         {% block feature %}{{ parent() }}{% endblock %}
+        {% block socialmedia %}{{ parent() }}{% endblock %}
         {% block location %}{{ parent() }}{% endblock %}
         {% block contact %}{{ parent() }}{% endblock %}
-        {% block rrss %}{{ parent() }}{% endblock %}
         {% block footer %}{{ parent() }}{% endblock %}
     {% else %}
         {{ 'Inactive Host' }}

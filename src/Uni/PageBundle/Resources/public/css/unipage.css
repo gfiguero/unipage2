@@ -6909,6 +6909,7 @@ button.close {
   height: 300px;
 }
 #contact {
+  padding-bottom: 160px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://static.pexels.com/photos/196656/pexels-photo-196656.jpeg');
   background-attachment: fixed;
   background-position: center center;
@@ -6919,12 +6920,11 @@ button.close {
 #contact .contact-content {
   text-align: center;
 }
-#rrss {
+#socialmedia {
   background: #333333;
-  padding-bottom: 160px;
   text-align: center;
 }
-#rrss ul.list-social a {
+#socialmedia .socialmedia-link {
   display: block;
   height: 80px;
   width: 80px;
@@ -6933,38 +6933,15 @@ button.close {
   border-radius: 100%;
   color: white;
   margin-bottom: 10px;
+  background-color: #555555;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-#rrss ul.list-social li.social-facebook a {
-  background-color: #3b5998;
-}
-#rrss ul.list-social li.social-facebook a:hover,
-#rrss ul.list-social li.social-facebook a:active,
-#rrss ul.list-social li.social-facebook a:focus {
-  background-color: #344e86;
-}
-#rrss ul.list-social li.social-twitter a {
-  background-color: #4099FF;
-}
-#rrss ul.list-social li.social-twitter a:hover,
-#rrss ul.list-social li.social-twitter a:active,
-#rrss ul.list-social li.social-twitter a:focus {
-  background-color: #268bff;
-}
-#rrss ul.list-social li.social-youtube a {
-  background-color: #c4302b;
-}
-#rrss ul.list-social li.social-youtube a:hover,
-#rrss ul.list-social li.social-youtube a:active,
-#rrss ul.list-social li.social-youtube a:focus {
-  background-color: #af2b26;
-}
-#rrss ul.list-social li.social-instagram a {
-  background-color: #8a3ab9;
-}
-#rrss ul.list-social li.social-instagram a:hover,
-#rrss ul.list-social li.social-instagram a:active,
-#rrss ul.list-social li.social-instagram a:focus {
-  background-color: #7c34a6;
+#socialmedia .socialmedia-link:hover,
+#socialmedia .socialmedia-link:active,
+#socialmedia .socialmedia-link:focus {
+  background-color: #000;
 }
 #footer {
   padding: 17.5px 0px;
