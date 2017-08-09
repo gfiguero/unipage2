@@ -5,6 +5,8 @@ topmenu:
     socialmediaenabled: Social Media
     product: Productos
     feature: Características
+    socialmediaenabled: Redes Sociales
+    photography: Fotos Principales
     account: Configuración
     change_password: Cambiar Password
     logout: Salir
@@ -83,6 +85,27 @@ feature:
         title: Título
         content: Contenido
         image: Imagen
+
+socialmediaenabled:
+    index:
+        title: Redes Sociales
+        list: Lista de redes
+        link: Volver a la lista
+    new:
+        link: Nueva red social
+        form: Nueva red social
+        submit: Guardar
+    edit:
+        form: Editar red social
+        submit: Guardar cambios
+    delete:
+        link: Eliminar red social
+        form: Eliminar red social
+        message: Los datos de la red social no podrán ser recuperados.
+        submit: Confirmar eliminación
+    form:
+        socialmedia: Red Social
+        url: Dirección url
 
 product:
     index:

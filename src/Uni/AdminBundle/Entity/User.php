@@ -1100,4 +1100,33 @@ class User extends BaseUser
     {
         return $this->socialmediaenabled;
     }
+    /**
+     * @var array
+     */
+    private $modules;
+
+
+    /**
+     * Set modules
+     *
+     * @param array $modules
+     *
+     * @return User
+     */
+    public function setModules($modules)
+    {
+        $this->modules = $modules;
+
+        return $this;
+    }
+
+    /**
+     * Get modules
+     *
+     * @return array
+     */
+    public function getModules()
+    {
+        return $this->modules;
+    }
 }

@@ -6,7 +6,7 @@
                     <div class="main-header">
                         {% if user.maintitle %}<h1 class="main-title">{{ user.maintitle|raw }}</h1>{% endif %}
                         {% if user.mainsubtitle %}<h2 class="main-subtitle">{{ user.mainsubtitle|raw }}</h2>{% endif %}
-                        {% if user.maincalltoaction %}<a type="button" href="#about" class="btn btn-primary btn-lg main-calltoaction page-scroll">{{ user.maincalltoaction|raw }}</a>{% endif %}
+                        {% if 'about' in user.modules %}{% if user.maincalltoaction %}<a type="button" href="#about" class="btn btn-primary btn-lg main-calltoaction page-scroll">{{ user.maincalltoaction|raw }}</a>{% endif %}{% endif %}
                     </div>
                 </div>
             </div>

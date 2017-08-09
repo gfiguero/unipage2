@@ -11,7 +11,7 @@ Uni\AdminBundle\Entity\SocialMediaAvailable:
         name:
             type: string
             length: 100
-        fontawesomeicon:
+        icon:
             type: string
             length: 100
         hexcolor:

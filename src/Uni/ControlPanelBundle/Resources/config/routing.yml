@@ -25,3 +25,10 @@ uni_control_panel_productcategory:
 uni_control_panel_productsubcategory:
     resource: "@UniControlPanelBundle/Resources/config/routing/productsubcategory.yml"
     prefix:   /productsubcategory
+
+uni_control_panel:
+    path: /
+    defaults:
+        _controller: FrameworkBundle:Redirect:redirect
+        route: controlpanel_account_edit
+        permanent: true

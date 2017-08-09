@@ -40,6 +40,9 @@ Uni\AdminBundle\Entity\User:
             type: string
             length: 100
             nullable: true
+        modules:
+            type: array
+            nullable: true
         location:
             type: string
             length: 100
