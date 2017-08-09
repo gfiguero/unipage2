@@ -30,3 +30,9 @@ uni_admin_socialmediaenabled:
     resource: "@UniAdminBundle/Resources/config/routing/socialmediaenabled.yml"
     prefix:   /socialmediaenabled
 
+kore_admin:
+    path: /
+    defaults:
+        _controller: FrameworkBundle:Redirect:redirect
+        route: admin_user_index
+        permanent: true

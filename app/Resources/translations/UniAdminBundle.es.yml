@@ -228,3 +228,12 @@ budget:
         created_at: Registro
         updated_at: Actualización
 
+module:
+    form:
+        about: Descripción de la Marca
+        feature: Características del Negocio
+        contact: Información de Contacto
+        socialmedia: Redes Sociales
+        catalog: Catálogo de Productos o Servicios
+        process: Proceso del Negocio
+        location: Localización del Negocio

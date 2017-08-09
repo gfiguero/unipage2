@@ -16,11 +16,11 @@
     {% if user %}
         {% block header %}{{ parent() }}{% endblock %}
         {% block main %}{{ parent() }}{% endblock %}
-        {% block about %}{{ parent() }}{% endblock %}
-        {% block feature %}{{ parent() }}{% endblock %}
-        {% block socialmedia %}{{ parent() }}{% endblock %}
-        {% block location %}{{ parent() }}{% endblock %}
-        {% block contact %}{{ parent() }}{% endblock %}
+        {% if 'about' in user.modules %}{% block about %}{{ parent() }}{% endblock %}{% endif %}
+        {% if 'feature' in user.modules %}{% block feature %}{{ parent() }}{% endblock %}{% endif %}
+        {% if 'socialmedia' in user.modules %}{% block socialmedia %}{{ parent() }}{% endblock %}{% endif %}
+        {% if 'location' in user.modules %}{% block location %}{{ parent() }}{% endblock %}{% endif %}
+        {% if 'contact' in user.modules %}{% block contact %}{{ parent() }}{% endblock %}{% endif %}
         {% block footer %}{{ parent() }}{% endblock %}
     {% else %}
         {{ 'Inactive Host' }}

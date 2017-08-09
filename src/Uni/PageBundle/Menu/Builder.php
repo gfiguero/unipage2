@@ -28,9 +28,10 @@ class Builder implements ContainerAwareInterface
         if ($user->getFeatureTitle()) $featureLink = $user->getFeatureTitle();
         $contactLink = 'Contacto';
         if ($user->getContactTitle()) $contactLink = $user->getContactTitle();
-        $topmenu->addChild($aboutLink, array('uri' => '#about'))->setLinkAttribute('class', 'page-scroll');
-        $topmenu->addChild($featureLink, array('uri' => '#feature'))->setLinkAttribute('class', 'page-scroll');
-        $topmenu->addChild($contactLink, array('uri' => '#contact'))->setLinkAttribute('class', 'page-scroll');
+
+        if (in_array('about', $user->getModules())) $topmenu->addChild($aboutLink, array('uri' => '#about'))->setLinkAttribute('class', 'page-scroll');
+        if (in_array('feature', $user->getModules())) $topmenu->addChild($featureLink, array('uri' => '#feature'))->setLinkAttribute('class', 'page-scroll');
+        if (in_array('contact', $user->getModules())) $topmenu->addChild($contactLink, array('uri' => '#contact'))->setLinkAttribute('class', 'page-scroll');
 
 /*
         if ($checker->isGranted('ROLE_USER')) {
