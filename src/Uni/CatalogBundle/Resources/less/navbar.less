@@ -1,0 +1,45 @@
+@import "../../../../../vendor/bower_components/bootstrap/less/navbar.less";
+.navbar-scroll { 
+    background-color: fade(@gray-base, 50%);
+    border: none;
+    .navbar-brand {
+        .transition(all 0.3s ease);
+        border: none;
+        height: @navbar-height;
+        &:hover,
+        &:focus {
+            color: @brand-primary;
+        }
+    }
+    .navbar-nav > li > a {
+        .transition(all 0.3s ease);
+        &:hover,
+        &:focus {
+            background-color: @brand-primary;
+            color: white;
+        }
+    }
+    @media (min-width: @screen-sm-min) {
+        .navbar-brand, .navbar-nav > li > a {
+            height: @navbar-height-affix-top;
+            padding: @navbar-padding-vertical-affix-top;
+        }
+        .navbar-toggle {
+            .transition(all 0.3s ease);
+            padding: @navbar-padding-vertical-affix-top;
+        }
+    }
+
+}
+
+.affix {
+    @media (min-width: @screen-sm-min) {
+        .navbar-brand, .navbar-nav > li > a {
+            height: @navbar-height-affix;
+            padding: @navbar-padding-vertical-affix;
+        }
+        .navbar-toggle {
+            padding: @navbar-padding-vertical-affix;
+        }
+    }
+}

@@ -1,0 +1,3 @@
+uni_catalog_product:
+    path: /catalog
+    defaults: { _controller: UniCatalogBundle:Catalog:product }
