@@ -1,0 +1,9 @@
+parameters:
+    modules:
+        about: module.form.about
+        feature: module.form.feature
+        contact: module.form.contact
+        socialmedia: module.form.socialmedia
+        catalog: module.form.catalog
+        process: module.form.process
+        location: module.form.location

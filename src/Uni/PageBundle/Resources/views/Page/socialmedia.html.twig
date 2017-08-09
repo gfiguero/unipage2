@@ -1,0 +1,27 @@
+{% block socialmedia %}
+    {% trans_default_domain 'UniPageBundle' %}
+    {% if user %}
+        <section id="socialmedia">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="section-header">
+                            <h1 class="section-title contact-title">Social Media</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ul class="list-inline">
+                            {% for key, socialmedia in socialmedialist %}
+                                <li>
+                                    <a class="socialmedia-link social-{{ socialmedia.socialmedia.name|lower }}" href="{{ socialmedia.url|raw }}" target="_blank" >{{ icon(socialmedia.socialmedia.icon) }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+{% endblock %}
