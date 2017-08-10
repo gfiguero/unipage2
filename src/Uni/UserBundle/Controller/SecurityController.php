@@ -2,20 +2,8 @@
 
 namespace Uni\UserBundle\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
+use FOS\UserBundle\Controller\SecurityController as BaseController;
 
-class SecurityController extends Controller
+class SecurityController extends BaseController
 {
-    public function loginAction(Request $request)
-    {
-        $authenticationUtils = $this->get('security.authentication_utils');
-        $error = $authenticationUtils->getLastAuthenticationError();
-        $lastUsername = $authenticationUtils->getLastUsername();
-
-        return $this->render('UniUserBundle:Security:login.html.twig', array(
-            'last_username' => $lastUsername,
-            'error'         => $error,
-        ));
-    }
 }

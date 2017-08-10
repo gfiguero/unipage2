@@ -27,7 +27,7 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Uni\AdminBundle\UniAdminBundle(),
             new Uni\PageBundle\UniPageBundle(),
-//            new Uni\UserBundle\UniUserBundle(),
+            new Uni\UserBundle\UniUserBundle(),
             new Uni\ControlPanelBundle\UniControlPanelBundle(),
             new Uni\CatalogBundle\UniCatalogBundle(),
         );

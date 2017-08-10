@@ -1,0 +1,20 @@
+{% block header %}
+    <header id="header">
+        <nav id="navbar" class="navbar navbar-default navbar-scroll navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{{ path('uni_page_index') }}">uniSign</a>
+                </div>
+                <div class="collapse navbar-collapse" id="topbar">
+                    {{ knp_menu_render('UniUserBundle:Builder:topMenu') }}
+                </div>
+            </div>   
+        </nav>
+    </header>
+{% endblock %}
