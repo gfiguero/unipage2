@@ -1,5 +1,5 @@
 {% extends 'UniCatalogBundle:Base:base.html.twig' %}
-{% use 'UniCatalogBundle:Base:style-product.html.twig' %}
+{% use 'UniCatalogBundle:Base:style-catalog.html.twig' %}
 {% use 'UniCatalogBundle:Base:footer.html.twig' %}
 
 {% trans_default_domain 'UniCatalogBundle' %}
@@ -72,5 +72,5 @@
 {% endblock %}
 
 {% block stylesheet %}
-    {% block styleproduct %}{{ parent() }}{% endblock %}
+    {% block stylecatalog %}{{ parent() }}{% endblock %}
 {% endblock %}
