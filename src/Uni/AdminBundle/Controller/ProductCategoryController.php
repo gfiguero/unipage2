@@ -53,6 +53,9 @@ class ProductCategoryController extends Controller
 
         if ($newForm->isSubmitted()) {
             if($newForm->isValid()) {
+                $slug = $this->get('admin.slugger')->slugify($productCategory->getName());
+                $productCategory->setSlug($slug);
+
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($productCategory);
                 $em->flush();
@@ -108,6 +111,9 @@ class ProductCategoryController extends Controller
 
         if ($editForm->isSubmitted()) {
             if($editForm->isValid()) {
+                $slug = $this->get('admin.slugger')->slugify($productCategory->getName());
+                $productCategory->setSlug($slug);
+                
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($productCategory);
                 $em->flush();

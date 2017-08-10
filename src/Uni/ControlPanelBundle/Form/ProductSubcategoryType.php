@@ -19,11 +19,6 @@ class ProductSubcategoryType extends AbstractType
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniControlPanelBundle',
             )) 
-            ->add('slug', null, array(
-                'label' => 'productsubcategory.form.slug',
-                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
-                'translation_domain' => 'UniControlPanelBundle',
-            )) 
             ->add('category', null, array(
                 'label' => 'productsubcategory.form.category',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),

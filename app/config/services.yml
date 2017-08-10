@@ -19,3 +19,7 @@ services:
         class: Uni\PageBundle\Twig\ColorExtension
         tags:
             - { name: twig.extension }
+    controlpanel.slugger:
+        class: Uni\ControlPanelBundle\Utils\Slugger     
+    admin.slugger:
+        class: Uni\AdminBundle\Utils\Slugger          

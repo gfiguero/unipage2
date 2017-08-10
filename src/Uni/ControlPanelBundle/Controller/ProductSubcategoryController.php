@@ -53,6 +53,9 @@ class ProductSubcategoryController extends Controller
 
         if ($newForm->isSubmitted()) {
             if($newForm->isValid()) {
+                $slug = $this->get('controlpanel.slugger')->slugify($productSubcategory->getName());
+                $productSubcategory->setSlug($slug);
+
                 $user = $this->getUser();
                 $productSubcategory->setUser($user);
                 $em = $this->getDoctrine()->getManager();
@@ -94,6 +97,9 @@ class ProductSubcategoryController extends Controller
 
         if ($editForm->isSubmitted()) {
             if($editForm->isValid()) {
+                $slug = $this->get('controlpanel.slugger')->slugify($productSubcategory->getName());
+                $productSubcategory->setSlug($slug);
+
                 $user = $this->getUser();
                 $productSubcategory->setUser($user);
                 $em = $this->getDoctrine()->getManager();

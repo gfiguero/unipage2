@@ -34,7 +34,7 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-sm-4">
-                                    {% if photography.image %}<img class="img-responsive" src="{{ vich_uploader_asset(photography, 'imagefile', 'Uni\\AdminBundle\\Entity\\Feature')|imagine_filter('photography_photography') }}">{% endif %}
+                                    {% if photography.image %}<img class="img-responsive" src="{{ vich_uploader_asset(photography, 'imagefile', 'Uni\\AdminBundle\\Entity\\Feature')|imagine_filter('main_photography') }}">{% endif %}
                                 </div>
                                 <div class="col-sm-8">
                                     {{ form_start(editForm, { 'style': 'horizontal' }) }}

@@ -18,11 +18,6 @@ class ProductSubcategory
     private $name;
 
     /**
-     * @var string
-     */
-    private $slug;
-
-    /**
      * @var \DateTime
      */
     private $createdAt;
@@ -92,30 +87,6 @@ class ProductSubcategory
     public function getName()
     {
         return $this->name;
-    }
-
-    /**
-     * Set slug
-     *
-     * @param string $slug
-     *
-     * @return ProductSubcategory
-     */
-    public function setSlug($slug)
-    {
-        $this->slug = $slug;
-
-        return $this;
-    }
-
-    /**
-     * Get slug
-     *
-     * @return string
-     */
-    public function getSlug()
-    {
-        return $this->slug;
     }
 
     /**
@@ -222,6 +193,36 @@ class ProductSubcategory
     public function getProducts()
     {
         return $this->products;
+    }
+
+    /**
+     * @var string
+     */
+    private $slug;
+
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     *
+     * @return Subcategory
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 
     /**

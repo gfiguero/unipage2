@@ -19,11 +19,6 @@ class ProductCategoryType extends AbstractType
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
                 'translation_domain' => 'UniAdminBundle',
             )) 
-            ->add('slug', null, array(
-                'label' => 'productcategory.form.slug',
-                'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),
-                'translation_domain' => 'UniAdminBundle',
-            )) 
             ->add('createdAt', null, array(
                 'label' => 'productcategory.form.createdAt',
                 'attr'  => array( 'label_col' => 4, 'widget_col' => 8 ),

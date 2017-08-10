@@ -18,11 +18,6 @@ class ProductCategory
     private $name;
 
     /**
-     * @var string
-     */
-    private $slug;
-
-    /**
      * @var \DateTime
      */
     private $createdAt;
@@ -87,30 +82,6 @@ class ProductCategory
     public function getName()
     {
         return $this->name;
-    }
-
-    /**
-     * Set slug
-     *
-     * @param string $slug
-     *
-     * @return ProductCategory
-     */
-    public function setSlug($slug)
-    {
-        $this->slug = $slug;
-
-        return $this;
-    }
-
-    /**
-     * Get slug
-     *
-     * @return string
-     */
-    public function getSlug()
-    {
-        return $this->slug;
     }
 
     /**
@@ -223,6 +194,35 @@ class ProductCategory
      */
     private $user;
 
+    /**
+     * @var string
+     */
+    private $slug;
+
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     *
+     * @return Category
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
 
     /**
      * Set user
