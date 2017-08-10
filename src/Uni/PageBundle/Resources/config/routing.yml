@@ -1,7 +1,3 @@
 uni_page_index:
     path: /
     defaults: { _controller: UniPageBundle:Page:index }
-
-uni_page_product:
-    path: /product
-    defaults: { _controller: UniPageBundle:Page:product }

@@ -38,6 +38,13 @@ assetic:
                 - less
                 - cssrewrite
             output: 'src/Uni/ControlPanelBundle/Resources/public/css/unicontrolpanel.css'
+        uni_catalog_css:
+            inputs:
+                - '@UniCatalogBundle/Resources/less/build.less'
+            filters:
+                - less
+                - cssrewrite
+            output: 'src/Uni/CatalogBundle/Resources/public/css/unicatalog.css'
 
         uni_user_css:
             inputs:
