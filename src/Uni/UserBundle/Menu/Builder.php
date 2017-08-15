@@ -17,8 +17,8 @@ class Builder implements ContainerAwareInterface
         $topmenu->setChildrenAttribute('class', 'nav navbar-nav navbar-nav-custom navbar-right');
         $topmenu->setChildrenAttribute('id', 'topmenu');
 
-        $topmenu->addChild('topmenu.home', array('route' => 'uni_page_index'))->setExtras(array('translation_domain' => 'UniUserBundle'));
-        $topmenu->addChild('topmenu.login', array('route' => 'fos_user_security_login'))->setExtras(array('translation_domain' => 'UniUserBundle'));
+        $topmenu->addChild('topmenu.home', array('route' => 'uni_page_index'))->setExtras(array('translation_domain' => 'FOSUserBundle'));
+        $topmenu->addChild('topmenu.login', array('route' => 'fos_user_security_login'))->setExtras(array('translation_domain' => 'FOSUserBundle'));
 
         return $topmenu;
     }

@@ -1,15 +1,15 @@
-{% extends "@FOSUser/layout.html.twig" %}
+{% extends 'UniUserBundle:Base:layout.html.twig' %}
 
 {% trans_default_domain 'FOSUserBundle' %}
 
 {% block title %}Reestablecer Contraseña{% endblock %}
 
-{% block controlpanel %}
+{% block user %}
     <section class="uiuser">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
-                    <div class="panel panel-default uiuser-panel">
+                    <div class="panel panel-default panel-default-fade">
                         <div class="panel-body">
                             <h1 class="page-header">Restablecer Contraseña</h1>
                             {{ form_start(form, { 'style' : 'horizontal', 'label_col' : 4 , 'widget_col' : 8, 'action': path('fos_user_resetting_reset', {'token': token}), 'attr': { 'class': 'fos_user_resetting_reset' } }) }}
@@ -26,12 +26,5 @@
             </div>
         </div>
     </section>
-{% endblock controlpanel %}
-
-{% block stylesheet %}
-    <style type="text/css">
-        section {
-            padding: 80px 0px;
-        }
-    </style>
 {% endblock %}
+

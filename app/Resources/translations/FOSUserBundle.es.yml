@@ -1,3 +1,7 @@
+topmenu:
+    home: Inicio
+    login: Iniciar sesión
+    
 group:
     edit:
         submit: 'Actualizar grupo'
